@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl sm:text-3xl leading-snug;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 sm:px-6 mx-auto max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full py-2 px-6 font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-primary text-white hover:shadow-glow focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 focus:ring-secondary-500 dark:bg-gray-800 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700;
+  }
+
+  .btn-accent {
+    @apply bg-accent-500 text-white hover:bg-accent-600 focus:ring-accent-500;
+  }
+
+  .card {
+    @apply rounded-2xl overflow-hidden bg-white shadow-md dark:bg-gray-800 transition-all duration-300 hover:shadow-xl;
+  }
+
+  .glass-card {
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-glass rounded-2xl;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .header-link {
+    @apply text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 font-medium text-sm md:text-base transition-colors duration-200;
+  }
+
+  .header-link-active {
+    @apply text-primary-600 dark:text-primary-400;
+  }
+}
+
+/* Custom animations and styles */
+.hero-parallax {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-primary;
+}
+
+.animate-on-scroll {
+  @apply opacity-0 transition-all duration-1000;
+}
+
+.animate-on-scroll.in-view {
+  @apply opacity-100;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white/20 dark:bg-gray-900/30 backdrop-blur-md;
+}
