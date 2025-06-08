@@ -13,7 +13,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b rounded-t-3xl w-[99%] mx-auto  from-gray-900 to-gray-950 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-gradient-to-b rounded-t-3xl w-[99%] mx-auto  from-gray-800 to-cyan-950 pt-16 pb-8 border-t  border-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand and Description */}
@@ -26,28 +26,28 @@ const Footer = () => {
                 Wilderest Goa
               </h2>
             </Link>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className=" text-gray-300 leading-relaxed">
               A sustainable luxury retreat nestled in Goa's pristine nature,
               where eco-conscious design meets unparalleled comfort.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://instagram.com"
-                className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-all hover:bg-emerald-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-emerald-600"
+                className="p-2 rounded-full  bg-gray-800 shadow-sm hover:shadow-md transition-all  hover:bg-gray-700  text-gray-300 hover:text-emerald-600"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
               <a
                 href="https://facebook.com"
-                className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-all hover:bg-emerald-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-emerald-600"
+                className="p-2 rounded-full  bg-gray-800 shadow-sm hover:shadow-md transition-all  hover:bg-gray-700  text-gray-300 hover:text-emerald-600"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a
                 href="https://twitter.com"
-                className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-all hover:bg-emerald-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-emerald-600"
+                className="p-2 rounded-full  bg-gray-800 shadow-sm hover:shadow-md transition-all  hover:bg-gray-700  text-gray-300 hover:text-emerald-600"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-gray-800 dark:text-gray-100 relative inline-block">
+            <h3 className="text-lg font-semibold mb-6  text-gray-100 relative inline-block">
               Quick Links
               <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"></span>
             </h3>
@@ -73,7 +73,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center group"
+                    className=" text-gray-400  hover:text-emerald-400 transition-colors flex items-center group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
@@ -85,7 +85,7 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-gray-800 dark:text-gray-100 relative inline-block">
+            <h3 className="text-lg font-semibold mb-6  text-gray-100 relative inline-block">
               Information
               <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"></span>
             </h3>
@@ -101,7 +101,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center group"
+                    className=" text-gray-400  hover:text-emerald-400 transition-colors flex items-center group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
@@ -113,20 +113,18 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-gray-800 dark:text-gray-100 relative inline-block">
+            <h3 className="text-lg font-semibold mb-6  text-gray-100 relative inline-block">
               Contact Us
               <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"></span>
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <div className="p-2 rounded-lg bg-emerald-100/50 dark:bg-emerald-900/20 mr-4">
-                  <MapPin className="text-emerald-600 dark:text-emerald-400 h-5 w-5" />
+                <div className="p-2 rounded-lg  bg-emerald-900/20 mr-4">
+                  <MapPin className=" text-emerald-400 h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-800 dark:text-gray-200">
-                    Our Location
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="font-medium  text-gray-200">Our Location</p>
+                  <p className=" text-gray-400">
                     Bardez, North Goa,
                     <br />
                     Goa 403507, India
@@ -134,32 +132,28 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="p-2 rounded-lg bg-emerald-100/50 dark:bg-emerald-900/20 mr-4">
-                  <Phone className="text-emerald-600 dark:text-emerald-400 h-5 w-5" />
+                <div className="p-2 rounded-lg  bg-emerald-900/20 mr-4">
+                  <Phone className=" text-emerald-400 h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-800 dark:text-gray-200">
-                    Call Us
-                  </p>
+                  <p className="font-medium  text-gray-200">Call Us</p>
                   <a
                     href="tel:+918574963214"
-                    className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    className=" text-gray-400  hover:text-emerald-400 transition-colors"
                   >
                     +91 857 496 3214
                   </a>
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="p-2 rounded-lg bg-emerald-100/50 dark:bg-emerald-900/20 mr-4">
-                  <Mail className="text-emerald-600 dark:text-emerald-400 h-5 w-5" />
+                <div className="p-2 rounded-lg  bg-emerald-900/20 mr-4">
+                  <Mail className=" text-emerald-400 h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-800 dark:text-gray-200">
-                    Email Us
-                  </p>
+                  <p className="font-medium  text-gray-200">Email Us</p>
                   <a
                     href="mailto:info@wilderestresort.com"
-                    className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    className=" text-gray-400  hover:text-emerald-400 transition-colors"
                   >
                     info@wilderestresort.com
                   </a>
@@ -169,20 +163,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-500 dark:text-gray-400 text-sm mb-4 md:mb-0">
+        <div className="mt-12 pt-8 border-t  border-gray-800 flex flex-col md:flex-row justify-between items-center">
+          <div className=" text-gray-400 text-sm mb-4 md:mb-0">
             © {currentYear} Wilderest Goa. All rights reserved.
           </div>
           <div className="flex items-center space-x-6">
             <Link
               to="/sustainability"
-              className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
+              className="text-sm  text-emerald-400 hover:underline"
             >
               Sustainability Commitment
             </Link>
             <Link
               to="/blog"
-              className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
+              className="text-sm  text-emerald-400 hover:underline"
             >
               Our Blog
             </Link>
