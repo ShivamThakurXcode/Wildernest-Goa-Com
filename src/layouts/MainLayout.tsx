@@ -1,18 +1,18 @@
-import { Outlet } from 'react-router-dom';
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
-import { motion } from 'framer-motion';
+import { Outlet } from "react-router-dom";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import { motion } from "framer-motion";
 
 interface MainLayoutProps {
   toggleTheme: () => void;
-  theme: 'light' | 'dark';
+  theme: "light" | "dark";
 }
 
 const MainLayout = ({ toggleTheme, theme }: MainLayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex bg-transparent flex-col min-h-screen">
       <Header toggleTheme={toggleTheme} theme={theme} />
-      <motion.main 
+      <motion.main
         className="flex-grow"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -6,13 +6,8 @@ import Button from "../ui/Button";
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('hero-dark.svg')`,
-        }}
-      />
+      {/* Background Images */}
+      <div className="absolute inset-0 z-0 bg-cover bg-center bg-[url('/hero-light.svg')] dark:bg-[url('/hero-dark.svg')]" />
 
       {/* Floating Elements */}
       <motion.div
@@ -41,6 +36,7 @@ const Hero = () => {
         }}
       />
 
+      {/* Content */}
       <div className="container mx-auto px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -48,11 +44,11 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="text-white font-display mb-6">
+          <h1 className="font-display mb-6 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
             Experience Nature's Luxury in{" "}
             <span className="text-gradient bg-gradient-primary">Goa</span>
           </h1>
-          <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-700 dark:text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             Discover Wilderest, where modern luxury meets untouched nature. Our
             eco-friendly resort offers a perfect blend of comfort and adventure
             in Goa's most serene landscapes.
@@ -67,7 +63,7 @@ const Hero = () => {
               to="/accommodation"
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto !text-white !border-white hover:!bg-white/10"
+              className="w-full sm:w-auto !text-gray-900 dark:!text-white !border-gray-900 dark:!border-white hover:!bg-gray-100 dark:hover:!bg-white/10"
             >
               Explore Rooms
               <ChevronRight size={16} className="ml-1" />
@@ -84,12 +80,12 @@ const Hero = () => {
         transition={{ delay: 1, duration: 1 }}
       >
         <motion.div
-          className="w-6 h-10 rounded-full border-2 border-white flex justify-center p-1"
+          className="w-6 h-10 rounded-full border-2 border-gray-900 dark:border-white flex justify-center p-1"
           initial={{ y: 0 }}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <motion.div className="w-1 h-2 bg-white rounded-full" />
+          <motion.div className="w-1 h-2 bg-gray-900 dark:bg-white rounded-full" />
         </motion.div>
       </motion.div>
     </div>

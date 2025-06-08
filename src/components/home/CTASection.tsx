@@ -1,9 +1,9 @@
-import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Section from '../ui/Section';
-import Button from '../ui/Button';
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Section from "../ui/Section";
+import Button from "../ui/Button";
 
 const CTASection = () => {
   const [ref, inView] = useInView({
@@ -12,13 +12,13 @@ const CTASection = () => {
   });
 
   return (
-    <Section 
-      className="py-20"
-      style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+    <Section
+      className="py-20 w-[99%] mx-auto rounded-2xl bottom-5 mt-10  mb-10"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Home/4.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
       <motion.div
@@ -28,25 +28,23 @@ const CTASection = () => {
         transition={{ duration: 0.8 }}
         className="max-w-3xl mx-auto text-center text-white"
       >
-        <h2 className="mb-6">Ready for Your Unforgettable <span className="text-gradient">Wilderest Experience?</span></h2>
+        <h2 className="mb-6">
+          Ready for Your Unforgettable{" "}
+          <span className="text-gradient">Wilderest Experience?</span>
+        </h2>
         <p className="text-gray-200 text-lg mb-8">
-          Book your stay now and enjoy special rates for the upcoming season. 
+          Book your stay now and enjoy special rates for the upcoming season.
           Experience the perfect blend of luxury and nature at Wilderest Resort.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button 
-            as={Link}
-            to="/book" 
-            size="lg"
-            className="w-full sm:w-auto"
-          >
+          <Button as={Link} to="/book" size="lg" className="w-full sm:w-auto">
             Book Your Stay
           </Button>
-          <Button 
+          <Button
             as={Link}
-            to="/contact" 
-            variant="outline" 
+            to="/contact"
+            variant="outline"
             size="lg"
             className="w-full sm:w-auto !text-white !border-white hover:!bg-white/10"
           >

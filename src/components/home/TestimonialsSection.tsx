@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
-import { Star } from 'lucide-react';
-import Section from '../ui/Section';
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { Star } from "lucide-react";
+import Section from "../ui/Section";
 
 interface TestimonialProps {
   name: string;
@@ -17,27 +17,40 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     location: "New York, USA",
-    quote: "Wilderest exceeded all our expectations. The perfect mix of luxury and nature, with staff that made us feel like family.",
+    quote:
+      "Wilderest exceeded all our expectations. The perfect mix of luxury and nature, with staff that made us feel like family.",
     rating: 5,
-    imageUrl: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300"
+    imageUrl:
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300",
   },
   {
     name: "Raj Mehta",
     location: "Mumbai, India",
-    quote: "The most rejuvenating weekend getaway! The eco-cabins are beautifully designed and the food was absolutely divine.",
+    quote:
+      "The most rejuvenating weekend getaway! The eco-cabins are beautifully designed and the food was absolutely divine.",
     rating: 5,
-    imageUrl: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300"
+    imageUrl:
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
   },
   {
     name: "Emma Clarke",
     location: "London, UK",
-    quote: "A stunning retreat in Goa, unlike any resort I've visited before. The guided nature walks were the highlight of our trip.",
+    quote:
+      "A stunning retreat in Goa, unlike any resort I've visited before. The guided nature walks were the highlight of our trip.",
     rating: 5,
-    imageUrl: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=300"
-  }
+    imageUrl:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=300",
+  },
 ];
 
-const Testimonial = ({ name, location, quote, rating, imageUrl, delay }: TestimonialProps) => {
+const Testimonial = ({
+  name,
+  location,
+  quote,
+  rating,
+  imageUrl,
+  delay,
+}: TestimonialProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -46,7 +59,7 @@ const Testimonial = ({ name, location, quote, rating, imageUrl, delay }: Testimo
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -57,23 +70,19 @@ const Testimonial = ({ name, location, quote, rating, imageUrl, delay }: Testimo
       animate={controls}
       variants={{
         hidden: { opacity: 0, y: 50 },
-        visible: { 
-          opacity: 1, 
+        visible: {
+          opacity: 1,
           y: 0,
-          transition: { 
-            duration: 0.5, 
-            delay: delay * 0.2 
-          }
-        }
+          transition: {
+            duration: 0.5,
+            delay: delay * 0.2,
+          },
+        },
       }}
       className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg"
     >
       <div className="w-20 h-20 mb-4 rounded-full overflow-hidden border-4 border-primary-100 dark:border-primary-900">
-        <img 
-          src={imageUrl} 
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+        <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
       </div>
       <div className="flex mb-3">
         {[...Array(rating)].map((_, i) => (
@@ -98,20 +107,20 @@ const TestimonialsSection = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
   return (
-    <Section className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800">
+    <Section className="bg-gradient-to-br  dark:from-gray-900 dark:to-gray-800">
       <div className="text-center mb-16">
-        <motion.h2 
+        <motion.h2
           ref={ref}
           initial="hidden"
           animate={controls}
           variants={{
             hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
           className="mb-4"
         >
@@ -122,12 +131,16 @@ const TestimonialsSection = () => {
           animate={controls}
           variants={{
             hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, delay: 0.2 },
+            },
           }}
           className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
         >
-          Hear from travelers who have experienced the Wilderest difference.
-          Our guests are our best storytellers.
+          Hear from travelers who have experienced the Wilderest difference. Our
+          guests are our best storytellers.
         </motion.p>
       </div>
 
