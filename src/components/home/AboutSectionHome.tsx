@@ -1,10 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { Sun, Waves } from "lucide-react";
+import { Palmtree, Umbrella } from "lucide-react";
 
-// Replace with Wilderest's actual solar installation image
-const resortSolarImage = "./Home/2.jpg";
+// Replace with Wilderest's actual resort image
+const resortImage = "./Home/2.jpg";
 
 const AboutSectionHome = () => {
   const controls = useAnimation();
@@ -22,7 +22,7 @@ const AboutSectionHome = () => {
   return (
     <section className="py-20 px-4 sm:px-6 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center  mb-16">
+        <div className="text-center mb-16">
           <motion.p
             initial="hidden"
             animate={controls}
@@ -36,7 +36,7 @@ const AboutSectionHome = () => {
             }}
             className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
           >
-            Take a visual journey
+            Discover the magic of Goa
           </motion.p>
           <motion.h2
             ref={ref}
@@ -48,12 +48,12 @@ const AboutSectionHome = () => {
             }}
             className="mb-4"
           >
-            Explore Our <span className="text-gradient">Gallery</span>
+            Experience <span className="text-gradient">Wilderest</span>
           </motion.h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left Card - Making Everything from Nirosolar */}
+          {/* Left Card - Resort Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,13 +62,13 @@ const AboutSectionHome = () => {
             className="relative rounded-2xl overflow-hidden h-96 md:h-auto shadow-lg"
           >
             <img
-              src={resortSolarImage}
-              alt="Wilderest's solar installation"
+              src={resortImage}
+              alt="Wilderest Resort Goa beachfront view"
               className="w-full h-full object-cover"
             />
           </motion.div>
 
-          {/* Middle Card - Solar Energy Best Production */}
+          {/* Middle Card - Luxury Accommodation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,20 +77,20 @@ const AboutSectionHome = () => {
             className="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all border border-gray-100/50 dark:border-gray-700/50"
           >
             <div className="w-16 h-16 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center mb-6">
-              <Sun className="w-8 h-8 text-amber-600 dark:text-amber-400" />
+              <Umbrella className="w-8 h-8 text-amber-600 dark:text-amber-400" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">
-              Solar Energy Best Production
+              Luxury Beachfront Villas
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              Solar energy is the radiant light and heat from the sun, harnessed
-              through various technologies to generate electricity or heat. It’s
-              a renewable, eco-friendly energy source, reducing carbon
-              emissions, cutting costs, and moving us toward sustainability.
+              Our private villas blend contemporary luxury with traditional Goan
+              architecture. Each features a private plunge pool, sun deck, and
+              breathtaking ocean views. Wake up to the sound of waves and enjoy
+              bespoke services tailored to your every need.
             </p>
           </motion.div>
 
-          {/* Right Card - We Are Building Better Future */}
+          {/* Right Card - Sustainable Tourism */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,16 +99,16 @@ const AboutSectionHome = () => {
             className="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all border border-gray-100/50 dark:border-gray-700/50"
           >
             <div className="w-16 h-16 rounded-full bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center mb-6">
-              <Waves className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+              <Palmtree className="w-8 h-8 text-teal-600 dark:text-teal-400" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">
-              We Are Building Better Future
+              Sustainable Paradise
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              Solar energy is the radiant light and heat from the sun, harnessed
-              through various technologies to generate electricity or heat. It’s
-              a renewable, eco-friendly energy source, reducing carbon
-              emissions, cutting costs, and moving us toward sustainability.
+              Wilderest is committed to eco-conscious hospitality. We use solar
+              energy, recycle 90% of our waste, and support local communities.
+              Our organic spa uses indigenous ingredients, and our restaurants
+              serve farm-to-table cuisine with ingredients from our own gardens.
             </p>
           </motion.div>
         </div>

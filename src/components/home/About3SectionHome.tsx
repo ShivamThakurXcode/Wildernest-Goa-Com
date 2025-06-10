@@ -1,6 +1,6 @@
 import { ArrowRight, Leaf, Palmtree } from "lucide-react";
 
-const ResortSectionFirst = () => {
+const ResortSection = () => {
   const resortImage = "./Home/3.jpg";
 
   return (
@@ -8,7 +8,31 @@ const ResortSectionFirst = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column - Text Section */}
+          <div className="relative rounded-2xl overflow-hidden h-96 lg:h-auto shadow-sm">
+            <img
+              src={resortImage}
+              alt="Luxury resort in Goa with palm trees and pool"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute flex items-center justify-center bottom-4 right-4 bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 max-w-xs">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                  <Palmtree className="w-5 h-5  text-emerald-400" />
+                </div>
+                <p className="text-white font-medium">
+                  Goa's premier eco-luxury destination
+                </p>
+              </div>
+              <div className="p-3 rounded-full border-2 border-emerald-500 mb-3 flex items-center justify-center ml-auto">
+                <div className="text-center">
+                  <p className="text-xl font-bold text-white">5★</p>
+                  <p className="text-xs text-emerald-200">RATING</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          {/* Right Column - Image Section */}
           <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
             <p className="text-sm font-medium text-emerald-600 mb-2">
               Luxury Meets Nature
@@ -65,35 +89,10 @@ const ResortSectionFirst = () => {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-
-          {/* Right Column - Image Section */}
-          <div className="relative rounded-2xl overflow-hidden h-96 lg:h-auto shadow-sm">
-            <img
-              src={resortImage}
-              alt="Luxury resort in Goa with palm trees and pool"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute flex items-center justify-center bottom-4 right-4 bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 max-w-xs">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <Palmtree className="w-5 h-5  text-emerald-400" />
-                </div>
-                <p className="text-white font-medium">
-                  Goa's premier eco-luxury destination
-                </p>
-              </div>
-              <div className="p-3 rounded-full border-2 border-emerald-500 mb-3 flex items-center justify-center ml-auto">
-                <div className="text-center">
-                  <p className="text-xl font-bold text-white">5★</p>
-                  <p className="text-xs text-emerald-200">RATING</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default ResortSectionFirst;
+export default ResortSection;

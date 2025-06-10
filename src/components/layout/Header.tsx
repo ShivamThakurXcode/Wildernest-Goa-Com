@@ -3,8 +3,6 @@ import { NavLink, Link } from "react-router-dom";
 import {
   Menu,
   X,
-  Sun,
-  Moon,
   ChevronDown,
   Home,
   Info,
@@ -17,12 +15,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface HeaderProps {
-  toggleTheme: () => void;
-  theme: "light" | "dark";
-}
-
-const Header = ({ toggleTheme, theme }: HeaderProps) => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isAccommodationOpen, setIsAccommodationOpen] = useState(false);
@@ -63,8 +56,8 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
       <header
         className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] sm:w-[90%] max-w-7xl ${
           isScrolled
-            ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg rounded-2xl py-2 border dark:border-white/20"
-            : "bg-white/40 dark:bg-gray-900/30 backdrop-blur-xl rounded-2xl py-2 border dark:border-white/20"
+            ? "bg-white backdrop-blur-lg shadow-xl rounded-2xl py-2 border border-gray-200"
+            : "bg-primary-900/25 backdrop-blur-lg rounded-2xl py-2 border border-gray-200/20"
         }`}
       >
         <div className="w-full mx-auto flex items-center justify-between px-4 sm:px-6">
@@ -74,7 +67,11 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                 W
               </span>
             </div>
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent dark:from-primary-400 dark:to-primary-300">
+            <h1
+              className={`text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent ${
+                isScrolled ? "" : "text-white"
+              }`}
+            >
               Wilderest Goa
             </h1>
           </Link>
@@ -86,8 +83,12 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-600 dark:text-primary-400 font-medium bg-primary-50/50 dark:bg-gray-800/50"
-                    : "text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 hover:bg-gray-100/30 dark:hover:bg-gray-800/30"
+                    ? "text-primary-600 font-medium bg-primary-50/50"
+                    : `${
+                        isScrolled
+                          ? "text-gray-700 hover:text-primary-500"
+                          : "text-white hover:text-primary-300"
+                      }`
                 }`
               }
             >
@@ -100,8 +101,12 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                 onClick={() => setIsAccommodationOpen(!isAccommodationOpen)}
                 className={`px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-1 ${
                   location.pathname.startsWith("/accommodation")
-                    ? "text-primary-600 dark:text-primary-400 font-medium bg-primary-50/50 dark:bg-gray-800/50"
-                    : "text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 hover:bg-gray-100/30 dark:hover:bg-gray-800/30"
+                    ? "text-primary-600 font-medium bg-primary-50/50"
+                    : `${
+                        isScrolled
+                          ? "text-gray-700 hover:text-primary-500"
+                          : "text-white hover:text-primary-300"
+                      }`
                 }`}
               >
                 Accommodation
@@ -119,25 +124,25 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-1 z-50 border dark:border-gray-700"
+                  className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-50 border border-gray-200"
                 >
                   <Link
                     to="/accommodation/room1"
-                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Room 1
                   </Link>
                   <Link
                     to="/accommodation/room2"
-                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Room 2
                   </Link>
                   <Link
                     to="/accommodation/room3"
-                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Room 3
@@ -151,8 +156,12 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-600 dark:text-primary-400 font-medium bg-primary-50/50 dark:bg-gray-800/50"
-                    : "text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 hover:bg-gray-100/30 dark:hover:bg-gray-800/30"
+                    ? "text-primary-600 font-medium bg-primary-50/50"
+                    : `${
+                        isScrolled
+                          ? "text-gray-700 hover:text-primary-500"
+                          : "text-white hover:text-primary-300"
+                      }`
                 }`
               }
             >
@@ -164,8 +173,12 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-600 dark:text-primary-400 font-medium bg-primary-50/50 dark:bg-gray-800/50"
-                    : "text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 hover:bg-gray-100/30 dark:hover:bg-gray-800/30"
+                    ? "text-primary-600 font-medium bg-primary-50/50"
+                    : `${
+                        isScrolled
+                          ? "text-gray-700 hover:text-primary-500"
+                          : "text-white hover:text-primary-300"
+                      }`
                 }`
               }
             >
@@ -176,8 +189,12 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-600 dark:text-primary-400 font-medium bg-primary-50/50 dark:bg-gray-800/50"
-                    : "text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 hover:bg-gray-100/30 dark:hover:bg-gray-800/30"
+                    ? "text-primary-600 font-medium bg-primary-50/50"
+                    : `${
+                        isScrolled
+                          ? "text-gray-700 hover:text-primary-500"
+                          : "text-white hover:text-primary-300"
+                      }`
                 }`
               }
             >
@@ -188,8 +205,12 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-600 dark:text-primary-400 font-medium bg-primary-50/50 dark:bg-gray-800/50"
-                    : "text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 hover:bg-gray-100/30 dark:hover:bg-gray-800/30"
+                    ? "text-primary-600 font-medium bg-primary-50/50"
+                    : `${
+                        isScrolled
+                          ? "text-gray-700 hover:text-primary-500"
+                          : "text-white hover:text-primary-300"
+                      }`
                 }`
               }
             >
@@ -199,20 +220,13 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
 
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors"
-              aria-label={
-                theme === "light"
-                  ? "Switch to dark mode"
-                  : "Switch to light mode"
-              }
-            >
-              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-            </button>
             <Link
               to="/book"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm hover:shadow-md"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-sm hover:shadow-md ${
+                isScrolled
+                  ? "bg-blue-600 hover:bg-blue-700 text-white"
+                  : "bg-white text-gray-900 hover:bg-gray-100"
+              }`}
             >
               Book Now
             </Link>
@@ -221,19 +235,12 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
           {/* Mobile Menu Button */}
           <div className="flex items-center lg:hidden gap-2">
             <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors"
-              aria-label={
-                theme === "light"
-                  ? "Switch to dark mode"
-                  : "Switch to light mode"
-              }
-            >
-              {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
-            </button>
-            <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="p-2 rounded-lg text-gray-700 hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-gray-800/50 transition-colors"
+              className={`p-2 rounded-lg transition-colors ${
+                isScrolled
+                  ? "text-gray-700 hover:bg-gray-100"
+                  : "text-white hover:bg-white/20"
+              }`}
               aria-label={isSidebarOpen ? "Close menu" : "Open menu"}
             >
               {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
@@ -241,13 +248,14 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
           </div>
         </div>
       </header>
+
       {/* Mobile Sidebar */}
       <AnimatePresence>
         {isSidebarOpen && (
           <>
             {/* Overlay */}
             <motion.div
-              className="absolute  h-screen w-screen top-0 left-0 inset-0 bg-black z-40"
+              className="absolute h-screen w-screen top-0 left-0 inset-0 bg-black z-40"
               initial="closed"
               animate="open"
               exit="closed"
@@ -258,7 +266,7 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
 
             {/* Sidebar */}
             <motion.div
-              className="absolute top-0 right-0 h-screen w-80 bg-white dark:bg-gray-900 z-50 shadow-2xl rounded-l-3xl"
+              className="absolute top-0 right-0 h-screen w-80 bg-white z-50 shadow-2xl rounded-l-3xl"
               initial="closed"
               animate="open"
               exit="closed"
@@ -266,14 +274,14 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <div className="flex flex-col h-full pt-20 pb-8 px-6">
-                <nav className="flex divide-y divide-y-reverse divide-gray-200  dark:divide-gray-800 flex-col space-y-2 flex-grow">
+                <nav className="flex divide-y divide-gray-200 flex-col space-y-2 flex-grow">
                   <NavLink
                     to="/"
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 dark:bg-gray-800 dark:text-primary-400 font-medium"
-                          : "text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+                          ? "bg-primary-50 text-primary-600 font-medium"
+                          : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
@@ -286,8 +294,8 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 dark:bg-gray-800 dark:text-primary-400 font-medium"
-                          : "text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+                          ? "bg-primary-50 text-primary-600 font-medium"
+                          : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
@@ -304,8 +312,8 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                       }
                       className={`w-full py-3 px-4 text-lg rounded-lg flex items-center justify-between ${
                         location.pathname.startsWith("/accommodation")
-                          ? "bg-primary-50 text-primary-600 dark:bg-gray-800 dark:text-primary-400 font-medium"
-                          : "text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+                          ? "bg-primary-50 text-primary-600 font-medium"
+                          : "text-gray-800 hover:bg-gray-100"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -331,7 +339,7 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                         >
                           <Link
                             to="/accommodation/room1"
-                            className="block py-2 px-4 text-base text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-gray-100 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
                               setIsSidebarOpen(false);
@@ -341,7 +349,7 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                           </Link>
                           <Link
                             to="/accommodation/room2"
-                            className="block py-2 px-4 text-base text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-gray-100 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
                               setIsSidebarOpen(false);
@@ -351,7 +359,7 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                           </Link>
                           <Link
                             to="/accommodation/room3"
-                            className="block py-2 px-4 text-base text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-gray-100 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
                               setIsSidebarOpen(false);
@@ -369,8 +377,8 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 dark:bg-gray-800 dark:text-primary-400 font-medium"
-                          : "text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+                          ? "bg-primary-50 text-primary-600 font-medium"
+                          : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
@@ -383,8 +391,8 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 dark:bg-gray-800 dark:text-primary-400 font-medium"
-                          : "text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+                          ? "bg-primary-50 text-primary-600 font-medium"
+                          : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
@@ -397,8 +405,8 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 dark:bg-gray-800 dark:text-primary-400 font-medium"
-                          : "text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+                          ? "bg-primary-50 text-primary-600 font-medium"
+                          : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
@@ -411,8 +419,8 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 dark:bg-gray-800 dark:text-primary-400 font-medium"
-                          : "text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+                          ? "bg-primary-50 text-primary-600 font-medium"
+                          : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
@@ -425,7 +433,7 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                 <div className="mt-4 space-y-3">
                   <Link
                     to="/book"
-                    className="block py-3 px-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
+                    className="block py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     <Calendar size={20} />
@@ -433,7 +441,7 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
                   </Link>
                   <a
                     href="tel:+919876543210"
-                    className="block py-3 px-4 bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
+                    className="block py-3 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     <Phone size={20} />
@@ -444,7 +452,7 @@ const Header = ({ toggleTheme, theme }: HeaderProps) => {
             </motion.div>
           </>
         )}
-      </AnimatePresence>{" "}
+      </AnimatePresence>
     </>
   );
 };

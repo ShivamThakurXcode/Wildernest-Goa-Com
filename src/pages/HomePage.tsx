@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet";
 import Hero from "../components/home/Hero";
-import TestimonialsSection from "../components/home/TestimonialsSection";
 import GallerySection from "../components/home/GallerySection";
 import CTASection from "../components/home/CTASection";
 import AboutSectionHome from "../components/home/AboutSectionHome";
-import SolarEnergySection from "../components/home/About2SectionHome";
 import BudgetDesignSection from "../components/home/AccommodationSection";
-import ActivitiesSection from "../components/home/ActSection";
+import ActivitiesIntegration from "../components/home/ActivitiesSection";
+import ResortSection from "../components/home/About3SectionHome";
+import ResortSectionFirst from "../components/home/About2SectionHome";
 const HomePage = () => {
   return (
     <>
@@ -20,12 +20,11 @@ const HomePage = () => {
 
       <Hero />
       <AboutSectionHome />
-      <SolarEnergySection />
+      <ResortSectionFirst />
       <BudgetDesignSection />
-      <ActivitiesSection />
-
+      <ActivitiesIntegration />
       <GallerySection />
-      <TestimonialsSection />
+      <ResortSection />
       <CTASection />
     </>
   );

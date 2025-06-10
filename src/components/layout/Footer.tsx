@@ -163,7 +163,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t  border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-12 pt-8 border-t  border-gray-300/30 flex flex-col md:flex-row justify-between items-center">
           <div className=" text-gray-400 text-sm mb-4 md:mb-0">
             © {currentYear} Wilderest Goa. All rights reserved.
           </div>
