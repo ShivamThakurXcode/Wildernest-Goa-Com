@@ -3,10 +3,12 @@ import {
   MapPin,
   Phone,
   Mail,
-  Instagram,
-  Facebook,
-  Twitter,
   Leaf,
+  CreditCard,
+  Wallet,
+  Smartphone,
+  QrCode,
+  Banknote,
 } from "lucide-react";
 
 const Footer = () => {
@@ -30,28 +32,25 @@ const Footer = () => {
               A sustainable luxury retreat nestled in Goa's pristine nature,
               where eco-conscious design meets unparalleled comfort.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://instagram.com"
-                className="p-2 rounded-full  bg-gray-800 shadow-sm hover:shadow-md transition-all  hover:bg-gray-700  text-gray-300 hover:text-emerald-600"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="https://facebook.com"
-                className="p-2 rounded-full  bg-gray-800 shadow-sm hover:shadow-md transition-all  hover:bg-gray-700  text-gray-300 hover:text-emerald-600"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="https://twitter.com"
-                className="p-2 rounded-full  bg-gray-800 shadow-sm hover:shadow-md transition-all  hover:bg-gray-700  text-gray-300 hover:text-emerald-600"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
+            <div className="space-y-2">
+              <p className="text-md  text-gray-400">Online Payment Accepted</p>
+              <div className="flex flex-wrap gap-3">
+                <div className="p-2 rounded-full bg-white/10 text-gray-300 hover:text-emerald-400 transition-colors">
+                  <CreditCard className="h-6 w-6" />
+                </div>
+                <div className="p-2 rounded-full bg-white/10 text-gray-300 hover:text-emerald-400 transition-colors">
+                  <Wallet className="h-6 w-6" />
+                </div>
+                <div className="p-2 rounded-full bg-white/10 text-gray-300 hover:text-emerald-400 transition-colors">
+                  <Smartphone className="h-6 w-6" />
+                </div>
+                <div className="p-2 rounded-full bg-white/10 text-gray-300 hover:text-emerald-400 transition-colors">
+                  <QrCode className="h-6 w-6" />
+                </div>
+                <div className="p-2 rounded-full bg-white/10 text-gray-300 hover:text-emerald-400 transition-colors">
+                  <Banknote className="h-6 w-6" />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -68,7 +67,6 @@ const Footer = () => {
                 { name: "Accommodation", path: "/accommodation" },
                 { name: "Activities", path: "/activities" },
                 { name: "Gallery", path: "/gallery" },
-                { name: "Contact", path: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -91,11 +89,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {[
+                { name: "Contact", path: "/contact" },
                 { name: "Terms & Conditions", path: "/terms" },
                 { name: "Privacy Policy", path: "/privacy" },
                 { name: "Cancellation Policy", path: "/cancellation" },
-                { name: "Sustainability", path: "/sustainability" },
-                { name: "Careers", path: "/careers" },
                 { name: "FAQs", path: "/faqs" },
               ].map((link) => (
                 <li key={link.name}>
@@ -169,16 +166,16 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-6">
             <Link
-              to="/sustainability"
+              to="/privacy"
               className="text-sm  text-emerald-400 hover:underline"
             >
-              Sustainability Commitment
+              Privacy Policy
             </Link>
             <Link
-              to="/blog"
+              to="/cancellation"
               className="text-sm  text-emerald-400 hover:underline"
             >
-              Our Blog
+              Cancellation Policy
             </Link>
           </div>
         </div>

@@ -54,28 +54,16 @@ const AboutSectionHome = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left Card - Resort Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden h-96 md:h-auto shadow-lg"
-          >
+          <div className="relative rounded-2xl overflow-hidden h-96 md:h-auto shadow-lg">
             <img
               src={resortImage}
               alt="Wilderest Resort Goa beachfront view"
               className="w-full h-full object-cover"
             />
-          </motion.div>
+          </div>
 
           {/* Middle Card - Luxury Accommodation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all border border-gray-100/50 dark:border-gray-700/50"
-          >
+          <div className="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all border border-gray-100/50 dark:border-gray-700/50">
             <div className="w-16 h-16 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center mb-6">
               <Umbrella className="w-8 h-8 text-amber-600 dark:text-amber-400" />
             </div>
@@ -88,16 +76,10 @@ const AboutSectionHome = () => {
               breathtaking ocean views. Wake up to the sound of waves and enjoy
               bespoke services tailored to your every need.
             </p>
-          </motion.div>
+          </div>
 
           {/* Right Card - Sustainable Tourism */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all border border-gray-100/50 dark:border-gray-700/50"
-          >
+          <div className="bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all border border-gray-100/50 dark:border-gray-700/50">
             <div className="w-16 h-16 rounded-full bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center mb-6">
               <Palmtree className="w-8 h-8 text-teal-600 dark:text-teal-400" />
             </div>
@@ -110,7 +92,7 @@ const AboutSectionHome = () => {
               Our organic spa uses indigenous ingredients, and our restaurants
               serve farm-to-table cuisine with ingredients from our own gardens.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
