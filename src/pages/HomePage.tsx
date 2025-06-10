@@ -22,8 +22,8 @@ const HomePage = () => {
       <AboutSectionHome />
       <ResortSectionFirst />
       <BudgetDesignSection />
-      <ActivitiesIntegration />
       <GallerySection />
+      <ActivitiesIntegration />
       <ResortSection />
       <CTASection />
     </>
