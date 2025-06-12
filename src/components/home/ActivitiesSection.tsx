@@ -1,6 +1,6 @@
 const ActivitiesIntegration = () => {
   return (
-    <section className="py-2 bg-cover bg-center bg-[url('./hero-dark.svg')]  bg-gray-200 w-[90%] mx-auto rounded-4xl shadow-lg">
+    <section className="py-2 bg-cover bg-center bg-[url('./public/hero-dark.svg')]  bg-gray-200 w-[90%] mx-auto rounded-4xl shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="hidden md:block">
