@@ -3,10 +3,14 @@ import Hero from "../components/home/Hero";
 import GallerySection from "../components/home/GallerySection";
 import CTASection from "../components/home/CTASection";
 import AboutSectionHome from "../components/home/AboutSectionHome";
-import BudgetDesignSection from "../components/home/AccommodationSection";
 import ActivitiesIntegration from "../components/home/ActivitiesSection";
 import ResortSection from "../components/home/About3SectionHome";
 import ResortSectionFirst from "../components/home/About2SectionHome";
+import ResortHighlights from "../components/home/ResortHighlights";
+import AdventureIdeasSection from "../components/home/AdventureIdeasSection";
+import JourneyTimeline from "../components/home/TimeLine";
+import AccommodationSection from "../components/home/AccommodationSection";
+import FeatureSection from "../components/home/FeaturesSection";
 const HomePage = () => {
   return (
     <>
@@ -19,13 +23,13 @@ const HomePage = () => {
       </Helmet>
 
       <Hero />
-      <AboutSectionHome />
+      <ResortHighlights />
+      <AdventureIdeasSection />
       <ResortSectionFirst />
-      <BudgetDesignSection />
-      <GallerySection />
-      <ActivitiesIntegration />
+      <JourneyTimeline />
+      <AccommodationSection />
+      <FeatureSection />
       <ResortSection />
-      <CTASection />
     </>
   );
 };

@@ -17,7 +17,7 @@ const ActivitiesIntegration = () => {
           </div>
 
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-4xl md:text-4xl font-bold text-gray-200 mb-4">
+            <h2 className="text-4xl md:text-4xl font-bold text-white mb-4">
               Connect with 50+ Activities in Goa
             </h2>
             <p className="text-lg text-gray-400">

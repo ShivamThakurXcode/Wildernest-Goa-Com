@@ -54,10 +54,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] sm:w-[90%] max-w-7xl ${
+        className={`fixed  left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[100%]   ${
           isScrolled
-            ? "bg-white backdrop-blur-lg shadow-xl rounded-2xl py-2 border border-gray-200"
-            : "bg-primary-900/25 backdrop-blur-lg rounded-2xl py-2 border border-gray-200/20"
+            ? "bg-white backdrop-blur-lg shadow-xl  py-2 border border-gray-200"
+            : "bg-primary-900/25 backdrop-blur-md  py-2 border border-gray-200/5"
         }`}
       >
         <div className="w-full mx-auto flex items-center justify-between px-4 sm:px-6">
@@ -224,7 +224,7 @@ const Header = () => {
               to="/book"
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-sm hover:shadow-md ${
                 isScrolled
-                  ? "bg-blue-600 hover:bg-blue-700 text-white"
+                  ? "bg-orange-500 hover:bg-orange-700 text-white"
                   : "bg-white text-gray-900 hover:bg-gray-100"
               }`}
             >
@@ -433,7 +433,7 @@ const Header = () => {
                 <div className="mt-4 space-y-3">
                   <Link
                     to="/book"
-                    className="block py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
+                    className="block py-3 px-4 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     <Calendar size={20} />

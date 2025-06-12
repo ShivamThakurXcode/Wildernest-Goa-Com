@@ -1,93 +1,108 @@
-import { ArrowRight, Leaf, Palmtree } from "lucide-react";
+import { ArrowRight, Leaf, Palmtree, Star, Waves } from "lucide-react";
 
 const ResortSectionFirst = () => {
   const resortImage = "./Home/3.jpg";
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Column - Text Section */}
+    <section className="relative py-20 px-4 sm:px-6 bg-cover bg-center bg-[url('./cta-bg.svg')] bg-no-repeat">
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
-          <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
-            <p className="text-sm font-medium text-emerald-600 mb-2">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {/* Left Column - Text Section */}
+          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500">
+            <p className="text-sm font-medium text-amber-400 mb-3 uppercase tracking-wider">
               Luxury Meets Nature
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Unforgettable Experiences at Wilderest Goa
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
+              Unforgettable Experiences <br /> at{" "}
+              <span className="text-amber-400">Wilderest Goa</span>
             </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Nestled along Goa's pristine coastline, Wilderest Resort offers a
-              perfect blend of luxury and nature, where you can unwind amidst
-              palm trees and golden sands while enjoying world-class amenities.
-            </p>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Our eco-friendly resort is committed to sustainable tourism while
-              providing you with the ultimate in comfort and relaxation.
-            </p>
 
-            <ul className="space-y-4 mb-8">
+            <div className="space-y-6 mb-10">
+              <p className="text-gray-200 text-lg leading-relaxed">
+                Nestled along Goa's pristine coastline, Wilderest Resort offers
+                a perfect blend of luxury and nature, where you can unwind
+                amidst palm trees and golden sands.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Our eco-friendly resort is committed to sustainable tourism
+                while providing world-class amenities and unparalleled comfort.
+              </p>
+            </div>
+
+            <ul className="space-y-5 mb-10">
               <li className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <Palmtree className="w-4 h-4 text-emerald-600" />
+                <div className="flex-shrink-0 mt-1 mr-4">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center">
+                    <Palmtree className="w-5 h-5 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-gray-700">
+                <p className="text-gray-100 text-lg">
                   Private beach access with exclusive cabanas and sunset views
                 </p>
               </li>
               <li className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <Leaf className="w-4 h-4 text-emerald-600" />
+                <div className="flex-shrink-0 mt-1 mr-4">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center">
+                    <Leaf className="w-5 h-5 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-gray-700">
-                  Eco-conscious resort with sustainable practices and green
-                  spaces
+                <p className="text-gray-100 text-lg">
+                  Eco-conscious resort with sustainable practices
                 </p>
               </li>
               <li className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <Leaf className="w-4 h-4 text-emerald-600" />
+                <div className="flex-shrink-0 mt-1 mr-4">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center">
+                    <Waves className="w-5 h-5 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-gray-700">
-                  Award-winning spa with organic treatments and yoga pavilion
+                <p className="text-gray-100 text-lg">
+                  Award-winning spa with organic treatments
                 </p>
               </li>
             </ul>
 
-            <button className="flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md">
-              Book Your Stay
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
+                Book Your Stay
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="flex items-center justify-center gap-3 bg-transparent border-2 border-white/20 hover:border-amber-400 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300">
+                Explore Villas
+              </button>
+            </div>
           </div>
 
           {/* Right Column - Image Section */}
-          <div className="relative rounded-2xl overflow-hidden h-96 lg:h-auto shadow-sm">
+          <div className="relative rounded-3xl overflow-hidden h-[500px] lg:h-auto shadow-2xl">
             <img
               src={resortImage}
               alt="Luxury resort in Goa with palm trees and pool"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
             />
-            <div className="absolute flex items-center justify-center bottom-4 right-4 bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 max-w-xs">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <Palmtree className="w-5 h-5  text-emerald-400" />
+
+            {/* Rating badge */}
+            <div className="absolute bottom-6 right-6 bg-gradient-to-br from-amber-500 to-amber-600 p-4 rounded-xl shadow-2xl">
+              <div className="flex items-center gap-2">
+                <div className="p-2 rounded-full bg-white/20">
+                  <Star className="w-5 h-5 text-white fill-white" />
                 </div>
-                <p className="text-white font-medium">
-                  Goa's premier eco-luxury destination
-                </p>
-              </div>
-              <div className="p-3 rounded-full border-2 border-emerald-500 mb-3 flex items-center justify-center ml-auto">
-                <div className="text-center">
-                  <p className="text-xl font-bold text-white">5★</p>
-                  <p className="text-xs text-emerald-200">RATING</p>
+                <div className="text-white">
+                  <p className="text-xl font-bold">5.0</p>
+                  <p className="text-xs font-light opacity-80">Guest Rating</p>
                 </div>
               </div>
+            </div>
+
+            {/* Location tag */}
+            <div className="absolute top-6 left-6 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-full">
+              <p className="text-white flex items-center gap-2">
+                <Palmtree className="w-4 h-4 text-amber-400" />
+                <span>Goa, India</span>
+              </p>
             </div>
           </div>
         </div>
