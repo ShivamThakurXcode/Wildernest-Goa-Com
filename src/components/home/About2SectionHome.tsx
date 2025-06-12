@@ -4,7 +4,12 @@ const ResortSectionFirst = () => {
   const resortImage = "./Home/3.jpg";
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 bg-cover bg-center bg-[url('./public/cta-bg.svg')] bg-no-repeat">
+    <section
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('./cta-bg.svg')`,
+      }}
+      className="relative py-20 px-4 sm:px-6 bg-cover bg-center  bg-no-repeat"
+    >
       {/* Dark overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/40"></div>
 
