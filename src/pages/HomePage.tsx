@@ -1,9 +1,5 @@
 import { Helmet } from "react-helmet";
 import Hero from "../components/home/Hero";
-import GallerySection from "../components/home/GallerySection";
-import CTASection from "../components/home/CTASection";
-import AboutSectionHome from "../components/home/AboutSectionHome";
-import ActivitiesIntegration from "../components/home/ActivitiesSection";
 import ResortSection from "../components/home/About3SectionHome";
 import ResortSectionFirst from "../components/home/About2SectionHome";
 import ResortHighlights from "../components/home/ResortHighlights";
