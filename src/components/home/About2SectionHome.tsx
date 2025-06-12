@@ -4,14 +4,9 @@ const ResortSectionFirst = () => {
   const resortImage = "./Home/3.jpg";
 
   return (
-    <section
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('./footer-bg.svg')`,
-      }}
-      className="relative py-20 px-4 sm:px-6 bg-cover bg-center   bg-no-repeat"
-    >
+    <section className="relative py-20 px-4 sm:px-6  bg-cover bg-center bg-[url('./cta-bg.svg')]">
       {/* Dark overlay for better text contrast */}
-      <div className="absolute inset-0 "></div>
+      <div className="absolute inset-0 bg-black/30 "></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -20,18 +15,18 @@ const ResortSectionFirst = () => {
             <p className="text-sm font-medium text-amber-400 mb-3 uppercase tracking-wider">
               Luxury Meets Nature
             </p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-4xl sm:text-4xl font-bold text-white mb-8 leading-tight">
               Unforgettable Experiences <br /> at{" "}
               <span className="text-amber-400">Wilderest Goa</span>
             </h2>
 
             <div className="space-y-6 mb-10">
-              <p className="text-gray-200 text-lg leading-relaxed">
+              <p className="text-gray-100  leading-relaxed">
                 Nestled along Goa's pristine coastline, Wilderest Resort offers
                 a perfect blend of luxury and nature, where you can unwind
                 amidst palm trees and golden sands.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-100 leading-relaxed">
                 Our eco-friendly resort is committed to sustainable tourism
                 while providing world-class amenities and unparalleled comfort.
               </p>
@@ -44,7 +39,7 @@ const ResortSectionFirst = () => {
                     <Palmtree className="w-5 h-5 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-gray-100 text-lg">
+                <p className="text-gray-200 text-lg">
                   Private beach access with exclusive cabanas and sunset views
                 </p>
               </li>
@@ -54,7 +49,7 @@ const ResortSectionFirst = () => {
                     <Leaf className="w-5 h-5 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-gray-100 text-lg">
+                <p className="text-gray-200 text-lg">
                   Eco-conscious resort with sustainable practices
                 </p>
               </li>
@@ -64,18 +59,18 @@ const ResortSectionFirst = () => {
                     <Waves className="w-5 h-5 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-gray-100 text-lg">
+                <p className="text-gray-200 text-lg">
                   Award-winning spa with organic treatments
                 </p>
               </li>
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button className="flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
                 Book Your Stay
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="flex items-center justify-center gap-3 bg-transparent border-2 border-white/20 hover:border-amber-400 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300">
+              <button className="flex items-center justify-center gap-3 bg-transparent border-2 border-white/20 hover:border-amber-400 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300">
                 Explore Villas
               </button>
             </div>
