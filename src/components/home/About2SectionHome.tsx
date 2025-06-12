@@ -6,7 +6,7 @@ const ResortSectionFirst = () => {
   return (
     <section
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('./cta-bg.svg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('./public/cta-bg.svg')`,
       }}
       className="relative py-20 px-4 sm:px-6 bg-cover bg-center  bg-no-repeat"
     >
