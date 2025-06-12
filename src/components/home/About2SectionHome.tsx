@@ -11,7 +11,7 @@ const ResortSectionFirst = () => {
       className="relative py-20 px-4 sm:px-6 bg-cover bg-center bg-[url('./public/cta-bg.svg')]  bg-no-repeat"
     >
       {/* Dark overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 "></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
