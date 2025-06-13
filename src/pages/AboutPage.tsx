@@ -39,7 +39,7 @@ const AboutPage = () => {
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./cta-bg.svg')`,
         }}
-        className="relative pt-40 pb-32 bg-cover bg-center"
+        className="relative pt-40 pb-32 bg-cover bg-center bg-[url('./cta-bg.svg')] "
       >
         <div className="container mx-auto px-4 text-center">
           <motion.div
