@@ -15,7 +15,7 @@ const accommodationPackages = [
     price: "₹24,999/night",
     image: "./Home/5.jpg",
     highlight: "Private waterfall access",
-    favorite: false,
+    favorite: true,
   },
   {
     title: "Forest View Cottage",
@@ -31,7 +31,7 @@ const accommodationPackages = [
     price: "₹16,999/night",
     image: "./Home/7.jpg",
     highlight: "Sunrise valley vistas",
-    favorite: false,
+    favorite: true,
   },
   {
     title: "Waterfall View Suite",
@@ -42,12 +42,12 @@ const accommodationPackages = [
     favorite: true,
   },
   {
-    title: "Executive Valley Villa",
+    title: "Extra Valley Villa",
     type: "Family Premium",
-    price: "₹34,999/night",
+    price: "₹12345/night",
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
-    highlight: "Exclusive valley privacy",
-    favorite: false,
+    highlight: "lorem ipsum dolor sit ",
+    favorite: true,
   },
 ];
 

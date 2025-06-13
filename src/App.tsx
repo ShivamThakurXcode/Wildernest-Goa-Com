@@ -43,7 +43,7 @@ function App() {
           element={<MainLayout toggleTheme={toggleTheme} theme={theme} />}
         >
           <Route index element={<HomePage />} />
-          {/* <Route path="about" element={<AboutPage />} /> */}
+          <Route path="about" element={<AboutPage />} />
           {/* <Route path="accommodation" element={<AccommodationPage />} /> */}
           <Route path="how-to-reach" element={<HowToReachPage />} />
           <Route path="book" element={<BookPage />} />

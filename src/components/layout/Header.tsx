@@ -12,6 +12,7 @@ import {
   Phone,
   Contact,
   Calendar,
+  Mail,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -53,26 +54,60 @@ const Header = () => {
 
   return (
     <>
+      {/* Top Contact Ribbon */}
+
       <header
-        className={`fixed  left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[100%]   ${
+        className={`fixed top-0 pt-0 mx-auto   z-50 transition-all duration-300 w-screen ${
           isScrolled
-            ? "bg-white backdrop-blur-lg shadow-xl  py-2 border border-gray-200"
-            : "bg-primary-900/25 backdrop-blur-md  py-2 border border-gray-200/5"
+            ? "bg-white backdrop-blur-lg shadow-xl py-2   border-gray-200"
+            : "bg-primary-900/25 backdrop-blur-md py-2   border-gray-200/5"
         }`}
       >
-        <div className="w-full mx-auto flex items-center justify-between px-4 sm:px-6">
+        <div
+          className={`w-full  mb-2 mt-0 z-50 top-0 left-0 border-b transition-all duration-300  border-yellow-500/30 text-white text-sm py-1 px-4 sm:px-6 flex justify-end items-center
+            ${
+              isScrolled
+                ? "bg-gradient-to-l from-green-950 to-[#3e3500] backdrop-blur-lg  py-2 shadow-xl "
+                : "bg-primary-900/25 backdrop-blur-md py-2  "
+            }
+            
+            `}
+        >
+          <div className="flex items-center px-5 space-x-4">
+            <a
+              href="tel:+919876543210"
+              className="flex items-center hover:text-primary-200"
+            >
+              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1 ">
+                <Phone size={14} className="   text-white" />
+              </div>
+              <span>+91 98765 43210</span>
+            </a>
+            <a
+              href="mailto:info@wilderestgoa.com"
+              className="flex items-center hover:text-primary-200"
+            >
+              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1 ">
+                <Mail size={14} className="   text-white" />
+              </div>
+              <span>info@wilderestgoa.com</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="w-full  mx-auto flex items-center justify-between px-10 sm:px-8">
           <Link to="/" className="flex items-center gap-2 sm:gap-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-sm">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center shadow-sm">
               <span className="text-white font-bold text-base sm:text-lg">
                 W
               </span>
             </div>
             <h1
-              className={`text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent ${
+              className={`text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent ${
                 isScrolled ? "" : "text-white"
               }`}
             >
-              Wilderest Goa
+              Logo..
             </h1>
           </Link>
 
@@ -83,10 +118,10 @@ const Header = () => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-medium bg-primary-50/10"
                     : `${
                         isScrolled
-                          ? "text-gray-700 hover:text-primary-500"
+                          ? "text-gray-700 hover:text-orange-500"
                           : "text-white hover:text-primary-300"
                       }`
                 }`
@@ -104,7 +139,7 @@ const Header = () => {
                     ? "text-primary-600 font-medium bg-primary-50/50"
                     : `${
                         isScrolled
-                          ? "text-gray-700 hover:text-primary-500"
+                          ? "text-gray-700 hover:text-orange-500"
                           : "text-white hover:text-primary-300"
                       }`
                 }`}
@@ -156,10 +191,10 @@ const Header = () => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-medium bg-primary-50/10"
                     : `${
                         isScrolled
-                          ? "text-gray-700 hover:text-primary-500"
+                          ? "text-gray-700 hover:text-orange-500"
                           : "text-white hover:text-primary-300"
                       }`
                 }`
@@ -173,10 +208,10 @@ const Header = () => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-medium bg-primary-50/10"
                     : `${
                         isScrolled
-                          ? "text-gray-700 hover:text-primary-500"
+                          ? "text-gray-700 hover:text-orange-500"
                           : "text-white hover:text-primary-300"
                       }`
                 }`
@@ -189,10 +224,10 @@ const Header = () => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-medium bg-primary-50/10"
                     : `${
                         isScrolled
-                          ? "text-gray-700 hover:text-primary-500"
+                          ? "text-gray-700 hover:text-orange-500"
                           : "text-white hover:text-primary-300"
                       }`
                 }`
@@ -205,10 +240,10 @@ const Header = () => {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm transition-colors ${
                   isActive
-                    ? "text-primary-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-medium bg-primary-50/10"
                     : `${
                         isScrolled
-                          ? "text-gray-700 hover:text-primary-500"
+                          ? "text-gray-700 hover:text-orange-500"
                           : "text-white hover:text-primary-300"
                       }`
                 }`
@@ -224,7 +259,7 @@ const Header = () => {
               to="/book"
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-sm hover:shadow-md ${
                 isScrolled
-                  ? "bg-orange-500 hover:bg-orange-700 text-white"
+                  ? "bg-gradient-to-tr from-orange-500 to-yellow-400  hover:bg-orange-700 text-white"
                   : "bg-white text-gray-900 hover:bg-gray-100"
               }`}
             >
@@ -255,7 +290,7 @@ const Header = () => {
           <>
             {/* Overlay */}
             <motion.div
-              className="absolute h-screen w-screen top-0 left-0 inset-0 bg-black z-40"
+              className="fixed h-screen w-screen top-0 left-0 inset-0 bg-black z-40"
               initial="closed"
               animate="open"
               exit="closed"
@@ -266,7 +301,7 @@ const Header = () => {
 
             {/* Sidebar */}
             <motion.div
-              className="absolute top-0 right-0 h-screen w-80 bg-white z-50 shadow-2xl rounded-l-3xl"
+              className="fixed top-0 right-0 h-screen w-80 bg-white z-50 shadow-2xl rounded-l-3xl"
               initial="closed"
               animate="open"
               exit="closed"
