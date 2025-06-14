@@ -50,7 +50,7 @@ const Hero = () => {
         >
           <h1 className="text-white font-display mb-6">
             Experience Nature's Luxury in{" "}
-            <span className="text-gradient bg-gradient-primary">Goa</span>
+            <span className="text-gradient">Goa</span>
           </h1>
           <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
             Discover Wilderest, where modern luxury meets untouched nature. Our
@@ -59,7 +59,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button as={Link} to="/book" size="lg" className="w-full sm:w-auto">
+            <Button
+              as={Link}
+              to="/book"
+              size="lg"
+              className="w-full sm:w-auto   bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white shadow-lg hover:shadow-xl transition-all"
+            >
               Book Your Stay
             </Button>
             <Button

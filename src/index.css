@@ -6,27 +6,32 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply font-sans text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display font-bold;
   }
-  
+
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl leading-tight;
   }
-  
+
   h2 {
     @apply text-3xl sm:text-4xl md:text-5xl leading-tight;
   }
-  
+
   h3 {
     @apply text-2xl sm:text-3xl leading-snug;
   }
-  
+
   p {
     @apply leading-relaxed;
   }
@@ -82,7 +87,7 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-primary;
+  @apply bg-clip-text text-transparent bg-gradient-to-tl from-orange-400 to-yellow-400;
 }
 
 .animate-on-scroll {
