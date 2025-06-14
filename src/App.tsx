@@ -7,6 +7,8 @@ import MainLayout from "./layouts/MainLayout";
 
 // Pages
 import HomePage from "./pages/HomePage";
+import GalleryPage from "./pages/GalleryPage";
+import ActivityPage from "./pages/ActivitiesPage";
 import AboutPage from "./pages/AboutPage";
 import AccommodationPage from "./pages/AccommodationPage";
 import HowToReachPage from "./pages/HowToReachPage";
@@ -44,13 +46,15 @@ function App() {
         >
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
-          {/* <Route path="accommodation" element={<AccommodationPage />} /> */}
+          <Route path="gallery" element={<GalleryPage />} />
+          <Route path="accommodation" element={<AccommodationPage />} />
+          <Route path="activities" element={<ActivityPage />} />
           <Route path="how-to-reach" element={<HowToReachPage />} />
           <Route path="book" element={<BookPage />} />
           <Route path="contact" element={<ContactPage />} />
-          {/* <Route path="terms" element={<TermsPage />} /> */}
-          {/* <Route path="privacy" element={<PrivacyPage />} /> */}
-          {/* <Route path="cancellation" element={<CancellationPage />} /> */}
+          <Route path="terms" element={<TermsPage />} />
+          <Route path="privacy" element={<PrivacyPage />} />
+          <Route path="cancellation" element={<CancellationPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

@@ -136,11 +136,11 @@ const Header = () => {
                 onClick={() => setIsAccommodationOpen(!isAccommodationOpen)}
                 className={`px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-1 ${
                   location.pathname.startsWith("/accommodation")
-                    ? "text-primary-600 font-medium bg-primary-50/50"
+                    ? "text-orange-600 font-medium bg-primary-50/10"
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
-                          : "text-white hover:text-primary-300"
+                          : "text-white hover:text-orange-500"
                       }`
                 }`}
               >
@@ -162,21 +162,21 @@ const Header = () => {
                   className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-50 border border-gray-200"
                 >
                   <Link
-                    to="/accommodation/room1"
+                    to="/accommodation"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Room 1
                   </Link>
                   <Link
-                    to="/accommodation/room2"
+                    to="/accommodation"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Room 2
                   </Link>
                   <Link
-                    to="/accommodation/room3"
+                    to="/accommodation"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
@@ -259,11 +259,11 @@ const Header = () => {
               to="/book"
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-sm hover:shadow-md ${
                 isScrolled
-                  ? "bg-gradient-to-tr from-orange-500 to-yellow-400  hover:bg-orange-700 text-white"
+                  ? "bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white"
                   : "bg-white text-gray-900 hover:bg-gray-100"
               }`}
             >
-              Book Now
+              Plan Your Trip
             </Link>
           </div>
 
