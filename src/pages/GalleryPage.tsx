@@ -112,7 +112,7 @@ const GalleryPage = () => {
       {/* Hero Section */}
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/cta-bg.svg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/cta-bg.svg')`,
         }}
         className="relative pt-40 pb-32 bg-cover bg-center"
       >

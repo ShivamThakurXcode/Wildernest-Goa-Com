@@ -236,53 +236,6 @@ const AboutPage = () => {
       {/* New Section 2 - Text Left / Image Right */}
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-xl text-black dark:text-white font-handwriting mb-2">
-              Culinary Philosophy
-            </h3>
-            <h2 className="text-4xl font-bold text-black dark:text-white mb-6">
-              Farm-to-Table Dining Experience
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Our culinary team creates unforgettable dining experiences using
-              ingredients sourced from our organic garden and local farmers. We
-              celebrate Goan flavors while adding contemporary twists to
-              traditional recipes.
-            </p>
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div>
-                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
-                  100%
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Organic produce
-                </p>
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
-                  30+
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Local suppliers
-                </p>
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
-                  0
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300">Food waste</p>
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
-                  5
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300">
-                  On-site gardens
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
               src="./Home/hero.png"
@@ -291,33 +244,73 @@ const AboutPage = () => {
               loading="lazy"
             />
           </div>
+          <div>
+            <h3 className="text-xl text-black dark:text-white font-handwriting mb-2">
+              Our Culinary Journey
+            </h3>
+            <h2 className="text-4xl font-bold text-black dark:text-white mb-6">
+              Savoring the Flavors of Goa
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              At Wilderest Resort Goa, our culinary team is dedicated to
+              crafting unforgettable dining experiences that showcase the rich
+              flavors of Goa. We source ingredients from our organic gardens and
+              partner with local farmers to bring you the freshest, most
+              authentic Goan cuisine.
+            </p>
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              <div>
+                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
+                  100%
+                </h4>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Organic produce from our gardens
+                </p>
+              </div>
+              <div>
+                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
+                  30+
+                </h4>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Local farmers and suppliers
+                </p>
+              </div>
+              <div>
+                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
+                  0
+                </h4>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Food waste reduction
+                </p>
+              </div>
+              <div>
+                <h4 className="text-2xl font-bold text-orange-400 dark:text-orange-400 mb-2">
+                  5
+                </h4>
+                <p className="text-gray-600 dark:text-gray-300">
+                  On-site gardens and orchards
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
       {/* New Section 3 - Image Left / Text Right */}
       <Section className="bg-gray-50 dark:bg-gray-800/30">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-2xl overflow-hidden shadow-xl">
-            <img
-              src="./Home/hero.png"
-              alt="Guests enjoying spa treatment at Wilderest"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-
           <div>
             <h3 className="text-xl text-black dark:text-white font-handwriting mb-2">
-              Wellness & Rejuvenation
+              Embracing Nature's Harmony
             </h3>
             <h2 className="text-4xl font-bold text-black dark:text-white mb-6">
-              Holistic Healing Experiences
+              Wilderest Goa Resort and Nature
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Our award-winning spa combines ancient Ayurvedic traditions with
-              modern wellness techniques. All treatments use organic products
-              made from locally-sourced ingredients, providing authentic healing
-              experiences.
+              Nestled in the heart of Goa, Wilderest Resort and Nature Camp is a
+              tranquil oasis that embodies the essence of eco-tourism. Our
+              resort seamlessly blends luxury with nature, offering an immersive
+              experience that rejuvenates the mind, body, and spirit.
             </p>
             <div className="mb-8">
               <div className="flex items-center mb-4">
@@ -338,10 +331,10 @@ const AboutPage = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-gray-800 dark:text-white">
-                    Ayurvedic Treatments
+                    Eco-Friendly Practices
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Personalized by certified practitioners
+                    Committed to reducing our carbon footprint
                   </p>
                 </div>
               </div>
@@ -363,10 +356,10 @@ const AboutPage = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-gray-800 dark:text-white">
-                    Yoga & Meditation
+                    Sustainable Tourism
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Daily sessions with ocean views
+                    Supporting local communities and conservation efforts
                   </p>
                 </div>
               </div>
@@ -388,14 +381,22 @@ const AboutPage = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-gray-800 dark:text-white">
-                    Detox Programs
+                    Nature Immersion
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Tailored 3-7 day wellness journeys
+                    Explore Goa's natural wonders with guided excursions
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src="./Home/hero.png"
+              alt="Guests enjoying spa treatment at Wilderest"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </Section>

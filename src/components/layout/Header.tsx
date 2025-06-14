@@ -122,7 +122,7 @@ const Header = () => {
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
-                          : "text-white hover:text-primary-300"
+                          : "text-white hover:text-orange-500"
                       }`
                 }`
               }
@@ -195,7 +195,7 @@ const Header = () => {
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
-                          : "text-white hover:text-primary-300"
+                          : "text-white hover:text-orange-500"
                       }`
                 }`
               }
@@ -212,7 +212,7 @@ const Header = () => {
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
-                          : "text-white hover:text-primary-300"
+                          : "text-white hover:text-orange-500"
                       }`
                 }`
               }
@@ -228,7 +228,7 @@ const Header = () => {
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
-                          : "text-white hover:text-primary-300"
+                          : "text-white hover:text-orange-500"
                       }`
                 }`
               }
@@ -244,7 +244,7 @@ const Header = () => {
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
-                          : "text-white hover:text-primary-300"
+                          : "text-white hover:text-orange-500"
                       }`
                 }`
               }

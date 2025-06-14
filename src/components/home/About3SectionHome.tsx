@@ -16,17 +16,17 @@ const ResortSection = () => {
             />
             <div className="absolute flex items-center justify-center bottom-4 right-4 bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 max-w-xs">
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <Palmtree className="w-5 h-5  text-emerald-400" />
+                <div className="p-2 rounded-full bg-orange-500/20 flex items-center justify-center">
+                  <Palmtree className="w-5 h-5  text-orange-400" />
                 </div>
                 <p className="text-white font-medium">
                   Goa's premier eco-luxury destination
                 </p>
               </div>
-              <div className="p-3 rounded-full border-2 border-emerald-500 mb-3 flex items-center justify-center ml-auto">
+              <div className="p-3 rounded-full border-2 border-orange-500 mb-3 flex items-center justify-center ml-auto">
                 <div className="text-center">
                   <p className="text-xl font-bold text-white">5★</p>
-                  <p className="text-xs text-emerald-200">RATING</p>
+                  <p className="text-xs text-orange-200">RATING</p>
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@ const ResortSection = () => {
 
           {/* Right Column - Image Section */}
           <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
-            <p className="text-sm font-medium text-emerald-600 mb-2">
+            <p className="text-sm font-medium text-orange-600 mb-2">
               Luxury Meets Nature
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
@@ -53,8 +53,8 @@ const ResortSection = () => {
             <ul className="space-y-4 mb-8">
               <li className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <Palmtree className="w-4 h-4 text-emerald-600" />
+                  <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                    <Palmtree className="w-4 h-4 text-orange-600" />
                   </div>
                 </div>
                 <p className="text-gray-700">
@@ -63,8 +63,8 @@ const ResortSection = () => {
               </li>
               <li className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <Leaf className="w-4 h-4 text-emerald-600" />
+                  <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                    <Leaf className="w-4 h-4 text-orange-600" />
                   </div>
                 </div>
                 <p className="text-gray-700">
@@ -74,8 +74,8 @@ const ResortSection = () => {
               </li>
               <li className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <Leaf className="w-4 h-4 text-emerald-600" />
+                  <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                    <Leaf className="w-4 h-4 text-orange-600" />
                   </div>
                 </div>
                 <p className="text-gray-700">
