@@ -55,31 +55,27 @@ const Header = () => {
   return (
     <>
       {/* Top Contact Ribbon */}
-
       <header
-        className={`fixed top-0 pt-0 mx-auto   z-50 transition-all duration-300 w-screen ${
+        className={`fixed top-0 pt-0 mx-auto z-50 transition-all duration-300 w-screen font-sans ${
           isScrolled
-            ? "bg-white backdrop-blur-lg shadow-xl py-2   border-gray-200"
-            : "bg-primary-900/25 backdrop-blur-md py-2   border-gray-200/5"
+            ? "bg-white backdrop-blur-lg shadow-xl py-2 border-gray-200"
+            : "bg-primary-900/25 backdrop-blur-md py-2 border-gray-200/5"
         }`}
       >
         <div
-          className={`w-full  mb-2 mt-0 z-50 top-0 left-0 border-b transition-all duration-300  border-yellow-500/30 text-white text-sm py-1 px-4 sm:px-6 flex justify-end items-center
-            ${
-              isScrolled
-                ? "bg-gradient-to-l from-green-950 to-[#3e3500] backdrop-blur-lg  py-2 shadow-xl "
-                : "bg-primary-900/25 backdrop-blur-md py-2  "
-            }
-            
-            `}
+          className={`w-full mb-2 mt-0 z-50 top-0 left-0 border-b transition-all duration-300 border-yellow-500/30 text-white text-sm py-1 px-4 sm:px-6 flex justify-end items-center ${
+            isScrolled
+              ? "bg-gradient-to-l from-green-950 to-[#3e3500] backdrop-blur-lg py-2 shadow-xl"
+              : "bg-primary-900/25 backdrop-blur-md py-2"
+          }`}
         >
           <div className="flex items-center px-5 space-x-4">
             <a
               href="tel:+919876543210"
               className="flex items-center hover:text-primary-200"
             >
-              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1 ">
-                <Phone size={14} className="   text-white" />
+              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1">
+                <Phone size={14} className="text-white" />
               </div>
               <span>+91 98765 43210</span>
             </a>
@@ -87,15 +83,15 @@ const Header = () => {
               href="mailto:info@wilderestgoa.com"
               className="flex items-center hover:text-primary-200"
             >
-              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1 ">
-                <Mail size={14} className="   text-white" />
+              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1">
+                <Mail size={14} className="text-white" />
               </div>
               <span>info@wilderestgoa.com</span>
             </a>
           </div>
         </div>
 
-        <div className="w-full  mx-auto flex items-center justify-between px-10 sm:px-8">
+        <div className="w-full mx-auto flex items-center justify-between px-10 sm:px-8">
           <Link to="/" className="flex items-center gap-2 sm:gap-3">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center shadow-sm">
               <span className="text-white font-bold text-base sm:text-lg">
@@ -103,22 +99,22 @@ const Header = () => {
               </span>
             </div>
             <h1
-              className={`text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent ${
+              className={`text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent ${
                 isScrolled ? "" : "text-white"
               }`}
             >
-              Logo..
+              Wilderest
             </h1>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-2">
+          <nav className="hidden lg:flex  items-center font-semibold  uppercase space-x-3">
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `px-3 py-2 rounded-lg text-sm transition-colors ${
+                `px-4 py-2 rounded-lg text-base transition-colors ${
                   isActive
-                    ? "text-orange-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-semibold"
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
@@ -134,9 +130,9 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAccommodationOpen(!isAccommodationOpen)}
-                className={`px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-1 ${
+                className={`px-4 py-2 rounded-lg text-base transition-colors uppercase flex items-center gap-1 ${
                   location.pathname.startsWith("/accommodation")
-                    ? "text-orange-600 font-medium bg-primary-50/10"
+                    ? "text-orange-600 font-semibold"
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
@@ -146,7 +142,7 @@ const Header = () => {
               >
                 Accommodation
                 <ChevronDown
-                  size={14}
+                  size={16}
                   className={`transition-transform ${
                     isAccommodationOpen ? "rotate-180" : ""
                   }`}
@@ -159,28 +155,42 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-50 border border-gray-200"
+                  className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-200"
                 >
                   <Link
-                    to="/accommodation"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    to="/accommodation/forest-view"
+                    className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
-                    Room 1
+                    Forest View Cottage
                   </Link>
                   <Link
-                    to="/accommodation"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    to="/accommodation/valley-view"
+                    className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
-                    Room 2
+                    Valley View Cottage
                   </Link>
                   <Link
-                    to="/accommodation"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    to="/accommodation/family-valley"
+                    className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
-                    Room 3
+                    Family Valley View
+                  </Link>
+                  <Link
+                    to="/accommodation/plunge-pool"
+                    className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
+                    onClick={() => setIsAccommodationOpen(false)}
+                  >
+                    Private Plunge Pool
+                  </Link>
+                  <Link
+                    to="/accommodation/plunge-pool-ac"
+                    className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
+                    onClick={() => setIsAccommodationOpen(false)}
+                  >
+                    Private Plunge Pool (AC)
                   </Link>
                 </motion.div>
               )}
@@ -189,9 +199,9 @@ const Header = () => {
             <NavLink
               to="/activities"
               className={({ isActive }) =>
-                `px-3 py-2 rounded-lg text-sm transition-colors ${
+                `px-4 py-2 rounded-lg text-base transition-colors ${
                   isActive
-                    ? "text-orange-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-semibold"
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
@@ -206,9 +216,9 @@ const Header = () => {
             <NavLink
               to="/gallery"
               className={({ isActive }) =>
-                `px-3 py-2 rounded-lg text-sm transition-colors ${
+                `px-4 py-2 rounded-lg text-base transition-colors ${
                   isActive
-                    ? "text-orange-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-semibold"
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
@@ -217,14 +227,14 @@ const Header = () => {
                 }`
               }
             >
-              Photo Gallery
+              Gallery
             </NavLink>
             <NavLink
               to="/how-to-reach"
               className={({ isActive }) =>
-                `px-3 py-2 rounded-lg text-sm transition-colors ${
+                `px-4 py-2 rounded-lg text-base transition-colors ${
                   isActive
-                    ? "text-orange-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-semibold"
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
@@ -233,14 +243,14 @@ const Header = () => {
                 }`
               }
             >
-              How to Reach
+              Location
             </NavLink>
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `px-3 py-2 rounded-lg text-sm transition-colors ${
+                `px-4 py-2 rounded-lg text-base transition-colors ${
                   isActive
-                    ? "text-orange-500 font-medium bg-primary-50/10"
+                    ? "text-orange-500 font-semibold"
                     : `${
                         isScrolled
                           ? "text-gray-700 hover:text-orange-500"
@@ -254,16 +264,12 @@ const Header = () => {
           </nav>
 
           {/* Desktop Buttons */}
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-3">
             <Link
               to="/book"
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-sm hover:shadow-md ${
-                isScrolled
-                  ? "bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white"
-                  : "bg-white text-gray-900 hover:bg-gray-100"
-              }`}
+              className={`px-5 py-2.5 rounded-lg text-base font-semibold transition-all shadow-sm hover:shadow-md bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white`}
             >
-              Plan Your Trip
+              PLAN YOUR TRIP
             </Link>
           </div>
 
@@ -315,7 +321,7 @@ const Header = () => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 font-medium"
+                          ? "bg-amber-50 text-orange-600 font-semibold"
                           : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
@@ -329,7 +335,7 @@ const Header = () => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 font-medium"
+                          ? "bg-amber-50 text-orange-600 font-semibold"
                           : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
@@ -347,7 +353,7 @@ const Header = () => {
                       }
                       className={`w-full py-3 px-4 text-lg rounded-lg flex items-center justify-between ${
                         location.pathname.startsWith("/accommodation")
-                          ? "bg-primary-50 text-primary-600 font-medium"
+                          ? "bg-amber-50 text-orange-600 font-semibold"
                           : "text-gray-800 hover:bg-gray-100"
                       }`}
                     >
@@ -373,34 +379,54 @@ const Header = () => {
                           className="overflow-hidden pl-8 mt-2"
                         >
                           <Link
-                            to="/accommodation/room1"
-                            className="block py-2 px-4 text-base text-gray-700 hover:bg-gray-100 rounded-lg"
+                            to="/accommodation/forest-view"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
                               setIsSidebarOpen(false);
                             }}
                           >
-                            Room 1
+                            Forest View Cottage
                           </Link>
                           <Link
-                            to="/accommodation/room2"
-                            className="block py-2 px-4 text-base text-gray-700 hover:bg-gray-100 rounded-lg"
+                            to="/accommodation/valley-view"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
                               setIsSidebarOpen(false);
                             }}
                           >
-                            Room 2
+                            Valley View Cottage
                           </Link>
                           <Link
-                            to="/accommodation/room3"
-                            className="block py-2 px-4 text-base text-gray-700 hover:bg-gray-100 rounded-lg"
+                            to="/accommodation/family-valley"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
                               setIsSidebarOpen(false);
                             }}
                           >
-                            Room 3
+                            Family Valley View
+                          </Link>
+                          <Link
+                            to="/accommodation/plunge-pool"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
+                            onClick={() => {
+                              setIsAccommodationOpen(false);
+                              setIsSidebarOpen(false);
+                            }}
+                          >
+                            Private Plunge Pool
+                          </Link>
+                          <Link
+                            to="/accommodation/plunge-pool-ac"
+                            className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
+                            onClick={() => {
+                              setIsAccommodationOpen(false);
+                              setIsSidebarOpen(false);
+                            }}
+                          >
+                            Private Plunge Pool (AC)
                           </Link>
                         </motion.div>
                       )}
@@ -412,7 +438,7 @@ const Header = () => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 font-medium"
+                          ? "bg-amber-50 text-orange-600 font-semibold"
                           : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
@@ -426,35 +452,35 @@ const Header = () => {
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 font-medium"
+                          ? "bg-amber-50 text-orange-600 font-semibold"
                           : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     <Image size={20} />
-                    Photo Gallery
+                    Gallery
                   </NavLink>
                   <NavLink
                     to="/how-to-reach"
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 font-medium"
+                          ? "bg-amber-50 text-orange-600 font-semibold"
                           : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     <MapPin size={20} />
-                    How to Reach
+                    Location
                   </NavLink>
                   <NavLink
                     to="/contact"
                     className={({ isActive }) =>
                       `py-3 px-4 text-lg rounded-lg flex items-center gap-3 ${
                         isActive
-                          ? "bg-primary-50 text-primary-600 font-medium"
+                          ? "bg-amber-50 text-orange-600 font-semibold"
                           : "text-gray-800 hover:bg-gray-100"
                       }`
                     }
@@ -468,7 +494,7 @@ const Header = () => {
                 <div className="mt-4 space-y-3">
                   <Link
                     to="/book"
-                    className="block py-3 px-4 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
+                    className="block py-3 px-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white rounded-lg text-center font-semibold text-lg transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-3"
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     <Calendar size={20} />

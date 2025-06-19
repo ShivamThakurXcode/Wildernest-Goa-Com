@@ -62,21 +62,22 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-6  text-gray-100 relative inline-block">
-              Quick Links
+              Navigation
               <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full"></span>
             </h3>
             <ul className="space-y-3">
               {[
-                { name: "Home", path: "/" },
-                { name: "About", path: "/about" },
-                { name: "Accommodation", path: "/accommodation" },
+                { name: "About Wilderest", path: "/about" },
                 { name: "Activities", path: "/activities" },
-                { name: "Gallery", path: "/gallery" },
+                { name: "Photo Gallery", path: "/gallery" },
+                { name: "How To Reach", path: "/how-to-reach" },
+                { name: "Contact Us", path: "/contact" },
+                { name: "Plan Your Trip", path: "/book" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className=" text-gray-400  hover:text-orange-400 transition-colors flex items-center group"
+                    className=" text-gray-400 font-semibold  hover:text-orange-400 transition-colors flex items-center group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
@@ -86,26 +87,27 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Information */}
           <div>
             <h3 className="text-lg font-semibold mb-6  text-gray-100 relative inline-block">
-              Information
+              Accommodation
               <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full"></span>
             </h3>
             <ul className="space-y-3">
               {[
-                { name: "Contact", path: "/contact" },
-                { name: "Terms & Conditions", path: "/terms" },
-                { name: "Privacy Policy", path: "/privacy" },
+                { name: "Forest View Cottage", path: "/contact" },
+                { name: "Valley View Cottage", path: "/terms" },
+                { name: "Family Valley View", path: "/privacy" },
+                { name: "Private Plunge Pool", path: "/privacy" },
+                { name: "Private Plunge Pool - AC", path: "/privacy" },
                 { name: "Cancellation Policy", path: "/cancellation" },
-                { name: "FAQs", path: "/faqs" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className=" text-gray-400  hover:text-orange-400 transition-colors flex items-center group"
+                    className=" text-gray-400 font-semibold  hover:text-orange-400 transition-colors flex items-center group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1.5 h-1.5  rounded-full bg-orange-400 mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -169,7 +171,7 @@ const Footer = () => {
           <div className=" text-gray-400 text-sm mb-4 md:mb-0">
             © {currentYear} Wilderest Goa. All rights reserved.
           </div>
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center  space-x-6">
             <Link
               to="/privacy"
               className="text-sm  text-orange-400 hover:underline"
@@ -178,7 +180,7 @@ const Footer = () => {
             </Link>
             <Link
               to="/cancellation"
-              className="text-sm  text-orange-400 hover:underline"
+              className="text-sm   text-orange-400 hover:underline"
             >
               Cancellation Policy
             </Link>

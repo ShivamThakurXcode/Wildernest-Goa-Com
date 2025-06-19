@@ -10,34 +10,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('./Home/hero.png')`,
-        }}
-      />
-
-      {/* Floating Elements */}
-      <motion.div
-        className="absolute right-10 top-1/3 w-16 h-16 rounded-full bg-primary-500/30 blur-xl z-0"
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute left-1/4 bottom-1/3 w-20 h-20 rounded-full bg-secondary-500/20 blur-xl z-0"
-        animate={{ y: [0, 20, 0] }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      />
-      <motion.div
-        className="absolute right-1/4 top-2/3 w-24 h-24 rounded-full bg-accent-500/20 blur-xl z-0"
-        animate={{ y: [0, -15, 0] }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./Home/hero.png')`,
         }}
       />
 

@@ -74,9 +74,14 @@ const AccommodationPage = () => {
       </Helmet>
       {/* Hero Section */}
       <div className="relative">
-        <div className="h-screen max-h-[500px]  overflow-hidden">
+        <div
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/cta-bg.svg')`,
+          }}
+          className="h-screen max-h-[500px] bg-cover bg-center  overflow-hidden"
+        >
           <img
-            src="./public/cta-bg.svg"
+            src="/cta-bg.svg"
             alt={FamilyValleyView.name}
             className="w-full h-full object-cover"
           />
