@@ -75,10 +75,10 @@ const AccommodationPage = () => {
       {/* Hero Section */}
       <div className="relative">
         <div
+          className="h-screen max-h-[500px] bg-cover bg-center  overflow-hidden bg-[url('./public/cta-bg.svg')]"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/cta-bg.svg')`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./cta-bg.svg')`,
           }}
-          className="h-screen max-h-[500px] bg-cover bg-center  overflow-hidden"
         >
           <img
             src="/cta-bg.svg"

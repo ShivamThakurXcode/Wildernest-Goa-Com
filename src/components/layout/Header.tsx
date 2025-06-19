@@ -379,7 +379,7 @@ const Header = () => {
                           className="overflow-hidden pl-8 mt-2"
                         >
                           <Link
-                            to="/accommodation/forest-view"
+                            to="/accommodation"
                             className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
@@ -389,7 +389,7 @@ const Header = () => {
                             Forest View Cottage
                           </Link>
                           <Link
-                            to="/accommodation/valley-view"
+                            to="/accommodation"
                             className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
@@ -399,7 +399,7 @@ const Header = () => {
                             Valley View Cottage
                           </Link>
                           <Link
-                            to="/accommodation/family-valley"
+                            to="/accommodation"
                             className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
@@ -409,7 +409,7 @@ const Header = () => {
                             Family Valley View
                           </Link>
                           <Link
-                            to="/accommodation/plunge-pool"
+                            to="/accommodation"
                             className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
@@ -419,7 +419,7 @@ const Header = () => {
                             Private Plunge Pool
                           </Link>
                           <Link
-                            to="/accommodation/plunge-pool-ac"
+                            to="/accommodation"
                             className="block py-2 px-4 text-base text-gray-700 hover:bg-amber-50 rounded-lg"
                             onClick={() => {
                               setIsAccommodationOpen(false);
