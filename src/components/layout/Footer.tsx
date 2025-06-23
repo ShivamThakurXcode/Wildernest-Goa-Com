@@ -129,9 +129,9 @@ const Footer = () => {
                 <div>
                   <p className="font-medium  text-gray-200">Our Location</p>
                   <p className=" text-gray-400">
-                    Bardez, North Goa,
-                    <br />
-                    Goa 403507, India
+                    Wilderest Nature Resort <br />
+                    Off Sankhali, Ghats, Chorla <br />
+                    Charavade, Goa 403708
                   </p>
                 </div>
               </li>

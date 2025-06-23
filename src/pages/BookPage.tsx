@@ -5,6 +5,7 @@ import { Calendar, User, Mail, Phone, Users, Baby } from "lucide-react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Section from "../components/ui/Section";
 import Button from "../components/ui/Button";
+import HeroBanner from "../layouts/hero-innerPage";
 
 const BookPage = () => {
   const [formData, setFormData] = useState({
@@ -65,30 +66,12 @@ const BookPage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/cta-bg.svg')`,
-        }}
-        className="relative pt-40 pb-32 bg-cover bg-center"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-xl text-white font-handwriting mb-2">
-              Reserve Your Escape
-            </h3>
-            <h1 className="text-5xl md:text-6xl font-bold text-white relative mb-6">
-              Book Your Stay
-            </h1>
-            <p className="text-orange-100 text-lg max-w-3xl mx-auto">
-              Experience sustainable luxury in Goa's pristine wilderness
-            </p>
-          </motion.div>
-        </div>
-      </div>
+
+      <HeroBanner
+        title="Plan Your Trip"
+        subTitle="Luxury Eco-Tourism in Goa"
+        paragraph="Experience the ultimate in luxury eco-tourism at Wilderest Nature Resort in Goa, India. Book your stay in our beautiful accommodations surrounded by nature."
+      />
 
       {/* Booking Form Section */}
       <Section className="py-16 bg-white">

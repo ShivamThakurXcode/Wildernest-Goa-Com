@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Clock, Send, ChevronDown } from "lucide-react";
 import Section from "../components/ui/Section";
 import Button from "../components/ui/Button";
 import { toast } from "../components/ui/Toaster";
+import HeroBanner from "../layouts/hero-innerPage";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -93,31 +94,13 @@ const ContactPage = () => {
         />
       </Helmet>
 
-      {/* Hero Section with  Gradient */}
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/cta-bg.svg')`,
-        }}
-        className="relative pt-40 pb-32 bg-cover bg-center"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-xl text-white font-handwriting mb-2">
-              Connect with Wilderest
-            </h3>
-            <h1 className="text-5xl md:text-6xl font-bold text-white relative mb-6">
-              Get in Touch
-            </h1>
-            <p className="text-orange-100 text-lg max-w-3xl mx-auto">
-              Reach out to us for inquiries, reservations, or special requests.
-            </p>
-          </motion.div>
-        </div>
-      </div>
+      {/* Hero Section */}
+
+      <HeroBanner
+        title="Contact Us"
+        subTitle="Connect with Wilderest"
+        paragraph="Feel free to reach out for any inquiries, reservations, or special requests."
+      />
 
       {/* Contact Information and Form */}
       <Section>
@@ -131,7 +114,7 @@ const ContactPage = () => {
               viewport={{ once: true }}
               className="mb-6 text-3xl font-bold"
             >
-              Get in <span className="text-orange-600">Touch</span>
+              Contact <span className="text-orange-600">Us</span>
             </motion.h2>
 
             <motion.p
@@ -141,9 +124,9 @@ const ContactPage = () => {
               viewport={{ once: true }}
               className="text-gray-600 mb-8"
             >
-              We're always ready to assist with any questions about our
-              accommodations, activities, or services. Reach out through any of
-              the channels below.
+              We're here to help you with any questions you have about where you
+              can stay, what fun things you can do, or the services we offer.
+              Feel free to contact us using any of the options listed below.
             </motion.p>
 
             <div className="space-y-6 mb-8">
@@ -153,11 +136,9 @@ const ContactPage = () => {
                   title: "Address",
                   content: (
                     <>
-                      Wilderest Nature Resort,
-                      <br />
-                      Bardez, North Goa,
-                      <br />
-                      Goa 403507, India
+                      Wilderest Nature Resort <br />
+                      Off Sankhali, Ghats, Chorla <br />
+                      Charavade, Goa 403708
                     </>
                   ),
                 },
@@ -194,12 +175,6 @@ const ContactPage = () => {
                         info@wilderestresort.com
                       </a>
                       <br />
-                      <a
-                        href="mailto:reservations@wilderestresort.com"
-                        className="hover:text-orange-600 transition-colors"
-                      >
-                        reservations@wilderestresort.com
-                      </a>
                     </>
                   ),
                 },
@@ -208,9 +183,7 @@ const ContactPage = () => {
                   title: "Office Hours",
                   content: (
                     <>
-                      Monday - Sunday: 24 hours
-                      <br />
-                      (Front desk always available)
+                      Monday - Sunday: 24 hours - (Front desk always available)
                     </>
                   ),
                 },
@@ -233,26 +206,6 @@ const ContactPage = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Google Map with Orange Border */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="rounded-xl overflow-hidden shadow-lg h-[250px] border-2 border-orange-200"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61538.789588542036!2d73.76019024863282!3d15.592269899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0cf0b5b0d5f%3A0xeafd7bd22c55c94c!2sBardez%2C%20Goa!5e0!3m2!1sen!2sin!4v1662452689754!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Wilderest Resort Location"
-              ></iframe>
-            </motion.div>
           </div>
 
           {/* Contact Form - Orange Theme */}
@@ -456,8 +409,8 @@ const ContactPage = () => {
             viewport={{ once: true }}
             className="text-gray-600"
           >
-            Find quick answers to common questions about Wilderest Nature
-            Resort.
+            Discover quick answers to frequently asked questions about Wilderest
+            Nature Resort.
           </motion.p>
         </div>
 
@@ -466,32 +419,30 @@ const ContactPage = () => {
             {
               question: "What is the check-in and check-out time?",
               answer:
-                "Check-in time is from 2:00 PM to 10:00 PM, and check-out time is until 11:00 AM. Early check-in or late check-out may be arranged based on availability.",
+                "Check-in is at 12:00 PM, and check-out is by 11:00 AM. Early check-in or late check-out can be arranged based on availability.",
             },
             {
               question: "Is there WiFi available at the resort?",
               answer:
-                "Yes, complimentary high-speed WiFi is available throughout the resort, including all rooms, public areas, and even some outdoor spaces.",
+                "There is no mobile network or Wi-Fi available in the rooms.",
             },
             {
               question: "Are pets allowed at Wilderest?",
-              answer:
-                "We welcome pets in select accommodations with prior arrangement. A pet fee applies. Please contact us in advance to make arrangements for your furry companion.",
+              answer: "Pets are not permitted at Wilderest.",
             },
             {
               question: "What dining options are available?",
               answer:
-                "Our resort features a main restaurant serving local and international cuisine, a poolside café, and in-room dining. All meals are prepared using fresh, locally-sourced ingredients.",
+                "A buffet featuring Satvik local cuisine, including both vegetarian and non-vegetarian dishes.",
             },
             {
               question: "Is airport transfer available?",
               answer:
-                "Yes, we provide airport transfers at additional cost. Please provide your flight details at least 24 hours prior to arrival.",
+                "We offer airport transfers for an additional fee. Please provide your flight details at least 24 hours before your arrival.",
             },
             {
-              question: "What activities are available at the resort?",
-              answer:
-                "We offer guided nature walks, yoga sessions, cooking classes, wildlife spotting, nearby beach trips, and cultural experiences with local communities.",
+              question: "Are single individuals or groups allowed?",
+              answer: "Only couples and families are permitted.",
             },
           ].map((faq, index) => (
             <motion.div

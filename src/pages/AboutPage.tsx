@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import Section from "../components/ui/Section";
 import FeatureSection from "../components/home/FeaturesSection";
+import HeroBanner from "../layouts/hero-innerPage";
 
 const AboutPage = () => {
   const controls = useAnimation();
@@ -36,30 +37,12 @@ const AboutPage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./cta-bg.svg')`,
-        }}
-        className="relative pt-40 pb-32 bg-cover bg-center bg-[url('./cta-bg.svg')] "
-      >
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-xl text-white font-handwriting mb-2">
-              Discover our essence
-            </h3>
-            <h1 className="text-5xl md:text-6xl font-bold text-white relative mb-6">
-              About Wilderest
-            </h1>
-            <p className="text-gray-100 text-lg max-w-3xl mx-auto">
-              Where sustainable luxury meets Goa's untouched beauty
-            </p>
-          </motion.div>
-        </div>
-      </div>
+
+      <HeroBanner
+        title="About Wilderest"
+        subTitle="Discover our essence"
+        paragraph="Where sustainable luxury meets Goa's untouched beauty"
+      />
 
       {/* Our Story Section */}
       <section className="py-10 pt-20 px-4 sm:px-6 bg-white dark:bg-gray-900">

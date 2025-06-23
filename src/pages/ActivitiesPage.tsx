@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import HeroBanner from "../layouts/hero-innerPage";
 import {
   MapPin,
   Star,
@@ -128,30 +129,12 @@ const ActivityPage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./cta-bg.svg')`,
-        }}
-        className="relative pt-40 pb-32 bg-cover bg-center bg-[url('./cta-bg.svg')] "
-      >
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-xl text-white font-handwriting mb-2">
-              Discover our essence
-            </h3>
-            <h1 className="text-5xl md:text-6xl font-bold text-white relative mb-6">
-              About Wilderest
-            </h1>
-            <p className="text-gray-100 text-lg max-w-3xl mx-auto">
-              Where sustainable luxury meets Goa's untouched beauty
-            </p>
-          </motion.div>
-        </div>
-      </div>
+
+      <HeroBanner
+        title="Activities "
+        subTitle="Experience the Best of Goa"
+        paragraph="Explore a world of adventure, relaxation, and connection with nature at Wilderest Resort"
+      />
 
       {/* Category Navigation */}
       <div className="sticky top-0 z-20 bg-white dark:bg-gray-900 shadow-sm">
