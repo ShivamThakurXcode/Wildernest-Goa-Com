@@ -2,81 +2,297 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
+import HeroBanner from "../layouts/hero-innerPage";
 
 // Define types for our gallery image
 interface GalleryImage {
   id: number;
   src: string;
   alt: string;
-  category: string;
 }
 
-// Sample gallery images (replace with your actual images)
 const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    src: "/Home/2.jpg",
-    alt: "Aerial view of Wilderest Resort nestled in Goan nature",
-    category: "resort",
+    src: "/gallery/g1.jpg",
+    alt: "",
   },
   {
     id: 2,
-    src: "/Home/3.jpg",
-    alt: "Infinity pool overlooking lush greenery",
-    category: "amenities",
+    src: "/gallery/g2.png",
+    alt: "",
   },
   {
     id: 3,
-    src: "/Home/4.jpg",
-    alt: "Luxury villa with private deck",
-    category: "accommodations",
+    src: "/gallery/g3.png",
+    alt: "",
   },
   {
     id: 4,
-    src: "/Home/5.jpg",
-    alt: "Guest enjoying spa treatment in nature",
-    category: "wellness",
+    src: "/gallery/g4.png",
+    alt: "",
   },
   {
     id: 5,
-    src: "/Home/6.jpg",
-    alt: "Private beach access pathway",
-    category: "location",
+    src: "/gallery/g5.jpg",
+    alt: "",
   },
   {
     id: 6,
-    src: "/Home/7.jpg",
-    alt: "Romantic sunset dining setup",
-    category: "dining",
+    src: "/gallery/g6.png",
+    alt: "",
   },
   {
     id: 7,
-    src: "/Home/8.jpg",
-    alt: "Morning yoga session in garden",
-    category: "activities",
+    src: "/gallery/g7.jpg",
+    alt: "",
   },
   {
-    id: 7,
-    src: "/Home/8.jpg",
-    alt: "Morning yoga session in garden",
-    category: "activities",
+    id: 8,
+    src: "/gallery/g8.jpg",
+    alt: "",
+  },
+  {
+    id: 9,
+    src: "/gallery/g9.jpg",
+    alt: "",
+  },
+  {
+    id: 10,
+    src: "/gallery/g10.jpg",
+    alt: "",
+  },
+  {
+    id: 11,
+    src: "/gallery/g11.jpg",
+    alt: "",
+  },
+  {
+    id: 12,
+    src: "/gallery/g12.jpg",
+    alt: "",
+  },
+  {
+    id: 13,
+    src: "/gallery/g13.jpg",
+    alt: "",
+  },
+  {
+    id: 14,
+    src: "/gallery/g14.jpg",
+    alt: "",
+  },
+  {
+    id: 15,
+    src: "/gallery/g15.jpg",
+    alt: "",
+  },
+  {
+    id: 16,
+    src: "/gallery/g16.jpg",
+    alt: "",
+  },
+  { id: 17, src: "/gallery/g17.jpg", alt: "" },
+  {
+    id: 18,
+    src: "/gallery/g18.jpg",
+    alt: "",
+  },
+  {
+    id: 19,
+    src: "/gallery/g19.jpg",
+    alt: "",
+  },
+  {
+    id: 20,
+    src: "/gallery/g20.jpg",
+    alt: "",
+  },
+  {
+    id: 21,
+    src: "/gallery/g21.jpg",
+    alt: "",
+  },
+  {
+    id: 22,
+    src: "/gallery/g22.jpg",
+    alt: "",
+  },
+  {
+    id: 23,
+    src: "/gallery/g23.jpg",
+    alt: "",
+  },
+  {
+    id: 24,
+    src: "/gallery/g24.jpg",
+    alt: "",
+  },
+  {
+    id: 25,
+    src: "/gallery/g25.jpg",
+    alt: "",
+  },
+  {
+    id: 26,
+    src: "/gallery/g26.jpg",
+    alt: "",
+  },
+  {
+    id: 27,
+    src: "/gallery/g27.jpg",
+    alt: "",
+  },
+  {
+    id: 28,
+    src: "/gallery/g28.jpg",
+    alt: "",
+  },
+  {
+    id: 29,
+    src: "/gallery/g29.jpg",
+    alt: "",
+  },
+  {
+    id: 30,
+    src: "/gallery/g30.jpg",
+    alt: "",
+  },
+  {
+    id: 31,
+    src: "/gallery/g31.jpg",
+    alt: "",
+  },
+  {
+    id: 32,
+    src: "/gallery/g32.jpg",
+    alt: "",
+  },
+  {
+    id: 33,
+    src: "/gallery/g33.jpg",
+    alt: "",
+  },
+  {
+    id: 34,
+    src: "/gallery/g34.jpg",
+    alt: "",
+  },
+  {
+    id: 35,
+    src: "/gallery/g35.jpg",
+    alt: "",
+  },
+  {
+    id: 36,
+    src: "/gallery/g36.jpg",
+    alt: "",
+  },
+  {
+    id: 37,
+    src: "/gallery/g37.png",
+    alt: "",
+  },
+  {
+    id: 38,
+    src: "/gallery/g38.jpg",
+    alt: "",
+  },
+  {
+    id: 39,
+    src: "/gallery/g39.jpg",
+    alt: "",
+  },
+  {
+    id: 40,
+    src: "/gallery/g40.jpg",
+    alt: "",
+  },
+  {
+    id: 41,
+    src: "/gallery/g41.jpg",
+    alt: "",
+  },
+  {
+    id: 42,
+    src: "/gallery/g42.jpg",
+    alt: "",
+  },
+  {
+    id: 43,
+    src: "/gallery/g43.png",
+    alt: "",
+  },
+  {
+    id: 44,
+    src: "/gallery/g44.png",
+    alt: "",
+  },
+  {
+    id: 45,
+    src: "/gallery/g45.png",
+    alt: "",
+  },
+  {
+    id: 46,
+    src: "/gallery/g46.png",
+    alt: "",
+  },
+  {
+    id: 47,
+    src: "/gallery/g47.png",
+    alt: "",
+  },
+  {
+    id: 48,
+    src: "/gallery/g48.png",
+    alt: "",
+  },
+  {
+    id: 49,
+    src: "/gallery/g49.png",
+    alt: "",
+  },
+  {
+    id: 50,
+    src: "/gallery/g50.png",
+    alt: "",
+  },
+  {
+    id: 51,
+    src: "/gallery/g51.png",
+    alt: "",
+  },
+  {
+    id: 52,
+    src: "/gallery/g52.png",
+    alt: "",
+  },
+  {
+    id: 53,
+    src: "/gallery/g53.jpg",
+    alt: "",
+  },
+  {
+    id: 54,
+    src: "/gallery/g54.jpg",
+    alt: "",
+  },
+  {
+    id: 55,
+    src: "/gallery/g55.jpg",
+    alt: "",
+  },
+  {
+    id: 56,
+    src: "/gallery/g56.png",
+    alt: "",
   },
 ];
 
 const GalleryPage = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  const [activeCategory, setActiveCategory] = useState("all");
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const categories = [
-    "all",
-    ...new Set(galleryImages.map((image) => image.category)),
-  ];
-
-  const filteredImages =
-    activeCategory === "all"
-      ? galleryImages
-      : galleryImages.filter((image) => image.category === activeCategory);
 
   const openImage = (image: GalleryImage, index: number) => {
     setSelectedImage(image);
@@ -91,12 +307,12 @@ const GalleryPage = () => {
     let newIndex;
     if (direction === "prev") {
       newIndex =
-        (currentIndex - 1 + filteredImages.length) % filteredImages.length;
+        (currentIndex - 1 + galleryImages.length) % galleryImages.length;
     } else {
-      newIndex = (currentIndex + 1) % filteredImages.length;
+      newIndex = (currentIndex + 1) % galleryImages.length;
     }
     setCurrentIndex(newIndex);
-    setSelectedImage(filteredImages[newIndex]);
+    setSelectedImage(galleryImages[newIndex]);
   };
 
   return (
@@ -110,62 +326,20 @@ const GalleryPage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/cta-bg.svg')`,
-        }}
-        className="relative pt-40 pb-32 bg-cover bg-center"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-xl text-white font-handwriting mb-2">
-              Visual Journey
-            </h3>
-            <h1 className="text-5xl md:text-6xl font-bold text-white relative mb-6">
-              Resort Gallery
-            </h1>
-            <p className="text-orange-100 text-lg max-w-3xl mx-auto">
-              Discover the beauty of Wilderest through our curated collection of
-              images
-            </p>
-          </motion.div>
-        </div>
-      </div>
+      <HeroBanner
+        title="Gallery"
+        subTitle="Wilderest Nature Resort"
+        paragraph="Explore our gallery for a glimpse of our luxurious accommodations, landscapes, and experiences in Goa, India."
+      />
 
       {/* Gallery Section */}
       <section className="py-16 bg-orange-50">
         <div className="container mx-auto px-4">
-          {/* Category Filters */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-3 mb-12"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full capitalize transition-all ${
-                  activeCategory === category
-                    ? "bg-orange-600 text-white"
-                    : "bg-white text-orange-800 hover:bg-orange-100"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </motion.div>
-
           {/* Image Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredImages.map((image, index) => (
+            {galleryImages.map((image, index) => (
               <motion.div
-                key={image.id}
+                key={`${image.id}-${index}`}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
@@ -179,9 +353,6 @@ const GalleryPage = () => {
                   className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
-                <div className="p-4 bg-white">
-                  <p className="text-orange-800 capitalize">{image.category}</p>
-                </div>
               </motion.div>
             ))}
           </div>
