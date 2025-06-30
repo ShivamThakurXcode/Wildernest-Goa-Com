@@ -7,6 +7,7 @@ import AdventureIdeasSection from "../components/home/AdventureIdeasSection";
 import JourneyTimeline from "../components/home/TimeLine";
 import AccommodationSection from "../components/home/AccommodationSection";
 import FeatureSection from "../components/home/FeaturesSection";
+import Chatbot from "../components/chatbot";
 const HomePage = () => {
   return (
     <>
@@ -17,7 +18,7 @@ const HomePage = () => {
           content="Experience luxury eco-tourism at Wilderest Nature Resort in Goa, India. Book your stay in our beautiful accommodations surrounded by nature."
         />
       </Helmet>
-
+      <Chatbot />
       <Hero />
       <ResortHighlights />
       <AdventureIdeasSection />
