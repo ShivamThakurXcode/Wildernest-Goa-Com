@@ -2,14 +2,14 @@ import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import { Leaf, Star, ArrowRight } from "lucide-react";
 import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import Section from "../components/ui/Section";
 import FeatureSection from "../components/home/FeaturesSection";
 import HeroBanner from "../layouts/hero-innerPage";
 
 const AboutPage = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({
+  const [, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });

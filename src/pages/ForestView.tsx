@@ -66,7 +66,7 @@ const FamilyValleyView = {
   ],
 };
 
-const AccommodationPage = () => {
+const ForestView = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
@@ -605,4 +605,4 @@ const AccommodationPage = () => {
   );
 };
 
-export default AccommodationPage;
+export default ForestView;

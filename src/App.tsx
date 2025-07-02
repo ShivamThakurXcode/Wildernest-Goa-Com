@@ -10,14 +10,19 @@ import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";
 import ActivityPage from "./pages/ActivitiesPage";
 import AboutPage from "./pages/AboutPage";
-import AccommodationPage from "./pages/AccommodationPage";
 import HowToReachPage from "./pages/HowToReachPage";
 import BookPage from "./pages/BookPage";
 import ContactPage from "./pages/ContactPage";
 import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import AccommodationPage from "./pages/AccommodationPage";
 import CancellationPage from "./pages/CancellationPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import FamilyValley from "./pages/FamilyValley";
+import ValleyView from "./pages/ValleyView";
+import ForestView from "./pages/ForestView";
+import PlungePool from "./pages/PlungePool";
+import PlungePool_Ac from "./pages/PlungePool_Ac";
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">(
@@ -47,7 +52,15 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="gallery" element={<GalleryPage />} />
+
+          {"/* Accommodation Package Routes *?/}"}
+          <Route path="FamilyValley" element={<FamilyValley />} />
+          <Route path="ForestView" element={<ForestView />} />
+          <Route path="ValleyView" element={<ValleyView />} />
+          <Route path="PlungePool" element={<PlungePool />} />
+          <Route path="PlungePool_Ac" element={<PlungePool_Ac />} />
           <Route path="accommodation" element={<AccommodationPage />} />
+
           <Route path="activities" element={<ActivityPage />} />
           <Route path="how-to-reach" element={<HowToReachPage />} />
           <Route path="book" element={<BookPage />} />

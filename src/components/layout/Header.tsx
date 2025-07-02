@@ -158,35 +158,35 @@ const Header = () => {
                   className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-200"
                 >
                   <Link
-                    to="/accommodation/forest-view"
+                    to="/ForestView"
                     className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Forest View Cottage
                   </Link>
                   <Link
-                    to="/accommodation/valley-view"
+                    to="/ValleyView"
                     className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Valley View Cottage
                   </Link>
                   <Link
-                    to="/accommodation/family-valley"
+                    to="/FamilyValley"
                     className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Family Valley View
                   </Link>
                   <Link
-                    to="/accommodation/plunge-pool"
+                    to="/PlungePool"
                     className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
                     Private Plunge Pool
                   </Link>
                   <Link
-                    to="/accommodation/plunge-pool-ac"
+                    to="/PlungePool_Ac"
                     className="block px-4 py-3 text-base text-gray-700 hover:bg-amber-50"
                     onClick={() => setIsAccommodationOpen(false)}
                   >
