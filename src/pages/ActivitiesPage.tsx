@@ -17,9 +17,9 @@ import {
   FlaskConical,
   Droplet,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+
 import Section from "../components/ui/Section";
-import Button from "../components/ui/Button";
+
 import HeroBanner from "../layouts/hero-innerPage";
 
 const activities = [
