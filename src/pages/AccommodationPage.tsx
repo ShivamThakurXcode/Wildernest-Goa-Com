@@ -6,15 +6,16 @@ import {
   Star,
   MapPin,
   Users,
-  Home,
   Mountain,
+  Palette,
+  Flame,
+  Video,
+  Flower2,
+  Bird,
+  LucideWaves,
+  Waves,
   Leaf,
-  Utensils,
-  Route,
-  Sunset,
-  Coffee,
-  Baby,
-  Car,
+  Sun,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Section from "../components/ui/Section";
@@ -23,14 +24,13 @@ import Button from "../components/ui/Button";
 const FamilyValleyView = {
   id: 1,
   name: "Family Valley View",
-  tagline: "Spacious Accommodation for Families",
+  tagline: "Panoramic Vistas for Your Family Escape",
   description:
-    "Our Family Valley View cottage offers comfortable accommodation for up to 4 adults, featuring breathtaking valley views. Perfect for families looking to connect with nature while enjoying modern comforts.",
-  price: 11551,
-  originalPrice: 13000,
-  capacity: "4 Adults",
-  size: "Spacious Family Cottage",
-  rating: 4.8,
+    "Nestled on our premium hillside location, the Family Valley View accommodation offers breathtaking panoramic views of Goa's lush valleys. This spacious retreat is designed for families seeking both adventure and relaxation, featuring a private balcony, kid-friendly amenities, and direct access to nature trails.",
+  price: 13000,
+  capacity: "2 Adults + 2 Children",
+  size: "110 sqm",
+  rating: 4.9,
   images: [
     "./FamilyVV/FamilyHero.jpg",
     "./FamilyVV/1.jpg",
@@ -42,72 +42,29 @@ const FamilyValleyView = {
     "./FamilyVV/7.jpg",
   ],
   features: [
-    "Spacious valley-facing accommodation",
-    "Comfortable bedding for 4 adults",
-    "Private balcony with valley views",
-    "En-suite bathroom with eco-friendly amenities",
-    "Natural ventilation and ceiling fans",
-    "Complimentary welcome drink",
+    "Spacious master bedroom with king-sized bed",
+    "Children's bunk room with custom jungle-themed decor",
+    "Private infinity-edge balcony with valley views",
+    "Living area with convertible sofa bed",
+    "Kitchenette with mini-fridge and coffee station",
+    "Two modern bathrooms (one with tub)",
+    "Smart TV with family entertainment package",
+    "Complimentary kid's adventure backpack",
   ],
   highlights: [
-    { icon: <Users size={20} />, text: "Ideal for families or groups" },
-    { icon: <Mountain size={20} />, text: "Panoramic valley views" },
-    { icon: <Leaf size={20} />, text: "Eco-friendly accommodation" },
-    { icon: <Sunset size={20} />, text: "Access to sunset point" },
+    { icon: <Sun size={20} />, text: "Sunrise views from your balcony" },
+    { icon: <Leaf size={20} />, text: "Direct access to nature trails" },
+    { icon: <Users size={20} />, text: "Family-friendly activities included" },
+    { icon: <Mountain size={20} />, text: "Panoramic valley vistas" },
   ],
-  inclusions: [
-    { icon: <Utensils />, text: "All meals (Veg & Non-Veg)" },
-    { icon: <Coffee />, text: "Evening tea/snacks" },
-    { icon: <Route />, text: "Guided treks & nature walks" },
-    { icon: <Baby />, text: "One child below 10 years free" },
-  ],
-};
-
-const tariffDetails = {
-  season: "01st April 2025 till 30th Sept 2025",
-  plan: "AP (All Inclusive)",
-  checkIn: "1330 Hrs",
-  checkOut: "1130 Hrs",
-  activities: [
-    "Treks to various spots on the property",
-    "Trekking to Sunset Point",
-    "Heena & Mehandi session for Ladies",
-    "Forest Walk / waterfalls trek",
-    "Traditional Folk dance & Music by local villagers / Bonfire",
-    "Bird Watching Trail (Early morning Activity)",
-    "Slide-show on Wildlife and Bio-Diversity",
-    "Pottery session",
-    "Swimming Pool access",
-  ],
-  childPolicy: [
-    "One child below 10 years: Complimentary on sharing basis",
-    "Child 10-18 years: ₹2500/- with extra mattress & all inclusive",
-  ],
-  notes: [
-    "02 nights stay recommended to enjoy all activities",
-    "Pickup & drop from North Goa locations: ₹5000/- (for 2 pax staying 2 nights)",
-    "Extra adult: ₹3000/- per night with mattress and all inclusive",
-    "Private plunge pool cottages are for couples only - no extra person allowed",
-    "No AC, no television & no room service",
-    "Stag groups not allowed",
+  experiences: [
+    "Guided family nature walks",
+    "Outdoor movie nights under the stars",
+    "Kids' jungle survival workshop",
+    "Family yoga sessions at sunrise",
+    "Family yoga sessions at sunrise",
   ],
 };
-
-const AccommodationCard = ({ icon, title, description }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-    viewport={{ once: true }}
-    className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow"
-  >
-    <div className="bg-amber-100 dark:bg-amber-900/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-      {icon}
-    </div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600 dark:text-gray-400">{description}</p>
-  </motion.div>
-);
 
 const AccommodationPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -115,18 +72,22 @@ const AccommodationPage = () => {
   return (
     <>
       <Helmet>
-        <title>Family Valley View | Wildernest Nature Resort</title>
+        <title>Family Valley View | Wilderest Nature Resort</title>
         <meta
           name="description"
-          content="Family Valley View accommodation at Wildernest Nature Resort. Spacious cottage for 4 adults with all meals included and nature activities."
+          content="Experience panoramic valley views with your family at Wilderest Nature Resort in Goa. Spacious accommodations designed for family comfort and adventure."
         />
       </Helmet>
-
       {/* Hero Section */}
       <div className="relative">
-        <div className="h-screen max-h-[500px] bg-cover bg-center overflow-hidden">
+        <div
+          className="h-screen max-h-[500px] bg-cover bg-center  overflow-hidden bg-[url('./public/cta-bg.svg')]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./cta-bg.svg')`,
+          }}
+        >
           <img
-            src="./FamilyVV/FamilyHero.jpg"
+            src="/cta-bg.svg"
             alt={FamilyValleyView.name}
             className="w-full h-full object-cover"
           />
@@ -134,13 +95,13 @@ const AccommodationPage = () => {
         </div>
 
         <div className="absolute inset-0 container mx-auto px-6 flex items-center">
-          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10  items-center w-full">
             {/* Left Column - Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-2xl mt-20"
+              className="max-w-2xl mt-20 "
             >
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 {FamilyValleyView.name}
@@ -155,16 +116,14 @@ const AccommodationPage = () => {
                   size="xl"
                   className="flex items-center justify-center gap-3 bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Book Now
+                  Book Your Family Escape
                 </Button>
-                <div className="flex items-center text-white bg-white/10 px-4 py-3 filter backdrop-blur-xl rounded-4xl">
+                <div className="flex items-center text-white bg-white/10 px-4 py-3 filter backdrop-blur-xl   rounded-4xl">
                   <span className="mr-2">From</span>
                   <span className="text-2xl font-bold">
                     ₹{FamilyValleyView.price.toLocaleString()}
                   </span>
-                  <span className="ml-1 line-through text-gray-300">
-                    ₹{FamilyValleyView.originalPrice.toLocaleString()}
-                  </span>
+                  <span className="ml-1">/Person</span>
                 </div>
               </div>
             </motion.div>
@@ -174,11 +133,11 @@ const AccommodationPage = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full h-[300px] mt-16"
+              className="relative w-full h-[300px] mt-16 "
             >
               <img
-                src="./FamilyVV/1.jpg"
-                alt="Family Valley View cottage"
+                src="./Home/hero.png"
+                alt="Wilderest Resort luxury villas surrounded by nature"
                 className="absolute inset-0 w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white/20 transition-transform duration-700 hover:scale-[1.02]"
                 loading="lazy"
               />
@@ -211,45 +170,6 @@ const AccommodationPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Package Cards Section */}
-      <Section>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Your All-Inclusive Package
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Everything you need for a perfect nature getaway is included in your
-            stay
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <AccommodationCard
-            icon={<Utensils className="text-amber-600 dark:text-amber-400" />}
-            title="All Meals Included"
-            description="Enjoy buffet breakfast, lunch, dinner and evening snacks with both veg and non-veg options"
-          />
-
-          <AccommodationCard
-            icon={<Route className="text-amber-600 dark:text-amber-400" />}
-            title="Nature Activities"
-            description="Guided treks, bird watching, pottery sessions and cultural performances included"
-          />
-
-          <AccommodationCard
-            icon={<Baby className="text-amber-600 dark:text-amber-400" />}
-            title="Child Friendly"
-            description="One child below 10 years stays free. Special activities for kids available"
-          />
-
-          <AccommodationCard
-            icon={<Sunset className="text-amber-600 dark:text-amber-400" />}
-            title="Unique Experiences"
-            description="Sunset point trek, bonfire nights, and traditional folk dance performances"
-          />
-        </div>
-      </Section>
 
       {/* Gallery & Details Section */}
       <Section>
@@ -293,7 +213,7 @@ const AccommodationPage = () => {
           {/* Details */}
           <div>
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4">Cottage Features</h3>
+              <h3 className="text-2xl font-semibold mb-4">Room Features</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {FamilyValleyView.features.map((feature, index) => (
                   <motion.li
@@ -314,23 +234,21 @@ const AccommodationPage = () => {
             </div>
 
             <div className="bg-gradient-to-r from-amber-50 to-amber-100 dark:from-gray-700 dark:to-gray-800 p-6 rounded-2xl border border-amber-200 dark:border-gray-600 mb-8">
-              <h3 className="text-xl font-semibold mb-3">Tariff Details</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-medium mb-1">Season:</h4>
-                  <p>{tariffDetails.season}</p>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Plan:</h4>
-                  <p>{tariffDetails.plan}</p>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Check-in/Check-out:</h4>
-                  <p>
-                    {tariffDetails.checkIn} / {tariffDetails.checkOut}
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-3">
+                Exclusive Family Experiences
+              </h3>
+              <ul className="space-y-2">
+                {FamilyValleyView.experiences.map((exp, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="bg-amber-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      {index + 1}
+                    </span>
+                    <span className="text-gray-700 dark:text-gray-300">
+                      {exp}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -338,14 +256,14 @@ const AccommodationPage = () => {
                 as={Link}
                 to="/book"
                 size="xl"
-                className="flex items-center justify-center gap-3 bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white px-8 rounded-4xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="flex items-center justify-center gap-3 bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white px-16 py-4 rounded-4xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Reserve Your Stay
+                Plan Your Stay
               </Button>
               <Button
                 variant="outline"
-                size="lg"
-                className="flex items-center justify-center gap-3 border-orange-400 hover:bg-orange-100 text-orange-400 px-8 py-3 rounded-4xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                size="xl"
+                className=" flex items-center justify-center gap-3 border-orange-400 hover:bg-orange-100  text-orange-400 px-8 py-3 rounded-4xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Contact Our Specialists
               </Button>
@@ -354,80 +272,86 @@ const AccommodationPage = () => {
         </div>
       </Section>
 
-      {/* Activities Section */}
-      <Section className="bg-amber-50 dark:bg-gray-800">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Included Activities</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Enjoy these complimentary activities during your stay (minimum 2
-            nights recommended)
-          </p>
-        </div>
+      <Section
+        className="relative py-20 px-4 sm:px-6 bg-cover bg-center bg-[url('./public/cta-bg.svg')]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('./cta-bg.svg')`,
+        }}
+      >
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/30"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tariffDetails.activities.map((activity, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              viewport={{ once: true }}
-              className="flex items-start bg-white dark:bg-gray-700 p-4 rounded-lg"
-            >
-              <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700 dark:text-gray-300">
-                {activity}
-              </span>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-10">
+            {/* Left Column - Text Section */}
+            <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500">
+              <p className="text-sm font-medium text-center text-amber-400 mb-3 uppercase tracking-wider">
+                Family Valley View Package
+              </p>
+              <h2 className="text-4xl text-center sm:text-4xl font-bold text-white mb-8 leading-tight">
+                Details of Family Valley View at{" "}
+                <span className="text-amber-400">Wilderest Goa</span>
+              </h2>
 
-      {/* Policies Section */}
-      <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Child Policy</h3>
-            <ul className="space-y-4">
-              {tariffDetails.childPolicy.map((policy, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-start"
-                >
-                  <Baby className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    {policy}
-                  </span>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
+              <div className="space-y-6 mb-10">
+                <p className="text-gray-100 text-justify leading-relaxed">
+                  Our Family Valley View package is designed to provide an
+                  unforgettable experience for families seeking adventure and
+                  relaxation. Nestled on our premium hillside location, this
+                  spacious retreat offers breathtaking panoramic views of Goa's
+                  lush valleys.
+                </p>
+                <p className="text-gray-100 text-justify leading-relaxed">
+                  This package includes a private balcony, kid-friendly
+                  amenities, and direct access to nature trails, ensuring a
+                  perfect blend of luxury and nature. Enjoy world-class
+                  amenities and unparalleled comfort while exploring the beauty
+                  of Goa with your loved ones.
+                </p>
+              </div>
 
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Important Notes</h3>
-            <ul className="space-y-3">
-              {tariffDetails.notes.map((note, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-start"
-                >
-                  <span className="bg-amber-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-xs">
-                    {index + 1}
-                  </span>
-                  <span className="text-gray-700 dark:text-gray-300">
-                    {note}
-                  </span>
-                </motion.li>
-              ))}
-            </ul>
+              <div className="flex flex-col justify-center sm:flex-row sm:flex-wrap gap-4 mt-8">
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <Mountain className="w-5 h-5 text-amber-400" />
+                  Trek to Sunset Point
+                </div>
+
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <Palette className="w-5 h-5 text-amber-400" />
+                  Heena & Mehndi Session
+                </div>
+
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <Leaf className="w-5 h-5 text-amber-400" />
+                  Forest / Waterfall Trek
+                </div>
+
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <Flame className="w-5 h-5 text-amber-400" />
+                  Folk Dance & Bonfire
+                </div>
+
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <Video className="w-5 h-5 text-amber-400" />
+                  Wildlife Slide Show
+                </div>
+
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <Flower2 className="w-5 h-5 text-amber-400" />
+                  Pottery Session
+                </div>
+
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <Bird className="w-5 h-5 text-amber-400" />
+                  Bird Watching Trail
+                </div>
+
+                <div className="flex items-center gap-3 border-2 border-white/20 hover:border-amber-400 text-white px-6 py-3 rounded-xl transition-all">
+                  <LucideWaves className="w-5 h-5 text-amber-400" />
+                  Swimming Pool Access
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -436,61 +360,86 @@ const AccommodationPage = () => {
       <Section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Pricing Details</h2>
+            <h2 className="text-3xl font-bold mb-6">Pricing & Packages</h2>
 
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden mb-8">
               <div className="p-6 border-b border-gray-100 dark:border-gray-700">
-                <h3 className="text-xl font-semibold mb-2">
-                  Family Valley View
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">Standard Rate</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  All-inclusive package for 4 adults
+                  Best flexible rate with no restrictions
                 </p>
                 <div className="flex items-end gap-2">
                   <span className="text-3xl font-bold text-amber-600 dark:text-amber-400">
                     ₹{FamilyValleyView.price.toLocaleString()}
                   </span>
-                  <span className="text-gray-500 line-through">
-                    ₹{FamilyValleyView.originalPrice.toLocaleString()}
-                  </span>
-                  <span className="ml-2 text-sm bg-amber-100 dark:bg-amber-900/20 text-amber-800 dark:text-amber-200 px-2 py-1 rounded">
-                    TAC Applied
-                  </span>
+                  <span className="text-gray-500">/ Person</span>
                 </div>
               </div>
               <div className="p-6">
-                <h4 className="font-medium mb-3">Package Includes:</h4>
+                <h4 className="font-medium mb-3">Includes:</h4>
                 <ul className="space-y-2">
-                  {FamilyValleyView.inclusions.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>{item.text}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-start">
+                    <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Excepteur sint occaecat cupidatat non proident, sunt in
+                      culpa qui officia.
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
 
             <div className="bg-amber-50 dark:bg-gray-700 rounded-xl p-6 border border-amber-100 dark:border-gray-600">
-              <h3 className="font-semibold text-lg mb-3">Transport Options</h3>
-              <div className="flex items-start gap-3 mb-4">
-                <Car className="text-amber-600 dark:text-amber-400 w-5 h-5 mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    Pickup & drop from North Goa locations available at ₹5,000/-
-                    for 2 pax (for guests staying minimum 2 nights)
-                  </p>
-                </div>
-              </div>
-              <Button
-                as={Link}
-                to="/transport"
-                size="lg"
-                variant="outline"
-                className="border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400"
-              >
-                View Transport Options
-              </Button>
+              <h3 className="font-semibold text-lg mb-3">Special Offers</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Book 4 nights or more and receive:
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start">
+                  <span className="bg-amber-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-xs">
+                    1
+                  </span>
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-amber-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-xs">
+                    2
+                  </span>
+                  <span>
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="bg-amber-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-xs">
+                    3
+                  </span>
+                  <span>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -499,7 +448,7 @@ const AccommodationPage = () => {
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
                 <div className="p-6 bg-amber-600 dark:bg-amber-700">
                   <h3 className="text-xl font-semibold text-white">
-                    Ready to Book Your Family Getaway?
+                    Ready for Your Family Adventure?
                   </h3>
                 </div>
                 <div className="p-6">
@@ -507,16 +456,11 @@ const AccommodationPage = () => {
                     <div>
                       <h4 className="font-medium">{FamilyValleyView.name}</h4>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
-                        All-inclusive package for 4 adults
+                        Starting from
                       </p>
                     </div>
-                    <div className="text-right">
-                      <span className="text-sm line-through text-gray-500">
-                        ₹{FamilyValleyView.originalPrice.toLocaleString()}
-                      </span>
-                      <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">
-                        ₹{FamilyValleyView.price.toLocaleString()}
-                      </div>
+                    <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">
+                      ₹{FamilyValleyView.price.toLocaleString()}
                     </div>
                   </div>
 
@@ -544,9 +488,9 @@ const AccommodationPage = () => {
                         Guests
                       </label>
                       <select className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700">
-                        <option>4 Adults</option>
-                        <option>3 Adults + 1 Child (10-18 yrs)</option>
                         <option>2 Adults + 2 Children</option>
+                        <option>2 Adults + 1 Child</option>
+                        <option>2 Adults</option>
                       </select>
                     </div>
                   </div>
@@ -560,7 +504,7 @@ const AccommodationPage = () => {
 
                   <div className="mt-4 text-center">
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      For special requests, call us at{" "}
+                      Or call us at{" "}
                       <a
                         href="tel:+919876543210"
                         className="text-amber-600 dark:text-amber-400 font-medium"
@@ -572,32 +516,22 @@ const AccommodationPage = () => {
                 </div>
               </div>
 
-              <div className="mt-6 bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700">
-                <h4 className="font-medium mb-3">Family Testimonials</h4>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-5 h-5 ${
-                          i < Math.floor(FamilyValleyView.rating)
-                            ? "text-amber-500 fill-amber-500"
-                            : "text-gray-300 dark:text-gray-600"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-600 dark:text-gray-400">
-                    {FamilyValleyView.rating} from 86 family reviews
-                  </span>
+              <div className="mt-6 bg-amber-50 dark:bg-gray-800 rounded-xl p-6 border border-amber-100 dark:border-gray-700">
+                <h3 className="font-semibold text-lg mb-3">
+                  Child Policy and Package Details
+                </h3>
+                <div className="mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    Child Policy: Children below 5 years stay free. Children
+                    between 5-12 years are charged at 50% of the adult rate.
+                    Children above 12 years are considered adults.
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    Package Policy: Our packages are designed for a minimum stay
+                    of 2 nights. Cancellation or modification of bookings is
+                    subject to a fee. Please contact us for more information.
+                  </p>
                 </div>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400"
-                >
-                  Read Guest Experiences
-                </Button>
               </div>
             </div>
           </div>
@@ -609,12 +543,12 @@ const AccommodationPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">
-              Wildernest Nature Resort Location
+              Perfectly Located in North Goa
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              Nestled in the pristine Western Ghats of Goa, our eco-resort
-              offers a perfect blend of nature and comfort, away from the hustle
-              and bustle of city life.
+              Our Family Valley View accommodations are situated on a private
+              hillside in North Goa, offering both tranquility and convenient
+              access to family-friendly attractions.
             </p>
 
             <div className="space-y-4">
@@ -623,11 +557,23 @@ const AccommodationPage = () => {
                   <MapPin className="text-amber-600 dark:text-amber-400 w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1">Check-in/Check-out</h4>
+                  <h4 className="font-medium mb-1">Nearby Attractions</h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Standard time: 1:30 PM / 11:30 AM
-                    <br />
-                    Early check-in/late checkout subject to availability
+                    Children's Park (5 min) • Beach (10 min) • Water Park (15
+                    min) • Wildlife Sanctuary (20 min)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-amber-100 dark:bg-amber-900/30 p-3 rounded-full mt-0.5">
+                  <Waves className="text-amber-600 dark:text-amber-400 w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-medium mb-1">Beach Access</h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Complimentary shuttle service to our private beach club with
+                    family cabanas and kid-safe swimming area.
                   </p>
                 </div>
               </div>
@@ -637,23 +583,10 @@ const AccommodationPage = () => {
                   <Users className="text-amber-600 dark:text-amber-400 w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1">Group Policy</h4>
+                  <h4 className="font-medium mb-1">Family Services</h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Families and couples welcome. Stag groups not permitted to
-                    maintain the serene atmosphere.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-amber-100 dark:bg-amber-900/30 p-3 rounded-full mt-0.5">
-                  <Home className="text-amber-600 dark:text-amber-400 w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Eco-Friendly Stay</h4>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    No AC or televisions in cottages. Designed for you to
-                    connect with nature.
+                    Babysitting services available • Kids' club with daily
+                    activities • Family concierge for planning your outings.
                   </p>
                 </div>
               </div>
@@ -664,7 +597,6 @@ const AccommodationPage = () => {
             {/* Map placeholder - replace with actual map component */}
             <div className="w-full h-full flex items-center justify-center text-gray-500">
               <MapPin className="w-12 h-12 text-amber-600 dark:text-amber-400" />
-              <span className="ml-2">Wildernest Nature Resort Location</span>
             </div>
           </div>
         </div>
