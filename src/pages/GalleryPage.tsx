@@ -385,7 +385,7 @@ const GalleryPage = () => {
             <div className="mt-4 text-center text-white">
               <p className="text-lg">{selectedImage.alt}</p>
               <p className="text-orange-300 capitalize mt-1">
-                {selectedImage.category}
+                Image {currentIndex + 1} of {galleryImages.length}
               </p>
             </div>
           </div>
