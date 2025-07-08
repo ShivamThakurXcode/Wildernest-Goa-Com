@@ -13,6 +13,11 @@ import {
   Flower2,
   Bird,
   LucideWaves,
+  Mail,
+  Phone,
+  ChevronDown,
+  User,
+  Calendar,
   Waves,
   Leaf,
   Sun,
@@ -98,48 +103,48 @@ const PlungePool_Ac = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
         </div>
 
-        <div className="absolute inset-0 container mx-auto px-6 flex items-center">
-          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
+        <div className="absolute inset-0 container mx-auto px-4 sm:px-6 flex items-center">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center w-full">
             {/* Left Column - Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-2xl mt-20"
+              className="max-w-2xl mt-16 md:mt-20 mx-auto lg:mx-0 text-center lg:text-left px-4 sm:px-0"
             >
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 {PlungePoolAC.name}
               </h1>
-              <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-lg">
+              <p className="text-base md:text-lg lg:text-xl text-gray-200 mb-6 md:mb-8 max-w-lg mx-auto lg:mx-0">
                 {PlungePoolAC.tagline}
               </p>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                 <Button
                   as={Link}
                   to="/book"
                   size="xl"
-                  className="flex items-center justify-center gap-3 bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="flex-shrink-0 flex items-center  justify-center gap-3 bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
                 >
                   Book Your Romantic Escape
                 </Button>
-                <div className="flex items-center text-white bg-white/10 px-4 py-3 filter backdrop-blur-xl rounded-4xl">
-                  <span className="mr-2">From</span>
-                  <span className="text-2xl font-bold">
+                <div className="flex-shrink-0 flex items-center text-white bg-white/10 px-3 sm:px-4 py-2 sm:py-3 filter backdrop-blur-xl rounded-4xl">
+                  <span className="mr-2 text-sm sm:text-base">From</span>
+                  <span className="text-xl sm:text-2xl font-bold">
                     ₹{PlungePoolAC.price.toLocaleString()}
                   </span>
-                  <span className="ml-1 line-through text-gray-300">
+                  <span className="ml-1 line-through text-gray-300 text-sm sm:text-base">
                     ₹{PlungePoolAC.originalPrice.toLocaleString()}
                   </span>
                 </div>
               </div>
             </motion.div>
 
-            {/* Right Column - Image Section */}
+            {/* Right Column - Image Section - Hidden on mobile */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full h-[300px] mt-16"
+              className="relative w-full h-[250px] sm:h-[300px] mt-8 lg:mt-16 hidden md:block"
             >
               <img
                 src={PlungePoolAC.images[1]}
@@ -151,7 +156,6 @@ const PlungePool_Ac = () => {
           </div>
         </div>
       </div>
-
       {/* Highlights Ribbon */}
       <div className="bg-amber-50 dark:bg-gray-800 py-6 border-y border-amber-100 dark:border-gray-700">
         <div className="container mx-auto px-6">
@@ -257,22 +261,89 @@ const PlungePool_Ac = () => {
               </ul>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                as={Link}
-                to="/book"
-                size="xl"
-                className="flex items-center justify-center gap-3 bg-gradient-to-tl from-orange-400 to-yellow-400 hover:bg-gradient-to-tl hover:from-orange-500 hover:to-yellow-500 text-white px-16 py-4 rounded-4xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Plan Your Trip
-              </Button>
-              <Button
-                variant="outline"
-                size="xl"
-                className="flex items-center justify-center gap-3 border-orange-400 hover:bg-orange-100 text-orange-400 px-8 py-3 rounded-4xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Contact Our Specialists
-              </Button>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {/* Weekday Pricing */}
+              <div className="relative overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/10 dark:to-amber-900/20 p-5 rounded-xl border border-amber-200 dark:border-amber-800/50">
+                <div className="absolute top-3 right-3 bg-amber-600 text-white text-xs font-medium px-2 py-1 rounded-full">
+                  BEST VALUE
+                </div>
+                <div className="flex flex-col h-full">
+                  <div className="mb-3">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                      <span className="text-sm font-medium text-amber-600 dark:text-amber-400">
+                        Weekday Rate
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      Monday - Thursday
+                    </div>
+                  </div>
+
+                  <div className="mt-auto">
+                    <div className="flex items-end gap-2 mb-1">
+                      <span className="text-3xl font-bold text-gray-800 dark:text-white">
+                        ₹{PlungePoolAC.price.toLocaleString()}
+                      </span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+                        per night
+                      </span>
+                    </div>
+
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs line-through text-gray-500 dark:text-gray-400">
+                        ₹{PlungePoolAC.originalPrice.toLocaleString()}
+                      </span>
+                      <span className="text-xs bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 px-2 py-1 rounded-full">
+                        Save{" "}
+                        {Math.round(
+                          (1 -
+                            PlungePoolAC.price / PlungePoolAC.originalPrice) *
+                            100
+                        )}
+                        %
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Weekend Pricing */}
+              <div className="relative overflow-hidden bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/10 dark:to-green-900/20 p-5 rounded-xl border border-green-200 dark:border-green-800/50">
+                <div className="flex flex-col h-full">
+                  <div className="mb-3">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-green-600 dark:text-green-400" />
+                      <span className="text-sm font-medium text-green-600 dark:text-green-400">
+                        Weekend Rate
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      Friday - Sunday
+                    </div>
+                  </div>
+
+                  <div className="mt-auto">
+                    <div className="flex items-end gap-2 mb-1">
+                      <span className="text-3xl font-bold text-gray-800 dark:text-white">
+                        ₹{(PlungePoolAC.price * 1.2).toLocaleString()}
+                      </span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+                        per night
+                      </span>
+                    </div>
+
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs line-through text-gray-500 dark:text-gray-400">
+                        ₹{(PlungePoolAC.originalPrice * 1.2).toLocaleString()}
+                      </span>
+                      <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 px-2 py-1 rounded-full">
+                        Weekend Premium
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -424,72 +495,107 @@ const PlungePool_Ac = () => {
 
           <div>
             <div className="sticky top-24">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
-                <div className="p-6 bg-amber-600 dark:bg-amber-700">
-                  <h3 className="text-xl font-semibold text-white">
-                    Ready for Your Romantic Escape?
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                {/* Header */}
+                <div className="p-6 bg-gradient-to-r from-amber-500 to-amber-600 dark:from-amber-600 dark:to-amber-700">
+                  <h3 className="text-xl font-semibold text-white text-center">
+                    Book Your Romantic Escape
                   </h3>
                 </div>
+
+                {/* Body */}
                 <div className="p-6">
-                  <div className="flex justify-between items-center mb-6">
-                    <div>
-                      <h4 className="font-medium">{PlungePoolAC.name}</h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Luxury all-inclusive package
-                      </p>
+                  {/* Form Fields */}
+                  <div className="space-y-5">
+                    {/* Name and Phone in one row */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Full Name
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="text"
+                            placeholder="Your name"
+                            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-white transition-all"
+                          />
+                          <User className="absolute right-3 top-3.5 h-5 w-5 text-gray-400 dark:text-gray-500" />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Mobile Number
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="tel"
+                            placeholder="+91 "
+                            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-white transition-all"
+                          />
+                          <Phone className="absolute right-3 top-3.5 h-5 w-5 text-gray-400 dark:text-gray-500" />
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-sm line-through text-gray-500">
-                        ₹{PlungePoolAC.originalPrice.toLocaleString()}
-                      </span>
-                      <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">
-                        ₹{PlungePoolAC.price.toLocaleString()}
+
+                    {/* Email Field */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Email Address
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="email"
+                          placeholder="your@email.com"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-white transition-all"
+                        />
+                        <Mail className="absolute right-3 top-3.5 h-5 w-5 text-gray-400 dark:text-gray-500" />
+                      </div>
+                    </div>
+
+                    {/* Date Fields */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Check-In Date
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="date"
+                            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-white transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Check-Out Date
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="date"
+                            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:text-white transition-all"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                        Dates
-                      </label>
-                      <div className="grid grid-cols-2 gap-2">
-                        <input
-                          type="text"
-                          placeholder="Check-in"
-                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700"
-                        />
-                        <input
-                          type="text"
-                          placeholder="Check-out"
-                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                        Guests
-                      </label>
-                      <select className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700">
-                        <option>2 Adults (Couple)</option>
-                      </select>
-                    </div>
-                  </div>
-
+                  {/* Submit Button */}
                   <Button
                     size="xl"
-                    className="w-full bg-amber-600 hover:bg-amber-700"
+                    className="w-full mt-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white py-4 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
-                    Check Availability
+                    PLAN YOUR TRIP
                   </Button>
 
-                  <div className="mt-4 text-center">
+                  {/* Contact Info */}
+                  <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700 text-center">
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      For special requests, call us at{" "}
+                      Need help? Call us at{" "}
                       <a
                         href="tel:+919876543210"
-                        className="text-amber-600 dark:text-amber-400 font-medium"
+                        className="text-amber-600 dark:text-amber-400 font-medium hover:underline"
                       >
                         +91 98765 43210
                       </a>

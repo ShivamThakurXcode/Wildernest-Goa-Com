@@ -69,24 +69,28 @@ const Header = () => {
               : "bg-primary-900/25 backdrop-blur-md py-2"
           }`}
         >
-          <div className="flex items-center px-5 space-x-4">
+          <div className="flex flex-row items-center gap-3 overflow-x-auto whitespace-nowrap scrollbar-hide w-full justify-end">
             <a
               href="tel:+919876543210"
-              className="flex items-center hover:text-primary-200"
+              className="flex items-center min-w-0 hover:text-primary-200 flex-shrink-0"
             >
-              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1">
+              <div className="bg-orange-500 mr-2 rounded-full w-6 h-6 flex items-center justify-center p-1 flex-shrink-0">
                 <Phone size={14} className="text-white" />
               </div>
-              <span>+91 98765 43210</span>
+              <span className="text-sm sm:text-base truncate">
+                +91 98765 43210
+              </span>
             </a>
             <a
               href="mailto:info@wilderestgoa.com"
-              className="flex items-center hover:text-primary-200"
+              className="flex items-center min-w-0 hover:text-primary-200 flex-shrink-0"
             >
-              <div className="bg-orange-500 mr-1 rounded-full w-6 h-6 flex items-center justify-center p-1">
+              <div className="bg-orange-500 mr-2 rounded-full w-6 h-6 flex items-center justify-center p-1 flex-shrink-0">
                 <Mail size={14} className="text-white" />
               </div>
-              <span>info@wilderestgoa.com</span>
+              <span className="text-sm sm:text-base truncate">
+                info@wilderestgoa.com
+              </span>
             </a>
           </div>
         </div>
