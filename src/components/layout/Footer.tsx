@@ -179,10 +179,10 @@ const Footer = () => {
               Privacy Policy
             </Link>
             <Link
-              to="/cancellation"
+              to="/terms"
               className="text-sm   text-orange-400 hover:underline"
             >
-              Cancellation Policy
+              Terms & Conditions
             </Link>
           </div>
         </div>

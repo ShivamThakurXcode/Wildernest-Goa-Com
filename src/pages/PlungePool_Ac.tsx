@@ -5,21 +5,15 @@ import {
   Check,
   Star,
   MapPin,
-  Users,
   Mountain,
   Palette,
   Flame,
   Video,
-  Flower2,
-  Bird,
-  LucideWaves,
   Mail,
   Phone,
-  ChevronDown,
   User,
   Calendar,
   Waves,
-  Leaf,
   Sun,
   Snowflake,
   Droplets,
@@ -29,7 +23,6 @@ import Section from "../components/ui/Section";
 import Button from "../components/ui/Button";
 
 const PlungePoolAC = {
-  id: 5,
   name: "Private Plunge Pool (AC)",
   tagline: "Luxury with Climate Control",
   description:
@@ -414,7 +407,10 @@ const PlungePool_Ac = () => {
       <Section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Pricing Details</h2>
+            <h2 className="text-3xl font-bold mb-6">Package Details</h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
+              {PlungePoolAC.description}
+            </p>
 
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden mb-8">
               <div className="p-6 border-b border-gray-100 dark:border-gray-700">

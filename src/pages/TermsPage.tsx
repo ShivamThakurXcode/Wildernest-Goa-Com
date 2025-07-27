@@ -1,225 +1,238 @@
 import { Helmet } from "react-helmet";
-import Section from "../components/ui/Section";
 import { motion } from "framer-motion";
+import { MdOutlinePrivacyTip } from "react-icons/md";
+import Section from "../components/ui/Section";
+import HeroBanner from "../layouts/hero-innerPage";
 
 const TermsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Cancellation Policy | Wilderest Nature Resort</title>
+        <title>Booking & Resort Terms | Wildernest Goa</title>
         <meta
           name="description"
-          content="Learn about the cancellation policies for bookings at Wilderest Nature Resort in Goa, including refund and penalty details."
+          content="Read the booking, check-in, resort, and general terms for Wildernest Nature Resort. Review our policies for a smooth and enjoyable stay."
         />
       </Helmet>
+      <HeroBanner
+        title="Booking & Reservation Terms"
+        subTitle="Please Review Before Your Stay"
+        paragraph="Our policies help ensure a harmonious and safe experience for all guests."
+      />
 
-      {/* Hero Section */}
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./cta-bg.svg')`,
-        }}
-        className="relative pt-40 pb-32 bg-cover bg-center bg-[url('./cta-bg.svg')] "
-      >
-        <div className="container mx-auto px-4 text-center">
+      <Section className="bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 space-y-10">
+          <motion.p
+            className="text-sm text-gray-500 italic text-center pt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            Last Updated: July 2025
+          </motion.p>
           <motion.div
+            className="bg-white rounded-xl shadow-md border divide-x-2 border-gray-200 p-7 mb-2 flex items-center justify-between"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
-            <h3 className="text-xl text-white font-handwriting mb-2">
-              Understand our cancellation terms
-            </h3>
-            <h1 className="text-5xl md:text-6xl font-bold text-white relative mb-6">
-              Cancellation Policy
-            </h1>
-            <p className="text-gray-100 text-lg max-w-3xl mx-auto">
-              Familiarize yourself with the cancellation policies for your stay
-              at Wilderest Nature Resort
-            </p>
-          </motion.div>
-        </div>
-      </div>
-      <Section className="bg-orange-50">
-        <div className="max-w-4xl mx-auto px-4 py-12">
-          <div className="prose prose-orange dark:prose-invert prose-lg">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <h2 className="text-orange-800 border-b-2 border-orange-200 pb-2">
-                Booking & Reservation Terms
-              </h2>
-
-              <h3 className="text-orange-700">1. Booking Confirmation</h3>
-              <p className="text-orange-900">
-                A reservation is only confirmed upon receipt of a 50% advance
-                payment. Confirmation will be sent via email once payment is
-                received. The remaining balance is due at check-in.
+            <MdOutlinePrivacyTip className="w-16 h-16 mr-4 text-orange-500" />
+            <div className="flex-1 px-4">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                To ensure a smooth and enjoyable experience, please review our
+                policies prior to arrival. These terms help preserve harmony and
+                safety. Thank you for your cooperation.
               </p>
+            </div>
+          </motion.div>
 
-              <h3 className="text-orange-700">2. Age Requirement</h3>
-              <p className="text-orange-900">
+          {/* Booking Confirmation & Age Requirement */}
+          <motion.div
+            className="bg-white rounded-xl shadow-md border border-gray-200 p-7"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-3">
+              Booking Confirmation
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>
+                A reservation is only confirmed upon receipt of a 100% advance
+                payment. Confirmation will be sent via email once payment is
+                received.
+              </li>
+            </ul>
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mt-6 mb-3">
+              Age Requirement
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>
                 Guests must be 18 years or older to make a reservation. Guests
                 under 18 must be accompanied by an adult.
-              </p>
+              </li>
+            </ul>
+          </motion.div>
 
-              <h3 className="text-orange-700">3. Room Allocation</h3>
-              <p className="text-orange-900">
-                While we make every effort to honor specific room requests, room
-                allocation is subject to availability and at the discretion of
-                management.
-              </p>
-            </motion.div>
+          {/* Check-in & Check-out */}
+          <motion.div
+            className="bg-white rounded-xl shadow-md border border-gray-200 p-7"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-3">
+              Check-in & Check-out
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>
+                <span className="font-medium">Check-in Time:</span> Check-in
+                time is from 1:30 PM. Early check-in is subject to availability
+                and may incur additional charges.
+              </li>
+              <li>
+                <span className="font-medium">Check-out Time:</span> Check-out
+                time is 11:30 AM. Late check-out may be arranged, subject to
+                availability, and may incur additional charges.
+              </li>
+              <li>
+                <span className="font-medium">Identification:</span> Guests are
+                required to present a valid government-issued identification
+                (such as a passport or driver's license) at check-in.
+              </li>
+            </ul>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-12"
-            >
-              <h2 className="text-orange-800 border-b-2 border-orange-200 pb-2">
-                Check-in & Check-out
-              </h2>
+          {/* Resort Policies */}
+          <motion.div
+            className="bg-white rounded-xl shadow-md border border-gray-200 p-7"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-3">
+              Resort Policies
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>
+                <span className="font-medium">Noise Policy:</span> To maintain
+                the peaceful environment of our resort, we enforce a quiet
+                policy from 10:00 PM to 7:00 AM.
+              </li>
+              <li>
+                <span className="font-medium">Smoking Policy:</span> Smoking is
+                prohibited inside all accommodation units and enclosed areas of
+                the resort. Designated smoking areas are available.
+              </li>
+              <li>
+                <span className="font-medium">Property Damage:</span> Guests
+                will be held responsible for any damage to the property or its
+                contents during their stay and will be charged accordingly.
+              </li>
+            </ul>
+          </motion.div>
 
-              <h3 className="text-orange-700">1. Check-in Time</h3>
-              <p className="text-orange-900">
-                Check-in time is from 2:00 PM to 10:00 PM. Early check-in is
-                subject to availability and may incur additional charges.
-              </p>
-
-              <h3 className="text-orange-700">2. Check-out Time</h3>
-              <p className="text-orange-900">
-                Check-out time is 11:00 AM. Late check-out may be arranged based
-                on availability and may incur additional charges.
-              </p>
-
-              <h3 className="text-orange-700">3. Identification</h3>
-              <p className="text-orange-900">
-                Guests are required to present valid government-issued ID
-                (passport, driver's license, etc.) at check-in.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-              className="mt-12"
-            >
-              <h2 className="text-orange-800 border-b-2 border-orange-200 pb-2">
-                Resort Policies
-              </h2>
-
-              <h3 className="text-orange-700">1. Noise Policy</h3>
-              <p className="text-orange-900">
-                To maintain the peaceful environment of our resort, we enforce a
-                quiet policy from 10:00 PM to 7:00 AM.
-              </p>
-
-              <h3 className="text-orange-700">2. Smoking Policy</h3>
-              <p className="text-orange-900">
-                Smoking is prohibited inside all accommodation units and
-                enclosed areas of the resort. Designated smoking areas are
-                available.
-              </p>
-
-              <h3 className="text-orange-700">3. Pet Policy</h3>
-              <p className="text-orange-900">
-                Pets are welcome in select accommodations with prior
-                arrangement. A pet fee applies, and pet owners are responsible
-                for any damage caused by their pets.
-              </p>
-
-              <h3 className="text-orange-700">4. Property Damage</h3>
-              <p className="text-orange-900">
-                Guests will be held responsible for any damage to the property
-                or its contents during their stay and will be charged
-                accordingly.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
-              className="mt-12"
-            >
-              <h2 className="text-orange-800 border-b-2 border-orange-200 pb-2">
-                Health & Safety
-              </h2>
-
-              <h3 className="text-orange-700">1. Medical Emergencies</h3>
-              <p className="text-orange-900">
-                The resort maintains first aid facilities and has arrangements
-                with nearby medical facilities for emergencies. We recommend
-                guests have appropriate travel insurance.
-              </p>
-
-              <h3 className="text-orange-700">2. Natural Hazards</h3>
-              <p className="text-orange-900">
-                As a nature resort, guests should be aware of and take
-                precautions against natural elements such as insects, wildlife,
-                and weather conditions. The resort provides necessary
+          {/* Health & Safety */}
+          <motion.div
+            className="bg-white rounded-xl shadow-md border border-gray-200 p-7"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-3">
+              Health & Safety
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>
+                <span className="font-medium">Medical Emergencies:</span> The
+                resort maintains first aid facilities and has arrangements with
+                nearby medical facilities for emergencies. We recommend guests
+                have appropriate travel & medical insurance.
+              </li>
+              <li>
+                <span className="font-medium">Natural Hazards:</span> As a
+                nature resort, guests should be aware of and take precautions
+                against natural elements, including insects, wildlife, and
+                adverse weather conditions. The resort provides necessary
                 information and amenities to mitigate these risks.
-              </p>
-
-              <h3 className="text-orange-700">3. Swimming & Activities</h3>
-              <p className="text-orange-900">
-                Use of the swimming pool and participation in resort activities
-                is at the guest's own risk. Children must be supervised at all
+              </li>
+              <li>
+                <span className="font-medium">Swimming & Activities:</span> Use
+                of the swimming pool and participation in resort activities are
+                at the guest's own risk. Children must be supervised at all
                 times.
-              </p>
-            </motion.div>
+              </li>
+            </ul>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6 }}
-              className="mt-12"
-            >
-              <h2 className="text-orange-800 border-b-2 border-orange-200 pb-2">
-                General Terms
-              </h2>
-
-              <h3 className="text-orange-700">1. Liability</h3>
-              <p className="text-orange-900">
-                Wilderest Nature Resort is not liable for any loss, damage, or
-                theft of personal belongings. The use of safes provided in rooms
-                is recommended.
-              </p>
-
-              <h3 className="text-orange-700">2. Right of Admission</h3>
-              <p className="text-orange-900">
-                The resort reserves the right to refuse service or accommodation
-                to any guest who violates the resort's policies or engages in
+          {/* General Terms */}
+          <motion.div
+            className="bg-white rounded-xl shadow-md border border-gray-200 p-7"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-3">
+              General Terms
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>
+                <span className="font-medium">Liability:</span> Wilderest Nature
+                Resort is not liable for any loss, damage, or theft of personal
+                belongings. The use of safes provided in rooms is recommended.
+              </li>
+              <li>
+                <span className="font-medium">Right of Admission:</span> The
+                resort reserves the right to refuse service or accommodation to
+                any guest who violates the resort's policies or engages in
                 disruptive behavior.
-              </p>
+              </li>
+              <li>
+                <span className="font-medium">Photography:</span> The resort may
+                take photographs of its premises, which may include guests, for
+                promotional purposes. Please notify the management if you do not
+                wish to be included.
+              </li>
+              <li>
+                <span className="font-medium">Amendments:</span> These terms and
+                conditions may be amended by the resort at any time. The current
+                version will always be available on our website.
+              </li>
+              <li>
+                <span className="font-medium">Stags & Group:</span> Stag’s Group
+                Not Allowed.
+              </li>
+              <li>
+                <span className="font-medium">Amenities:</span> Please note that
+                our accommodations do not feature air conditioning, television,
+                or room service. This allows for an authentic nature experience
+                and helps preserve the tranquil atmosphere of the resort.
+              </li>
+            </ul>
+            <p className="text-gray-700 mt-4">
+              By proceeding with a reservation at Wilderest Nature Resort,
+              guests acknowledge and agree to abide by the terms outlined above.
+              We appreciate your understanding and support in helping us create
+              a peaceful and respectful atmosphere for all our visitors.
+            </p>
+          </motion.div>
 
-              <h3 className="text-orange-700">3. Photography</h3>
-              <p className="text-orange-900">
-                The resort may take photographs of its premises, which may
-                include guests, for promotional purposes. Please notify the
-                management if you do not wish to be included.
-              </p>
-
-              <h3 className="text-orange-700">4. Amendments</h3>
-              <p className="text-orange-900">
-                These terms and conditions may be amended by the resort at any
-                time. The current version will always be available on our
-                website.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="text-sm italic mt-12 text-orange-600"
-            >
-              Last Updated: September 2023
-            </motion.div>
-          </div>
+          {/* Contact/Assistance Section */}
+          <motion.div
+            className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl border border-orange-200 shadow p-7 mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-2">
+              Need Assistance?
+            </h2>
+            <p className="text-gray-700 mb-2">
+              Should you have any questions or require assistance, our team is
+              always here to help. We look forward to welcoming you to a
+              memorable stay in the heart of nature.
+            </p>
+          </motion.div>
         </div>
       </Section>
     </>

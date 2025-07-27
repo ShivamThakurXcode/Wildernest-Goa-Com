@@ -1,115 +1,131 @@
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
+import { MdOutlinePrivacyTip } from "react-icons/md";
+
 import Section from "../components/ui/Section";
+import HeroBanner from "../layouts/hero-innerPage";
 
 const sections = [
   {
-    title: "1. Data Collection",
+    title: "1. Information We Collect",
     points: [
-      "We collect personal information such as name, email, and phone number during bookings or form submissions.",
-      "We also gather anonymized data to improve user experience and website performance.",
+      "Personal information (name, contact details, government-issued ID, etc.)",
+      "Booking and payment details",
+      "Preferences and feedback",
+      "Usage data (IP address, browser type, device information)",
     ],
   },
   {
     title: "2. Use of Information",
     points: [
-      "Personal data is used solely for communication, bookings, and improving services.",
-      "We do not sell or share your personal information with third parties without consent.",
+      "Process reservations and payments",
+      "Communicate updates and special offers",
+      "Improve our services based on guest feedback and patterns",
+      "Ensure site security and technical functioning",
+      "Comply with legal obligations",
     ],
   },
   {
-    title: "3. Cookies & Tracking",
+    title: "3. Children’s Privacy",
     points: [
-      "We use cookies to store session data, preferences, and enhance user experience.",
-      "You can manage or disable cookies through your browser settings.",
+      "We do not knowingly collect information from children under 18 without parental consent.",
+      "Our services are not directed at minors.",
+      "If you believe a minor has provided us with information without proper consent, please contact us, and we will take appropriate action.",
     ],
   },
   {
     title: "4. Data Security",
     points: [
-      "We implement standard security practices to safeguard user data.",
-      "Despite our best efforts, we cannot guarantee absolute security of online transmissions.",
+      "We employ technical and organizational measures to protect your information from unauthorized access or disclosure.",
+      "These include encryption, firewalls, regular security assessments, staff training, and secure payment systems.",
+      "Procedures are also in place for managing data breaches.",
+      "While we prioritize your data's security, no method of transmission or storage is 100% secure.",
+      "We encourage you to take precautions, such as using strong passwords and safeguarding your own devices.",
     ],
   },
   {
-    title: "5. Third-Party Services",
+    title: "5. Sharing of Information",
     points: [
-      "Our site may include links to external services or tools, which are governed by their respective privacy policies.",
-      "We are not responsible for third-party content, terms, or data practices.",
+      "We do not sell your personal data.",
+      "Information may be shared with trusted third parties (such as payment processors and service partners) only as required to fulfill your request or comply with legal requirements, with appropriate safeguards in place.",
     ],
   },
   {
-    title: "6. Children's Privacy",
+    title: "6. Your Rights & Choices",
     points: [
-      "We do not knowingly collect information from children under 13.",
-      "If we become aware, we will delete such information immediately.",
+      "You may review, update, or request deletion of your personal information by contacting us.",
     ],
   },
   {
-    title: "7. Policy Updates",
+    title: "7. Changes to This Policy",
     points: [
-      "Our privacy policy may be updated occasionally.",
-      "Significant changes will be posted on this page with a revised effective date.",
-    ],
-  },
-  {
-    title: "8. Contact Us",
-    points: [
-      "For any privacy-related questions or data access requests, contact us at support@wilderestresort.com.",
+      "We may update this privacy policy as needed.",
+      "Significant changes will be communicated on our website.",
+      "We encourage you to review this page periodically.",
     ],
   },
 ];
+
+const contactDetails = {
+  address: "[Resort Address]",
+  email: "[Email]",
+  phone: "[Phone Number]",
+};
 
 const PrivacyPage = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Wilderest Nature Resort</title>
+        <title>Privacy Policy | Wildernest Goa</title>
         <meta
           name="description"
-          content="Review our privacy practices, data collection policies, and how we safeguard your personal information at Wilderest Nature Resort."
+          content="Learn how Wildernest Goa collects, uses, and protects your personal information. Read our privacy policy for details on data collection, security, and your rights."
         />
       </Helmet>
-
-      {/* Hero Section */}
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./cta-bg.svg')`,
-        }}
-        className="relative pt-40 pb-32 bg-cover bg-center"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-xl text-white font-handwriting mb-2">
-              Your trust matters
-            </h3>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Privacy Policy
-            </h1>
-            <p className="text-gray-100 text-lg max-w-3xl mx-auto">
-              Learn how we collect, use, and protect your data at Wilderest
-              Nature Resort
-            </p>
-          </motion.div>
-        </div>
-      </div>
+      <HeroBanner
+        title="Privacy Policy"
+        subTitle="Your Data, Our Priority"
+        paragraph="Learn how we protect your personal information"
+      />
 
       {/* Privacy Sections */}
       <Section className="bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 py-16 space-y-8">
+        <div className="max-w-6xl mx-auto px-4  space-y-10">
+          {" "}
+          <motion.p
+            className="text-sm text-gray-500 italic text-center pt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            Last Updated: July 2025
+          </motion.p>
+          <motion.div
+            className="bg-white rounded-xl shadow-md border divide-x-2 border-gray-200 p-7 mb-2 flex items-center justify-between"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <MdOutlinePrivacyTip className="w-16 h-16 mr-4 text-orange-500" />
+            <div className="flex-1 px-4">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                At Wildernest Goa, we value your privacy and are committed to
+                protecting your personal information. This policy outlines how
+                we collect, use, disclose, and safeguard your data when you
+                visit our website or use our services, in accordance with the
+                applicable laws of India.
+              </p>
+            </div>
+          </motion.div>
           {sections.map((section, index) => (
             <motion.div
               key={section.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}
-              className="bg-white rounded-xl shadow-lg border border-gray-200 p-6"
+              className="bg-white rounded-xl shadow-md border border-gray-200 p-7"
             >
-              <h2 className="text-xl font-semibold text-orange-700 mb-4">
+              <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-3">
                 {section.title}
               </h2>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -119,14 +135,35 @@ const PrivacyPage = () => {
               </ul>
             </motion.div>
           ))}
-          <motion.p
-            className="text-sm text-gray-500 italic text-center pt-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+          {/* Contact Section */}
+          <motion.div
+            className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl border border-orange-200 shadow p-7 mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
           >
-            Last Updated: July 2025
-          </motion.p>
+            <h2 className="text-lg md:text-xl font-semibold text-orange-600 mb-2">
+              8. Contact Us
+            </h2>
+            <p className="text-gray-700 mb-2">
+              If you have questions about this policy or your data, please
+              contact us:
+            </p>
+            <ul className="text-gray-700 text-base space-y-1">
+              <li>
+                <span className="font-medium">Address:</span>{" "}
+                {contactDetails.address}
+              </li>
+              <li>
+                <span className="font-medium">Email:</span>{" "}
+                {contactDetails.email}
+              </li>
+              <li>
+                <span className="font-medium">Phone:</span>{" "}
+                {contactDetails.phone}
+              </li>
+            </ul>
+          </motion.div>
         </div>
       </Section>
     </>
