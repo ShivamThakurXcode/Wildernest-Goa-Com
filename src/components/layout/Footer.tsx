@@ -131,7 +131,7 @@ const Footer = () => {
                   <p className=" text-gray-400">
                     Wilderest Nature Resort <br />
                     Off Sankhali, Ghats, Chorla <br />
-                    Charavade, Goa 403708
+                    Charavade, Goa 403708
                   </p>
                 </div>
               </li>

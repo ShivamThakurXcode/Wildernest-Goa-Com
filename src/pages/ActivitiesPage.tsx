@@ -27,9 +27,9 @@ const activities = [
     id: 1,
     title: "Property Treks",
     icon: <Mountain className="w-5 h-5" />,
-    description: "Explore scenic trails across our 50-acre property",
+    description: "Explore our expansive property on guided nature walks",
     fullDescription:
-      "Discover hidden gems across our expansive property with guided treks through diverse landscapes including spice plantations, fruit orchards, and natural springs. Our expert naturalists will introduce you to native flora and fauna while sharing insights about the local ecosystem.",
+      "Explore our expansive property on guided treks through spice plantations, fruit orchards, and spring-fed forests. Expert naturalists identify native flora and fauna, sharing details on their ecological roles and significance.",
     duration: "1-2 Hours",
     intensity: "Moderate",
     bestTime: "Morning or Evening",
@@ -48,7 +48,7 @@ const activities = [
     icon: <Sunset className="w-5 h-5" />,
     description: "Hike to our exclusive viewpoint for breathtaking sunsets",
     fullDescription:
-      "Our signature sunset trek takes you through lush trails to a private vantage point with panoramic views of the Goan coastline. Enjoy complimentary refreshments as you watch the sun dip below the horizon in a spectacular display of colors.",
+      "Join our signature sunset trek along lush forest trails to a secluded viewpoint overlooking the Goan coastline. Sip refreshing drinks while enjoying panoramic sunset views in a private, tranquil setting.",
     duration: "1.5 Hours",
     intensity: "Moderate",
     bestTime: "Evening",
@@ -56,7 +56,7 @@ const activities = [
     ecoBadge: true,
     rating: 5.0,
     highlights: [
-      "Exclusive access to private viewpoint",
+      "Exclusive access to a private viewpoint",
       "Complimentary tropical drinks",
       "Perfect photo opportunities",
     ],
@@ -65,9 +65,9 @@ const activities = [
     id: 3,
     title: "Heena Sessions",
     icon: <Droplets className="w-5 h-5" />,
-    description: "Traditional Mehandi art for ladies",
+    description: "Traditional henna art experiences",
     fullDescription:
-      "Experience the ancient art of Heena with our skilled local artists. These intricate temporary tattoos are a beautiful cultural tradition, using all-natural henna paste in relaxing garden settings.",
+      "Discover the art of henna as local artists create intricate, all-natural tattoos in a serene garden setting. Discover the meaning and beauty behind each design.",
     duration: "45-60 mins",
     intensity: "Relaxing",
     bestTime: "Afternoon",
@@ -86,7 +86,7 @@ const activities = [
     icon: <Droplet className="w-5 h-5" />,
     description: "Explore lush forests and discover hidden waterfalls",
     fullDescription:
-      "Venture into the surrounding forests with our experienced guides to discover seasonal waterfalls and pristine natural pools. Learn about the local ecosystem while enjoying the therapeutic sounds of nature and cool mountain waters.",
+      "Trek into the surrounding forests led by expert guides, where hidden seasonal waterfalls and crystal-clear pools await. Discover local wildlife while listening to the sounds of flowing water and chirping birds.",
     duration: "2-3 Hours",
     intensity: "Moderate to Challenging",
     bestTime: "Morning",
@@ -105,7 +105,7 @@ const activities = [
     icon: <Music className="w-5 h-5" />,
     description: "Cultural evening with local performers",
     fullDescription:
-      "Immerse yourself in Goan culture with an evening of traditional folk dances and music performed by local artists. Enjoy the vibrant performances around a bonfire with opportunities to participate and learn some dance steps yourself.",
+      "Celebrate Goan tradition around a bonfire as local artists showcase vibrant folk dances and music. Participate in interactive performances and try traditional dance moves yourself.",
     duration: "1.5 Hours",
     intensity: "Relaxing",
     bestTime: "Evening",
@@ -124,7 +124,7 @@ const activities = [
     icon: <Bird className="w-5 h-5" />,
     description: "Early morning avian exploration",
     fullDescription:
-      "Join our resident ornithologist for a peaceful morning birdwatching session. Spot colorful kingfishers, majestic eagles, and numerous migratory species in their natural habitat. Binoculars and field guides provided.",
+      "Set out at dawn with our ornithologist to spot kingfishers, eagles, and visiting migratory birds. Use provided binoculars and guides to enhance your birdwatching adventure in peaceful surroundings.",
     duration: "1.5 Hours",
     intensity: "Easy",
     bestTime: "Dawn",
@@ -143,7 +143,7 @@ const activities = [
     icon: <Film className="w-5 h-5" />,
     description: "Educational slideshow on local biodiversity",
     fullDescription:
-      "An informative and visually stunning presentation about the region's rich biodiversity. Learn about the wildlife you might encounter during your stay and conservation efforts to protect these species.",
+      "Enjoy a vivid presentation on regional biodiversity. Discover local wildlife and learn about conservation efforts during your stay.",
     duration: "45 mins",
     intensity: "Relaxing",
     bestTime: "Evening",
@@ -162,7 +162,7 @@ const activities = [
     icon: <FlaskConical className="w-5 h-5" />,
     description: "Hands-on clay crafting experience",
     fullDescription:
-      "Try your hand at traditional Goan pottery techniques under the guidance of master artisans. Create your own clay masterpiece to take home as a unique souvenir of your stay.",
+      "Shape your own clay creation with guidance from Goan master potters using authentic traditional techniques. Take home your personalised masterpiece as a lasting memory.",
     duration: "1 Hour",
     intensity: "Creative",
     bestTime: "Morning or Afternoon",
@@ -181,7 +181,7 @@ const activities = [
     icon: <MapPin className="w-5 h-5" />,
     description: "Enjoy all our premium amenities",
     fullDescription:
-      "Access to all resort facilities including our infinity pool with panoramic views, well-maintained gardens, and relaxation areas. Our staff is always available to enhance your comfort and enjoyment.",
+      "Enjoy our infinity pool with sweeping views, tranquil garden paths, and comfortable relaxation areas. Attentive staff ensure your stay is seamless and enjoyable throughout.",
     duration: "All Day",
     intensity: "Relaxing",
     bestTime: "Any Time",
@@ -210,7 +210,7 @@ const ActivityPage = () => {
       <HeroBanner
         title="Immersive Experiences"
         subTitle="Connect with Goa's Nature & Culture"
-        paragraph="Each activity is carefully crafted to create meaningful connections."
+        paragraph="Each activity is designed to foster connections."
       />
 
       <section className="py-10 pt-20 px-4 sm:px-6 bg-white dark:bg-gray-900">
@@ -225,9 +225,8 @@ const ActivityPage = () => {
             </span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            Dive into a world of diverse activities at Wilderest Resort Goa,
-            where nature exploration, cultural experiences, and relaxation come
-            together.
+            Explore diverse activities at Wilderest Resort Goa, where nature,
+            culture, and relaxation blend seamlessly.
           </p>
         </div>
       </section>

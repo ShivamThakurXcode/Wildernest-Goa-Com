@@ -327,9 +327,9 @@ const GalleryPage = () => {
 
       {/* Hero Section */}
       <HeroBanner
-        title="Gallery"
         subTitle="Wilderest Nature Resort"
-        paragraph="Explore our gallery for a glimpse of our luxurious accommodations, landscapes, and experiences in Goa, India."
+        title="Gallery"
+        paragraph="Browse our gallery and imagine yourself at Wilderest Nature Resort. Book now to transform inspiring moments into your own unforgettable Goa adventure."
       />
 
       {/* Gallery Section */}

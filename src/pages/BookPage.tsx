@@ -61,7 +61,7 @@ const BookPage = () => {
         <title>Book Your Stay | Wilderest Nature Resort, Goa</title>
         <meta
           name="description"
-          content="Reserve your luxury nature retreat at Wilderest Resort Goa. Check availability for your preferred dates and experience sustainable luxury in nature."
+          content="Immerse yourself in the rarefied world of luxury eco-tourism at Wilderest Nature Resort, Goa. Secure your place in our elegantly appointed accommodations, harmoniously nestled within untouched wilderness."
         />
       </Helmet>
 
@@ -348,8 +348,9 @@ const BookPage = () => {
                 Need Assistance?
               </h3>
               <p className="text-gray-600 mb-4">
-                Our reservations team is available 24/7 to help with your
-                booking or answer any questions.
+                Our dedicated reservations specialists are available around the
+                clock to ensure your arrangements are seamless and your
+                inquiries receive exceptional attention.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -368,8 +369,9 @@ const BookPage = () => {
             <div className="bg-gray-900 p-8 rounded-2xl text-white">
               <h3 className="text-2xl font-bold mb-4">Cancellation Policy</h3>
               <p className="text-gray-300 mb-4">
-                Free cancellation up to 7 days before arrival. Flexible options
-                available for direct bookings.
+                Enjoy complimentary cancellation up to 7 days before arrival.
+                Flexible, privileged options are reserved for guests booking
+                directly.
               </p>
               <Button
                 variant="outline"
@@ -395,8 +397,8 @@ const BookPage = () => {
               Book With Confidence
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-              Your safety and comfort are our top priorities. We maintain the
-              highest standards of cleanliness and service.
+              Your well-being is our utmost privilege. Expect the highest
+              standards of discrete comfort and attentive care.
             </p>
           </motion.div>
 
@@ -419,7 +421,7 @@ const BookPage = () => {
                     />
                   </svg>
                 ),
-                text: "Secure Payment",
+                text: "Discreet Secure Payment",
               },
               {
                 icon: (
@@ -438,7 +440,7 @@ const BookPage = () => {
                     />
                   </svg>
                 ),
-                text: "Flexible Cancellation",
+                text: "Tailored Cancellation Options",
               },
               {
                 icon: (
@@ -457,7 +459,7 @@ const BookPage = () => {
                     />
                   </svg>
                 ),
-                text: "Privacy Protected",
+                text: "Assured Privacy Protection",
               },
               {
                 icon: (
@@ -476,7 +478,7 @@ const BookPage = () => {
                     />
                   </svg>
                 ),
-                text: "Best Price Guarantee",
+                text: "Exclusive Price Guarantee",
               },
             ].map((item, index) => (
               <motion.div

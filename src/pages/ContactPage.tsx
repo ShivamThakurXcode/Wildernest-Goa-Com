@@ -99,7 +99,7 @@ const ContactPage = () => {
       <HeroBanner
         title="Contact Us"
         subTitle="Connect with Wilderest"
-        paragraph="Feel free to reach out for any inquiries, reservations, or special requests."
+        paragraph="Please feel free to reach out with any inquiries, reservations, or special requests."
       />
 
       {/* Contact Information and Form */}
@@ -124,8 +124,8 @@ const ContactPage = () => {
               viewport={{ once: true }}
               className="text-gray-600 mb-8"
             >
-              We're here to help you with any questions you have about where you
-              can stay, what fun things you can do, or the services we offer.
+              We're here to help with any questions you have about where to
+              stay, what fun activities you can enjoy, or the services we offer.
               Feel free to contact us using any of the options listed below.
             </motion.p>
 
@@ -419,12 +419,12 @@ const ContactPage = () => {
             {
               question: "What is the check-in and check-out time?",
               answer:
-                "Check-in is at 12:00 PM, and check-out is by 11:00 AM. Early check-in or late check-out can be arranged based on availability.",
+                "Check-in is at 1:30 PM, and check-out is by 11:30 AM. Early check-in or late check-out can be arranged based on availability..",
             },
             {
               question: "Is there WiFi available at the resort?",
               answer:
-                "There is no mobile network or Wi-Fi available in the rooms.",
+                "Yes, Wi-Fi (Jio network) is available in the reception area.",
             },
             {
               question: "Are pets allowed at Wilderest?",
