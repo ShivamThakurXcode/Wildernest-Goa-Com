@@ -14,42 +14,42 @@ const ResortHighlights = () => {
       title: "Best Destinations",
       icon: <MapPin className="w-8 h-8" />,
       description:
-        "Suspendisse interdum consectetur libero id. Blandit libero volut ornare",
+        "Discover the most breathtaking locations in Goa, from pristine beaches to lush hills, all accessible from our resort.",
     },
     {
       id: 2,
       title: "Beaches",
       icon: <Umbrella className="w-8 h-8" />,
       description:
-        "Purus viverra accumsan in nisi nisi scelerisque eu nunc mi ultrices",
+        "Relax on Goa's stunning beaches, just a short distance from Wilderest, offering sun, sand, and serenity.",
     },
     {
       id: 3,
       title: "Hiking",
       icon: <Mountain className="w-8 h-8" />,
       description:
-        "Quam adipiscing vitae proin sagittis nisi rhoncus mattis rhon odio",
+        "Embark on scenic hiking trails through the Western Ghats, exploring diverse flora and fauna.",
     },
     {
       id: 4,
       title: "Cycling",
       icon: <Bike className="w-8 h-8" />,
       description:
-        "Vivamus arcu felis bibendum ut tristique et egestas quis sapien",
+        "Cycle through picturesque paths and enjoy the fresh air and panoramic views of Goa's countryside.",
     },
     {
       id: 5,
       title: "Boating",
       icon: <Ship className="w-8 h-8" />,
       description:
-        "Laoreet sit amet cursus sit amet dictum sit amet ut eu sem integ",
+        "Experience thrilling boat rides on local rivers and lakes, immersing yourself in Goa's aquatic beauty.",
     },
     {
       id: 6,
       title: "Trekking",
       icon: <MountainIcon className="w-8 h-8" />,
       description:
-        "Uitricies integer quis auctor elit sed xulputate mi sit amet leo a",
+        "Join guided treks to hidden gems, uncovering the natural wonders of the region.",
     },
   ];
 

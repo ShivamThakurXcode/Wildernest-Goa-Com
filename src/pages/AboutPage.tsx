@@ -74,7 +74,7 @@ const AboutPage = () => {
             {/* Left Column - Image Section */}
             <div className="relative rounded-3xl overflow-hidden h-full shadow-xl hover:shadow-2xl transition-shadow duration-500">
               <img
-                src="./Home/hero.png"
+                src="./about/abt-1.webp"
                 alt="Wildernest Nature Resort nestled in the Western Ghats"
                 className="w-full h-full object-cover bg-cover bg-center transition-transform duration-700 hover:scale-105"
                 loading="lazy"
@@ -191,7 +191,7 @@ const AboutPage = () => {
             {/* Right Column - Image Section */}
             <div className="relative rounded-3xl overflow-hidden h-full shadow-xl hover:shadow-2xl transition-shadow duration-500">
               <img
-                src="./Home/hero.png"
+                src="./about/abt-2.webp"
                 alt="Captain Nitin Dhond, Managing Director of Wildernest"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="lazy"
@@ -241,7 +241,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="./Home/hero.png"
+              src="./about/abt-3.webp"
               alt="Monsoon season at Wildernest Nature Resort"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -406,7 +406,7 @@ const AboutPage = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="./Home/hero.png"
+              src="./about/abt-4.webp"
               alt="Wildlife at Wildernest Nature Resort sanctuary"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -481,7 +481,7 @@ const AboutPage = () => {
             {/* Right Column - Image Section */}
             <div className="relative rounded-3xl overflow-hidden h-full shadow-xl hover:shadow-2xl transition-shadow duration-500">
               <img
-                src="./Home/hero.png"
+                src="./about/abt-5.webp"
                 alt="Eco cottage at Wildernest Nature Resort"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="lazy"

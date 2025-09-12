@@ -1,22 +1,22 @@
 const timelineData = [
   {
     year: "1988",
-    text: "Vec ultrices dui sapien mi. Vitae justo eget magna fermentum. Aliquet risus feugiat in ante metus dictum at tempor commodo.",
+    text: "Achieved eco-certification and began conservation programs for the Western Ghats.",
     image: "/Home/2.jpg",
   },
   {
     year: "1986",
-    text: "Zliquet risus feugiat in ante metus dictum at tempor commodo. Nec ultrices dui sapien mi. Vitae justo eget magna fermentum.",
+    text: "Introduced community-based tourism initiatives, supporting local artisans and culture.",
     image: "/Home/2.jpg",
   },
   {
     year: "1984",
-    text: "Aliquet risus feugiat in ante metus dictum at tempor commodo. Nec ultrices dui sapien mi. Vitae justo eget magna fermentum.",
+    text: "Expanded to include guided nature trails and wildlife observation experiences.",
     image: "/Home/2.jpg",
   },
   {
     year: "1982",
-    text: "Vitae justo eget magna fermentum. Aliquet risus feugiat in ante metus dictum at tempor commodo. Nec ultrices dui sapien mi.",
+    text: "Founded as a small eco-lodge in Goa, committed to sustainable tourism practices.",
     image: "/Home/2.jpg",
   },
 ];
@@ -35,9 +35,9 @@ export default function JourneyTimeline() {
           </span>
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-gray-600">
-          Orci eu lobortis elementum nibh tellus molestie. Lectus proin nibh
-          nisl condimentum id venenatis a condimentum. Aenean et tortor at risus
-          viverra adipiscing at.
+          From humble beginnings to a leading eco-tourism destination, discover
+          the milestones that shaped Wilderest Nature Resort into the sanctuary
+          it is today.
         </p>
       </div>
       <div className="relative ">

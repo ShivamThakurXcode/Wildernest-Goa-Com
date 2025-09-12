@@ -381,29 +381,22 @@ const AccommodationPage = () => {
                   <li className="flex items-start">
                     <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      All meals included with local organic ingredients
                     </span>
                   </li>
                   <li className="flex items-start">
                     <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>
-                      Sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </span>
+                    <span>Guided family activities and excursions</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                      laboris nisi ut aliquip.
+                      Complimentary transportation to nearby attractions
                     </span>
                   </li>
                   <li className="flex items-start">
                     <Check className="text-amber-600 dark:text-amber-400 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia.
-                    </span>
+                    <span>24/7 concierge service for families</span>
                   </li>
                 </ul>
               </div>
@@ -420,24 +413,20 @@ const AccommodationPage = () => {
                     1
                   </span>
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Free upgrade to premium room for stays over 4 nights
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="bg-amber-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-xs">
                     2
                   </span>
-                  <span>
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                  </span>
+                  <span>Complimentary family photography session</span>
                 </li>
                 <li className="flex items-start">
                   <span className="bg-amber-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-xs">
                     3
                   </span>
-                  <span>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  </span>
+                  <span>Exclusive access to private beach area</span>
                 </li>
               </ul>
             </div>
