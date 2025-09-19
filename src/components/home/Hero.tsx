@@ -26,7 +26,7 @@ const Hero = () => {
             <span className="text-gradient">Goa</span>
           </h1>
           <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
-            Discover Wilderest, where modern luxury meets untouched nature. Our
+            Discover Wildernest, where modern luxury meets untouched nature. Our
             eco-friendly resort offers a perfect blend of comfort and adventure
             in Goa's most serene landscapes.
           </p>

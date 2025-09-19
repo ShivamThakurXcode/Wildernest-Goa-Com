@@ -21,7 +21,7 @@ const ResortHighlights = () => {
       title: "Beaches",
       icon: <Umbrella className="w-8 h-8" />,
       description:
-        "Relax on Goa's stunning beaches, just a short distance from Wilderest, offering sun, sand, and serenity.",
+        "Relax on Goa's stunning beaches, just a short distance from Wildernest, offering sun, sand, and serenity.",
     },
     {
       id: 3,

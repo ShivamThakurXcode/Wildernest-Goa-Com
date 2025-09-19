@@ -17,10 +17,10 @@ const HowToReachPage = () => {
   return (
     <>
       <Helmet>
-        <title>How to Reach | Wilderest Nature Resort, Goa</title>
+        <title>How to Reach | Wildernest Nature Resort, Goa</title>
         <meta
           name="description"
-          content="Find the best ways to reach Wilderest Nature Resort in Goa - by air, road, rail, or sea. Get detailed directions, transport options, and contact information."
+          content="Find the best ways to reach Wildernest Nature Resort in Goa - by air, road, rail, or sea. Get detailed directions, transport options, and contact information."
         />
       </Helmet>
       {/* Hero Section */}
@@ -40,7 +40,7 @@ const HowToReachPage = () => {
               Explore Your Journey
             </h3>
             <h1 className="text-5xl md:text-6xl font-bold text-white relative mb-6">
-              How to Reach Wilderest
+              How to Reach Wildernest
             </h1>
             <p className="text-gray-100 text-lg max-w-3xl mx-auto">
               Unlock the path to Goa's hidden gem
@@ -61,7 +61,7 @@ const HowToReachPage = () => {
               Our Location
             </h2>
             <p className="text-gray-600 mb-6 text-lg">
-              Wilderest Nature Resort is nestled in the pristine forests of
+              Wildernest Nature Resort is nestled in the pristine forests of
               South Goa, just 45 minutes from Dabolim Airport. Our secluded
               location offers tranquility while remaining easily accessible.
             </p>
@@ -72,7 +72,7 @@ const HowToReachPage = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900">Address</h3>
                   <p className="text-gray-600">
-                    Wilderest Nature Resort, <br />
+                    Wildernest Nature Resort, <br />
                     Canacona, South Goa - 403702 <br />
                     India
                   </p>
@@ -84,8 +84,8 @@ const HowToReachPage = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900">Contact</h3>
                   <p className="text-gray-600">
-                    +91 98765 43210 <br />
-                    reservations@wilderestgoa.com
+                    +91 94800 22108 <br />
+                    reservations@Wildernestgoa.com
                   </p>
                 </div>
               </div>
@@ -391,7 +391,7 @@ const HowToReachPage = () => {
               Local Transportation Options
             </h2>
             <p className="text-lg text-gray-600">
-              Getting around during your stay at Wilderest
+              Getting around during your stay at Wildernest
             </p>
           </motion.div>
 

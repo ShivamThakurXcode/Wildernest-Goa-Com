@@ -38,10 +38,10 @@ const ResortSection = () => {
               Luxury Meets Nature
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Unforgettable Experiences at Wilderest Goa
+              Unforgettable Experiences at Wildernest Goa
             </h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Nestled along Goa's pristine coastline, Wilderest Resort offers a
+              Nestled along Goa's pristine coastline, Wildernest Resort offers a
               perfect blend of luxury and nature, where you can unwind amidst
               palm trees and golden sands while enjoying world-class amenities.
             </p>

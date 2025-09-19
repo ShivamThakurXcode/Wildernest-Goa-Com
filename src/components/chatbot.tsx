@@ -3,10 +3,10 @@ import { FiSend, FiMessageSquare, FiX, FiChevronUp } from "react-icons/fi";
 import { IoMdOptions } from "react-icons/io";
 import { RiRobot2Line } from "react-icons/ri";
 
-// Wilderest knowledge base
-const wilderestKnowledge = {
+// Wildernest knowledge base
+const WildernestKnowledge = {
   about:
-    "Wilderest is a luxury eco-resort in Goa, blending sustainable practices with 5-star amenities. Our 25-acre property features private villas, organic dining, and immersive nature experiences.",
+    "Wildernest is a luxury eco-resort in Goa, blending sustainable practices with 5-star amenities. Our 25-acre property features private villas, organic dining, and immersive nature experiences.",
   accommodations: [
     "Treehouse Villas: Elevated suites with private decks (₹25,000/night)",
     "Beachfront Cottages: Direct beach access (₹18,000/night)",
@@ -34,7 +34,7 @@ const wilderestKnowledge = {
   ].join("\n"),
   contact: [
     "Phone: +91 832 2789 456",
-    "Email: stay@wilderestgoa.com",
+    "Email: stay@Wildernestgoa.com",
     "Address: 25 Forest Lane, North Goa 403516",
     "Emergency: +91 992 345 6789",
   ].join("\n"),
@@ -47,7 +47,7 @@ const Chatbot = () => {
     Array<{ text: string; sender: "user" | "bot"; isCard?: boolean }>
   >([
     {
-      text: "Hello! I'm Wilderest's AI concierge. Ask me about accommodations, amenities, dining, or activities.",
+      text: "Hello! I'm Wildernest's AI concierge. Ask me about accommodations, amenities, dining, or activities.",
       sender: "bot",
       isCard: false,
     },
@@ -118,33 +118,33 @@ const Chatbot = () => {
     const lowerQuery = query.toLowerCase();
 
     if (lowerQuery.includes("about") || lowerQuery.includes("wildereast")) {
-      return wilderestKnowledge.about;
+      return WildernestKnowledge.about;
     } else if (
       lowerQuery.includes("room") ||
       lowerQuery.includes("stay") ||
       lowerQuery.includes("accommod")
     ) {
-      return "Our accommodations:\n\n" + wilderestKnowledge.accommodations;
+      return "Our accommodations:\n\n" + WildernestKnowledge.accommodations;
     } else if (lowerQuery.includes("amenit")) {
-      return "Resort amenities:\n\n" + wilderestKnowledge.amenities;
+      return "Resort amenities:\n\n" + WildernestKnowledge.amenities;
     } else if (
       lowerQuery.includes("activ") ||
       lowerQuery.includes("do") ||
       lowerQuery.includes("experience")
     ) {
-      return "Guest activities:\n\n" + wilderestKnowledge.activities;
+      return "Guest activities:\n\n" + WildernestKnowledge.activities;
     } else if (
       lowerQuery.includes("dining") ||
       lowerQuery.includes("eat") ||
       lowerQuery.includes("food")
     ) {
-      return "Dining options:\n\n" + wilderestKnowledge.dining;
+      return "Dining options:\n\n" + WildernestKnowledge.dining;
     } else if (
       lowerQuery.includes("contact") ||
       lowerQuery.includes("call") ||
       lowerQuery.includes("reach")
     ) {
-      return "Contact information:\n\n" + wilderestKnowledge.contact;
+      return "Contact information:\n\n" + WildernestKnowledge.contact;
     } else if (
       lowerQuery.includes("book") ||
       lowerQuery.includes("reserve") ||
@@ -152,7 +152,7 @@ const Chatbot = () => {
     ) {
       return (
         "For bookings:\n\n" +
-        wilderestKnowledge.contact +
+        WildernestKnowledge.contact +
         "\n\nOr visit our website's booking page."
       );
     } else {
@@ -179,7 +179,7 @@ const Chatbot = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            inputs: `You are a concierge for Wilderest Nature Resort in Goa. Respond to: "${query}". 
+            inputs: `You are a concierge for Wildernest Nature Resort in Goa. Respond to: "${query}". 
             Focus on nature, luxury, and local Goan experiences. Keep responses under 3 sentences.`,
           }),
         }
@@ -209,7 +209,7 @@ const Chatbot = () => {
             <div className="flex items-center space-x-2">
               <RiRobot2Line className="text-white text-md" />
               <h3 className="font-bold text-xl text-white">
-                Wilderester Assistante
+                Wildernester Assistante
               </h3>
             </div>
             <div className="flex space-x-2">
@@ -302,7 +302,7 @@ const Chatbot = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyPress={(e) => e.key === "Enter" && handleSend()}
-                    placeholder="Ask about Wilderest..."
+                    placeholder="Ask about Wildernest..."
                     className="flex-1 bg-gray-800 text-white placeholder-gray-500 border border-gray-700 rounded-l-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 pr-12"
                     disabled={isLoading}
                   />
@@ -319,7 +319,7 @@ const Chatbot = () => {
                   </button>
                 </div>
                 <p className="text-xs text-gray-500 mt-2 text-center">
-                  Your trusted AI guide for Wilderest experiences
+                  Your trusted AI guide for Wildernest experiences
                 </p>
               </div>
             </>

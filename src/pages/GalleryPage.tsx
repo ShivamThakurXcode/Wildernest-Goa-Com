@@ -318,18 +318,18 @@ const GalleryPage = () => {
   return (
     <>
       <Helmet>
-        <title>Gallery | Wilderest Nature Resort, Goa</title>
+        <title>Gallery | Wildernest Nature Resort, Goa</title>
         <meta
           name="description"
-          content="Explore the stunning visuals of Wilderest Nature Resort through our gallery showcasing luxurious accommodations, breathtaking landscapes, and unforgettable experiences."
+          content="Explore the stunning visuals of Wildernest Nature Resort through our gallery showcasing luxurious accommodations, breathtaking landscapes, and unforgettable experiences."
         />
       </Helmet>
 
       {/* Hero Section */}
       <HeroBanner
-        subTitle="Wilderest Nature Resort"
+        subTitle="Wildernest Nature Resort"
         title="Gallery"
-        paragraph="Browse our gallery and imagine yourself at Wilderest Nature Resort. Book now to transform inspiring moments into your own unforgettable Goa adventure."
+        paragraph="Browse our gallery and imagine yourself at Wildernest Nature Resort. Book now to transform inspiring moments into your own unforgettable Goa adventure."
       />
 
       {/* Gallery Section */}

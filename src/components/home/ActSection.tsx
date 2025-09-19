@@ -147,7 +147,7 @@ const ActivitiesSection = () => {
           }}
           className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
         >
-          Adventure Awaits at <span className="text-gradient">Wilderest</span>
+          Adventure Awaits at <span className="text-gradient">Wildernest</span>
         </motion.h2>
         <motion.p
           initial="hidden"

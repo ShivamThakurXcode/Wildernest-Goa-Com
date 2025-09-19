@@ -72,10 +72,10 @@ const AccommodationPage = () => {
   return (
     <>
       <Helmet>
-        <title>Family Valley View | Wilderest Nature Resort</title>
+        <title>Family Valley View | Wildernest Nature Resort</title>
         <meta
           name="description"
-          content="Experience panoramic valley views with your family at Wilderest Nature Resort in Goa. Spacious accommodations designed for family comfort and adventure."
+          content="Experience panoramic valley views with your family at Wildernest Nature Resort in Goa. Spacious accommodations designed for family comfort and adventure."
         />
       </Helmet>
       {/* Hero Section */}
@@ -137,7 +137,7 @@ const AccommodationPage = () => {
             >
               <img
                 src="./Home/hero.png"
-                alt="Wilderest Resort luxury villas surrounded by nature"
+                alt="Wildernest Resort luxury villas surrounded by nature"
                 className="absolute inset-0 w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white/20 transition-transform duration-700 hover:scale-[1.02]"
                 loading="lazy"
               />
@@ -290,7 +290,7 @@ const AccommodationPage = () => {
               </p>
               <h2 className="text-4xl text-center sm:text-4xl font-bold text-white mb-8 leading-tight">
                 Details of Family Valley View at{" "}
-                <span className="text-amber-400">Wilderest Goa</span>
+                <span className="text-amber-400">Wildernest Goa</span>
               </h2>
 
               <div className="space-y-6 mb-10">
@@ -495,10 +495,10 @@ const AccommodationPage = () => {
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                       Or call us at{" "}
                       <a
-                        href="tel:+919876543210"
+                        href="tel:+919480022108"
                         className="text-amber-600 dark:text-amber-400 font-medium"
                       >
-                        +91 98765 43210
+                        +91 94800 22108
                       </a>
                     </p>
                   </div>

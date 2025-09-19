@@ -554,10 +554,10 @@ const PlungePoolPage = () => {
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                       Need help? Call us at{" "}
                       <a
-                        href="tel:+919876543210"
+                        href="tel:+919480022108"
                         className="text-amber-600 dark:text-amber-400 font-medium hover:underline"
                       >
-                        +91 98765 43210
+                        +91 94800 22108
                       </a>
                     </p>
                   </div>

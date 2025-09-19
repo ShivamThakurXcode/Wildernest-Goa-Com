@@ -22,12 +22,12 @@ const ResortSectionFirst = () => {
             </p>
             <h2 className="text-4xl sm:text-4xl font-bold text-white mb-8 leading-tight">
               Unforgettable Experiences <br /> at{" "}
-              <span className="text-amber-400">Wilderest Goa</span>
+              <span className="text-amber-400">Wildernest Goa</span>
             </h2>
 
             <div className="space-y-6 mb-10">
               <p className="text-gray-100  leading-relaxed">
-                Nestled along Goa's pristine coastline, Wilderest Resort offers
+                Nestled along Goa's pristine coastline, Wildernest Resort offers
                 a perfect blend of luxury and nature, where you can unwind
                 amidst palm trees and golden sands.
               </p>

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send, ChevronDown } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 import Section from "../components/ui/Section";
 import Button from "../components/ui/Button";
 import { toast } from "../components/ui/Toaster";
@@ -18,6 +19,7 @@ const ContactPage = () => {
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -58,6 +60,10 @@ const ContactPage = () => {
     e.preventDefault();
 
     if (validateForm()) {
+      if (!recaptchaValue) {
+        alert("Please complete the reCAPTCHA verification");
+        return;
+      }
       setIsSubmitting(true);
 
       setTimeout(() => {
@@ -75,6 +81,7 @@ const ContactPage = () => {
           subject: "",
           message: "",
         });
+        setRecaptchaValue(null);
         setIsSubmitting(false);
       }, 1500);
     }
@@ -87,10 +94,10 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Wilderest Nature Resort</title>
+        <title>Contact Us | Wildernest Nature Resort</title>
         <meta
           name="description"
-          content="Contact Wilderest Nature Resort in Goa for inquiries, reservations, or special requests. We're here to help make your stay perfect."
+          content="Contact Wildernest Nature Resort in Goa for inquiries, reservations, or special requests. We're here to help make your stay perfect."
         />
       </Helmet>
 
@@ -98,7 +105,7 @@ const ContactPage = () => {
 
       <HeroBanner
         title="Contact Us"
-        subTitle="Connect with Wilderest"
+        subTitle="Connect with Wildernest"
         paragraph="Please feel free to reach out with any inquiries, reservations, or special requests."
       />
 
@@ -136,7 +143,7 @@ const ContactPage = () => {
                   title: "Address",
                   content: (
                     <>
-                      Wilderest Nature Resort <br />
+                      Wildernest Nature Resort <br />
                       Off Sankhali, Ghats, Chorla <br />
                       Charavade, Goa 403708
                     </>
@@ -148,17 +155,17 @@ const ContactPage = () => {
                   content: (
                     <>
                       <a
-                        href="tel:+918574963214"
+                        href="tel:+919480022108"
                         className="hover:text-orange-600 transition-colors"
                       >
-                        +91 857 496 3214
+                        +91 94800 22108
                       </a>
                       <br />
                       <a
-                        href="tel:+918574963215"
+                        href="tel:+919480022108"
                         className="hover:text-orange-600 transition-colors"
                       >
-                        +91 857 496 3215
+                        +91 94800 22108
                       </a>
                     </>
                   ),
@@ -169,10 +176,10 @@ const ContactPage = () => {
                   content: (
                     <>
                       <a
-                        href="mailto:info@wilderestresort.com"
+                        href="mailto:book@wildernestgoa.com"
                         className="hover:text-orange-600 transition-colors"
                       >
-                        info@wilderestresort.com
+                        book@wildernestgoa.com
                       </a>
                       <br />
                     </>
@@ -345,6 +352,14 @@ const ContactPage = () => {
                     )}
                   </div>
 
+                  {/* reCAPTCHA */}
+                  <div className="flex justify-center py-4">
+                    <ReCAPTCHA
+                      sitekey="6LevK84rAAAAAOtAWchMrMNhSwN8eSV_T0UEVczi"
+                      onChange={(value) => setRecaptchaValue(value)}
+                    />
+                  </div>
+
                   <div>
                     <Button
                       type="submit"
@@ -409,8 +424,8 @@ const ContactPage = () => {
             viewport={{ once: true }}
             className="text-gray-600"
           >
-            Discover quick answers to frequently asked questions about Wilderest
-            Nature Resort.
+            Discover quick answers to frequently asked questions about
+            Wildernest Nature Resort.
           </motion.p>
         </div>
 
@@ -427,8 +442,8 @@ const ContactPage = () => {
                 "Yes, Wi-Fi (Jio network) is available in the reception area.",
             },
             {
-              question: "Are pets allowed at Wilderest?",
-              answer: "Pets are not permitted at Wilderest.",
+              question: "Are pets allowed at Wildernest?",
+              answer: "Pets are not permitted at Wildernest.",
             },
             {
               question: "What dining options are available?",

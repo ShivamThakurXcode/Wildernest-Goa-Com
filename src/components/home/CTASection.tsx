@@ -30,11 +30,12 @@ const CTASection = () => {
       >
         <h2 className="mb-6">
           Ready for Your Unforgettable{" "}
-          <span className="text-gradient">Wilderest Experience?</span>
+          <span className="text-gradient">Wildernest Experience?</span>
         </h2>
         <p className="text-gray-200 text-lg mb-8">
           Book your stay now and enjoy special rates for the upcoming season.
-          Experience the perfect blend of luxury and nature at Wilderest Resort.
+          Experience the perfect blend of luxury and nature at Wildernest
+          Resort.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

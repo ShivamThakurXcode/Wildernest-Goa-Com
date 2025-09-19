@@ -200,10 +200,10 @@ const ActivityPage = () => {
   return (
     <>
       <Helmet>
-        <title>Activities | Wilderest Nature Resort</title>
+        <title>Activities | Wildernest Nature Resort</title>
         <meta
           name="description"
-          content="Experience diverse activities at Wilderest Resort Goa - from treks and cultural experiences to nature exploration and relaxation."
+          content="Experience diverse activities at Wildernest Resort Goa - from treks and cultural experiences to nature exploration and relaxation."
         />
       </Helmet>
       {/* Hero Section */}
@@ -225,7 +225,7 @@ const ActivityPage = () => {
             </span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            Explore diverse activities at Wilderest Resort Goa, where nature,
+            Explore diverse activities at Wildernest Resort Goa, where nature,
             culture, and relaxation blend seamlessly.
           </p>
         </div>

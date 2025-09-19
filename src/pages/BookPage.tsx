@@ -58,10 +58,10 @@ const BookPage = () => {
   return (
     <>
       <Helmet>
-        <title>Book Your Stay | Wilderest Nature Resort, Goa</title>
+        <title>Book Your Stay | Wildernest Nature Resort, Goa</title>
         <meta
           name="description"
-          content="Immerse yourself in the rarefied world of luxury eco-tourism at Wilderest Nature Resort, Goa. Secure your place in our elegantly appointed accommodations, harmoniously nestled within untouched wilderness."
+          content="Immerse yourself in the rarefied world of luxury eco-tourism at Wildernest Nature Resort, Goa. Secure your place in our elegantly appointed accommodations, harmoniously nestled within untouched wilderness."
         />
       </Helmet>
 
@@ -70,7 +70,7 @@ const BookPage = () => {
       <HeroBanner
         title="Plan Your Trip"
         subTitle="Luxury Eco-Tourism in Goa"
-        paragraph="Experience the ultimate in luxury eco-tourism at Wilderest Nature Resort in Goa, India. Book your stay in our beautiful accommodations surrounded by nature."
+        paragraph="Experience the ultimate in luxury eco-tourism at Wildernest Nature Resort in Goa, India. Book your stay in our beautiful accommodations surrounded by nature."
       />
 
       {/* Booking Form Section */}
@@ -113,7 +113,7 @@ const BookPage = () => {
                   Booking Request Received!
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Thank you for choosing Wilderest. We've received your
+                  Thank you for choosing Wildernest. We've received your
                   reservation request and will contact you within 24 hours to
                   confirm your booking.
                 </p>
@@ -257,7 +257,7 @@ const BookPage = () => {
                   {/* reCAPTCHA */}
                   <div className="flex justify-center py-4">
                     <ReCAPTCHA
-                      sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                      sitekey="6LevK84rAAAAAOtAWchMrMNhSwN8eSV_T0UEVczi"
                       onChange={(value) => setRecaptchaValue(value)}
                     />
                   </div>
@@ -355,12 +355,12 @@ const BookPage = () => {
               <div className="space-y-3">
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-orange-600 mr-3" />
-                  <span className="text-gray-700">+91 98765 43210</span>
+                  <span className="text-gray-700">+91 94800 22108</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 text-orange-600 mr-3" />
                   <span className="text-gray-700">
-                    reservations@wilderestgoa.com
+                    reservations@Wildernestgoa.com
                   </span>
                 </div>
               </div>

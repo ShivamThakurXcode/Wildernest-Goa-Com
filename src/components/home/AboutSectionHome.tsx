@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Palmtree, Umbrella } from "lucide-react";
 
-// Replace with Wilderest's actual resort image
+// Replace with Wildernest's actual resort image
 const resortImage = "./Home/2.jpg";
 
 const AboutSectionHome = () => {
@@ -48,7 +48,7 @@ const AboutSectionHome = () => {
             }}
             className="mb-4"
           >
-            Experience <span className="text-gradient">Wilderest</span>
+            Experience <span className="text-gradient">Wildernest</span>
           </motion.h2>
         </div>
 
@@ -57,7 +57,7 @@ const AboutSectionHome = () => {
           <div className="relative rounded-2xl overflow-hidden h-96 md:h-auto shadow-lg">
             <img
               src={resortImage}
-              alt="Wilderest Resort Goa beachfront view"
+              alt="Wildernest Resort Goa beachfront view"
               className="w-full h-full object-cover"
             />
           </div>
@@ -87,7 +87,7 @@ const AboutSectionHome = () => {
               Sustainable Paradise
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              Wilderest is committed to eco-conscious hospitality. We use solar
+              Wildernest is committed to eco-conscious hospitality. We use solar
               energy, recycle 90% of our waste, and support local communities.
               Our organic spa uses indigenous ingredients, and our restaurants
               serve farm-to-table cuisine with ingredients from our own gardens.

@@ -30,7 +30,7 @@ const Footer = () => {
                 <Leaf className="text-white h-6 w-6" />
               </div>
               <h2 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
-                Wilderest Goa
+                Wildernest Goa
               </h2>
             </Link>
             <p className=" text-gray-300 leading-relaxed">
@@ -67,7 +67,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {[
-                { name: "About Wilderest", path: "/about" },
+                { name: "About Wildernest", path: "/about" },
                 { name: "Activities", path: "/activities" },
                 { name: "Photo Gallery", path: "/gallery" },
                 { name: "How To Reach", path: "/how-to-reach" },
@@ -129,7 +129,7 @@ const Footer = () => {
                 <div>
                   <p className="font-medium  text-gray-200">Our Location</p>
                   <p className=" text-gray-400">
-                    Wilderest Nature Resort <br />
+                    Wildernest Nature Resort <br />
                     Off Sankhali, Ghats, Chorla <br />
                     Charavade, Goa 403708
                   </p>
@@ -142,10 +142,10 @@ const Footer = () => {
                 <div>
                   <p className="font-medium  text-gray-200">Call Us</p>
                   <a
-                    href="tel:+918574963214"
+                    href="tel:+919480022108"
                     className=" text-gray-400  hover:text-orange-400 transition-colors"
                   >
-                    +91 857 496 3214
+                    +91 94800 22108
                   </a>
                 </div>
               </li>
@@ -156,10 +156,10 @@ const Footer = () => {
                 <div>
                   <p className="font-medium  text-gray-200">Email Us</p>
                   <a
-                    href="mailto:info@wilderestresort.com"
+                    href="mailto:book@wildernestgoa.com"
                     className=" text-gray-400  hover:text-orange-400 transition-colors"
                   >
-                    info@wilderestresort.com
+                    book@wildernestgoa.com
                   </a>
                 </div>
               </li>
@@ -169,7 +169,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t  border-gray-300/30 flex flex-col md:flex-row justify-between items-center">
           <div className=" text-gray-400 text-sm mb-4 md:mb-0">
-            © {currentYear} Wilderest Goa. All rights reserved.
+            © {currentYear} Wildernest Goa. All rights reserved.
           </div>
           <div className="flex items-center  space-x-6">
             <Link

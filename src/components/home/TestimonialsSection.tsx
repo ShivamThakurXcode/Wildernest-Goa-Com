@@ -18,7 +18,7 @@ const testimonials = [
     name: "Sarah Johnson",
     location: "New York, USA",
     quote:
-      "Wilderest exceeded all our expectations. The perfect mix of luxury and nature, with staff that made us feel like family.",
+      "Wildernest exceeded all our expectations. The perfect mix of luxury and nature, with staff that made us feel like family.",
     rating: 5,
     imageUrl:
       "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300",
@@ -139,8 +139,8 @@ const TestimonialsSection = () => {
           }}
           className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
         >
-          Hear from travelers who have experienced the Wilderest difference. Our
-          guests are our best storytellers.
+          Hear from travelers who have experienced the Wildernest difference.
+          Our guests are our best storytellers.
         </motion.p>
       </div>
 

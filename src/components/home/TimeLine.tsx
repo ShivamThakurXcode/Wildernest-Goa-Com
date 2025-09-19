@@ -36,7 +36,7 @@ export default function JourneyTimeline() {
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-gray-600">
           From humble beginnings to a leading eco-tourism destination, discover
-          the milestones that shaped Wilderest Nature Resort into the sanctuary
+          the milestones that shaped Wildernest Nature Resort into the sanctuary
           it is today.
         </p>
       </div>

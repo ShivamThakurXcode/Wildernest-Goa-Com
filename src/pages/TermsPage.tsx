@@ -177,9 +177,10 @@ const TermsPage = () => {
             </h2>
             <ul className="list-disc pl-5 space-y-2 text-gray-700">
               <li>
-                <span className="font-medium">Liability:</span> Wilderest Nature
-                Resort is not liable for any loss, damage, or theft of personal
-                belongings. The use of safes provided in rooms is recommended.
+                <span className="font-medium">Liability:</span> Wildernest
+                Nature Resort is not liable for any loss, damage, or theft of
+                personal belongings. The use of safes provided in rooms is
+                recommended.
               </li>
               <li>
                 <span className="font-medium">Right of Admission:</span> The
@@ -210,7 +211,7 @@ const TermsPage = () => {
               </li>
             </ul>
             <p className="text-gray-700 mt-4">
-              By proceeding with a reservation at Wilderest Nature Resort,
+              By proceeding with a reservation at Wildernest Nature Resort,
               guests acknowledge and agree to abide by the terms outlined above.
               We appreciate your understanding and support in helping us create
               a peaceful and respectful atmosphere for all our visitors.

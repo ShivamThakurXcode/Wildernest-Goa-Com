@@ -71,25 +71,25 @@ const Header = () => {
         >
           <div className="flex flex-row items-center gap-3 overflow-x-auto whitespace-nowrap scrollbar-hide w-full justify-end">
             <a
-              href="tel:+919876543210"
+              href="tel:+919480022108"
               className="flex items-center min-w-0 hover:text-primary-200 flex-shrink-0"
             >
               <div className="bg-orange-500 mr-2 rounded-full w-6 h-6 flex items-center justify-center p-1 flex-shrink-0">
                 <Phone size={14} className="text-white" />
               </div>
               <span className="text-sm sm:text-base truncate">
-                +91 98765 43210
+                +91 94800 22108
               </span>
             </a>
             <a
-              href="mailto:info@wilderestgoa.com"
+              href="mailto:info@Wildernestgoa.com"
               className="flex items-center min-w-0 hover:text-primary-200 flex-shrink-0"
             >
               <div className="bg-orange-500 mr-2 rounded-full w-6 h-6 flex items-center justify-center p-1 flex-shrink-0">
                 <Mail size={14} className="text-white" />
               </div>
               <span className="text-sm sm:text-base truncate">
-                info@wilderestgoa.com
+                info@Wildernestgoa.com
               </span>
             </a>
           </div>
@@ -107,7 +107,7 @@ const Header = () => {
                 isScrolled ? "" : "text-white"
               }`}
             >
-              Wilderest
+              Wildernest
             </h1>
           </Link>
 
@@ -505,7 +505,7 @@ const Header = () => {
                     Book Now
                   </Link>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919480022108"
                     className="block py-3 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg text-center font-semibold text-lg transition-colors shadow-sm hover:shadow-md flex items-center justify-center gap-3"
                     onClick={() => setIsSidebarOpen(false)}
                   >
